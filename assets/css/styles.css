@@ -1,0 +1,79 @@
+/* ==========================
+   Global Styles
+========================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #FFF8FC;
+    color: #2D3748;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    line-height: 1.7;
+}
+
+/* ==========================
+   Header
+========================== */
+
+header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+h1 {
+    color: #0078D4;
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: #F472B6;
+    font-size: 1.2rem;
+}
+
+/* ==========================
+   Sections
+========================== */
+
+section {
+    background: white;
+    padding: 30px;
+    margin-bottom: 25px;
+    border-radius: 15px;
+    border: 1px solid #E5E7EB;
+    transition: transform 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-5px);
+}
+
+h2 {
+    color: #0078D4;
+    margin-bottom: 15px;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+/* ==========================
+   Footer
+========================== */
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    color: gray;
+}
