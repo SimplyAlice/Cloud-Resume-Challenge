@@ -4,136 +4,1044 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alice Matarise | Cloud Engineer</title>
+    <link 
+    rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
+    <!-- FLOATING CLOUD PARTICLES -->
 
-<nav>
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#learning">Cloud Journey</a>
-</nav>
+    <div class="floating-particles">
 
-<header>
-        <h1>Alice Matarise</h1>
-        <p>Cloud-Focused Software Engineer</p>
-        <p>Building cloud-based solutions with Azure and Python while applying modern software engineering practices.</p>
-    </header>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
 
-    <main>
-        <section id="about">
-            <h2>About Me</h2>
-            <p>
-                I am a Software Engineering student focused on cloud engineering,
-                automation, and building modern applications with Microsoft Azure and Python.
-            </p>
+    </div>
 
-            <p>
-                I enjoy exploring how software development and cloud technologies work
-                together to create scalable solutions.
-            </p>
-        </section>
+    <div id="progress-bar"></div>
 
-        <section id="skills">
-            <h2>Technical Skills</h2>
+    <div class="cursor-glow"></div>
 
-            <div class="skills-container">
-                <span class="skill">Python</span>
-                <span class="skill">Git & GitHub</span>
-                <span class="skill">Microsoft Azure</span>
-                <span class="skill">HTML</span>
-            </div>
+    <div id="mouse-trail"></div>
 
-        </section>
-        <section id="projects">
-            <h2>Projects</h2>
+    <div class="aurora">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
 
-            <div class="project-card">
-                <h3>Cloud Resume Challenge</h3>
+    <!-- ================= NAVIGATION ================= -->
 
-                <p>
-            A cloud-based portfolio website built using HTML, CSS,
-            Git, GitHub, and Microsoft Azure services.
-                </p>
+    <nav class="navbar">
 
-            </div>
+        <div class="logo">
+            <span class="logo-circle">AM</span>
+            <span class="logo-name">Alice Matarise</span>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#certifications">Certifications</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+    </nav>
 
 
-            <div class="project-card">
 
-                <h3>CareerOS</h3>
+<!-- ================= HERO ================= -->
 
-                <p>
-                    An AI-powered career operations platform designed to assist
-                    with job discovery, resume tailoring, and application workflows.
-                </p>
+<header class="hero">
 
-            </div>
+    <div class="hero-container">
 
 
-            <div class="project-card">
+        <!-- LEFT SIDE -->
 
-                <h3>Python Automation Projects</h3>
+        <div class="hero-content">
 
-                <p>
-                    Exploring Python through automation scripts, problem solving,
-                    and practical software engineering exercises.
-                </p>
+
+            <div class="status-badge">
+
+                ☁ Currently learning Microsoft Azure
 
             </div>
 
-        </section>
-        <section id="learning">
-            <h2>Cloud Journey</h2>
+
+            <h1>
+                Alice Matarise
+            </h1>
+
+
+            <h2>
+                Aspiring Cloud Engineer
+            </h2>
+
+
             <p>
-                Currently expanding my cloud engineering skills through Microsoft Azure,
-                Python automation, and software engineering practices.
+
+                BSc Information Technology (Software Engineering) student
+                building cloud-native solutions with Microsoft Azure,
+                Python, and automation.
+
             </p>
 
-        <div class="project-card">
-            <h3>☁️ Microsoft Azure Fundamentals</h3>
 
-            <p>
-                Currently studying Azure cloud concepts including cloud services,
-                architecture, security, and core platform fundamentals through AZ-900 preparation.
-            </p>
+            <div class="tech-focus">
+
+                <span>☁ Azure</span>
+
+                <span>🐍 Python</span>
+
+                <span>⚙ Automation</span>
+
+                <span>🚀 Cloud Infrastructure</span>
+
+            </div>
+
+
+
+<!-- HERO HIGHLIGHTS -->
+
+<div class="hero-highlights">
+
+    <div class="highlight-card">
+
+        <h3>☁</h3>
+
+        <p>Cloud Resume Challenge</p>
+
+    </div>
+
+    <div class="highlight-card">
+
+        <h3>AZ-900</h3>
+
+        <p>Currently Studying</p>
+
+    </div>
+
+    <div class="highlight-card">
+
+        <h3>🎓</h3>
+
+        <p>Final Year Software Engineering</p>
+
+    </div>
+
+</div>
+
+
+            <div class="hero-buttons">
+
+
+                <a href="https://github.com/SimplyAlice"
+                target="_blank"
+                class="btn-primary">
+
+                    View GitHub
+
+                </a>
+
+
+                <a href="#projects"
+                class="btn-secondary">
+
+                    View Projects
+
+                </a>
+
+
+            </div>
+
 
         </div>
 
 
-<div class="project-card">
-
-    <h3>🐍 Python Automation</h3>
-
-    <p>
-        Developing Python skills for scripting, automation,
-        and future cloud engineering workflows.
-    </p>
-
-</div>
 
 
-<div class="project-card">
+        <!-- RIGHT SIDE CLOUD DASHBOARD -->
 
-    <h3>🔧 Software Engineering Practices</h3>
 
-    <p>
-        Strengthening skills in Git, version control,
-        programming fundamentals, and software development practices.
-    </p>
+    <div class="cloud-dashboard">
 
-</div>
+        <div class="dashboard-header">
+            Azure Resources
+        </div>
+
+        <div class="dashboard-item">
+            <span class="status-dot"></span>
+            Static Website
+            <strong>Running</strong>
+        </div>
+
+        <div class="dashboard-item">
+            <span class="status-dot"></span>
+            Azure Function
+            <strong>Healthy</strong>
+        </div>
+
+        <div class="dashboard-item">
+            <span class="status-dot"></span>
+            Table Storage
+            <strong>Connected</strong>
+        </div>
+
+        <div class="dashboard-item">
+            <span class="status-dot"></span>
+            GitHub Actions
+            <strong>Deployed</strong>
+        </div>
+
+        <div class="dashboard-footer">
+            Visitor Count:
+            <strong id="hero-visitors">Loading...</strong>
+        </div>
+
+    </div>
+
+
+</header>
+    <!-- ================= MAIN ================= -->
+
+    <main>
+
+        <!-- About -->
+
+        <section id="about" class="reveal">
+            <h2>About Me</h2>
+            <div class="about-card">
+                <p>
+                    Hi, I'm <strong>Alice Matarise</strong>, a final-year BSc Information Technology (Software Engineering) student at Eduvos with a growing passion for cloud engineering and modern software development.
+                </p>
+
+                <p>
+                    I enjoy building scalable applications using Microsoft Azure, JavaScript, Python, HTML, and CSS while continuously expanding my knowledge of cloud infrastructure, automation, APIs, and DevOps.
+                </p>
+
+                <p>
+                    I'm currently working towards the Microsoft Azure Fundamentals (AZ-900) certification and building hands-on cloud projects that strengthen my practical experience.
+                </p>
+
+            </div>
 
         </section>
-    </main>
-<p>
-  Visitors: <span id="visitor-count">Loading...</span>
-</p>
-    <footer>
-        <p>© 2026 Alice Matarise</p>
-    </footer>
-<script src="assets/js/script.js"></script>
+
+        <!-- Skills -->
+
+        <section id="skills" class="reveal">
+
+            <h2>Technical Skills</h2>
+
+            <div class="skills-grid">
+
+                <div class="skill-card">
+                    <h3>☁ Cloud</h3>
+                    <ul>
+                        <li>Microsoft Azure</li>
+                        <li>Azure Functions</li>
+                        <li>Azure Storage</li>
+                        <li>Azure Table Storage</li>
+                        <li>Azure CLI</li>
+                    </ul>
+                </div>
+
+                <div class="skill-card">
+                    <h3>💻 Programming</h3>
+                    <ul>
+                        <li>Python</li>
+                        <li>JavaScript</li>
+                        <li>HTML5</li>
+                        <li>CSS3</li>
+                        <li>Node.js</li>
+                    </ul>
+                </div>
+
+                <div class="skill-card">
+                    <h3>🛠 Tools</h3>
+                    <ul>
+                        <li>Git</li>
+                        <li>GitHub</li>
+                        <li>Visual Studio Code</li>
+                        <li>REST APIs</li>
+                        <li>GitHub Actions</li>
+                    </ul>
+                </div>
+
+            </div>
+            
+        </section>
+<!-- ================= CLOUD ARCHITECTURE ================= -->
+
+        <section id="architecture" class="reveal">
+
+
+            <h2>
+                Cloud Architecture
+            </h2>
+
+
+            <p class="section-description">
+
+                A serverless Azure architecture powering this portfolio.
+
+            </p>
+
+
+
+            <div class="architecture-flow">
+
+
+                <div class="architecture-card">
+
+                    <div class="architecture-icon">
+
+                        <i class="fa-solid fa-user"></i>
+
+                    </div>
+
+                    <h3>
+                        Visitor
+                    </h3>
+
+                    <p>
+                        User accesses the portfolio website.
+                    </p>
+
+                    <div class="architecture-info">
+                        Every visit starts here. The browser loads the static website hosted in Azure.
+                    </div>
+
+                </div>
+
+
+
+                <div class="architecture-arrow">
+
+                    <span></span>
+
+                </div>
+
+
+
+
+                <div class="architecture-card">
+
+                    <div class="architecture-icon">
+
+                        <i class="fa-solid fa-cloud"></i>
+
+                    </div>
+
+                    <h3>
+                        Azure Static Website
+                    </h3>
+
+                    <p>
+                        Hosts HTML, CSS and JavaScript files.
+                    </p>
+
+                    <div class="architecture-info">
+                        Azure Storage serves the HTML, CSS and JavaScript files quickly from the cloud.
+                    </div>
+
+                </div>
+
+
+
+                <div class="architecture-arrow">
+
+                    <span></span>
+
+                </div>
+
+
+
+
+                <div class="architecture-card">
+
+                    <div class="architecture-icon">
+
+                        <i class="fa-solid fa-bolt"></i>
+
+                    </div>
+
+
+                    <h3>
+                        Azure Functions
+                    </h3>
+
+
+                    <p>
+                        Serverless API handling visitor requests.
+                    </p>
+                    <div class="architecture-info">
+
+                        A serverless API receives the request, updates the visitor count and returns the latest value.
+
+                    </div>                    
+
+                </div>
+
+
+
+
+                <div class="architecture-arrow">
+
+                    <span></span>
+
+                </div>
+
+
+
+
+                <div class="architecture-card">
+
+                    <div class="architecture-icon">
+
+                        <i class="fa-solid fa-database"></i>
+
+                    </div>
+
+
+                    <h3>
+                        Storage Database
+                    </h3>
+
+
+                    <p>
+                        Stores and retrieves visitor count data.
+                    </p>
+                    <div class="architecture-info">
+
+                        Azure Table Storage stores the visitor count so every visit is permanently recorded.
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- ================= PROJECTS ================= -->
+
+
+        <section id="projects" class="reveal">
+
+
+            <h2>
+                Featured Projects
+            </h2>
+
+
+            <div class="projects-grid">
+
+
+
+                <div class="project-card">
+
+
+                    <h3>
+                        ☁ Cloud Resume Challenge
+                    </h3>
+
+
+                    <p>
+                        Built and deployed a cloud-hosted portfolio using Microsoft Azure Static Website Hosting, Azure Functions, Azure Storage, JavaScript, HTML, and CSS. The website includes a live visitor counter powered by a serverless API.
+                    </p>
+
+
+                    <div class="tech-stack">
+
+                        <span>Azure</span>
+                        <span>JavaScript</span>
+                        <span>Azure Functions</span>
+                        <span>Azure Storage</span>
+                        <span>GitHub</span>
+
+                    </div>
+
+
+
+                    <div class="project-links">
+
+
+                        <a href="https://simplyaliceportfolio.z1.web.core.windows.net/"
+                        target="_blank"
+                        class="btn-primary">
+
+                            Live Demo
+
+                        </a>
+
+
+
+                        <a href="https://github.com/SimplyAlice/Cloud-Resume-Challenge"
+                        target="_blank"
+                        class="btn-secondary">
+
+                            GitHub
+
+                        </a>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+
+
+                <div class="project-card">
+
+
+                    <h3>
+                        🚀 CareerOS
+                    </h3>
+
+
+                    <p>
+                        An AI-powered career platform currently under development that will help users discover jobs, tailor CVs, manage applications, and organize their job search using modern cloud technologies.
+                    </p>
+
+
+
+                    <div class="tech-stack">
+
+                        <span>Python</span>
+                        <span>FastAPI</span>
+                        <span>Azure</span>
+                        <span>PostgreSQL</span>
+                        <span>AI</span>
+
+                    </div>
+
+
+
+                    <div class="project-links">
+
+
+                        <a href="#"
+                        class="btn-primary">
+
+                            Coming Soon
+
+                        </a>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+
+
+
+                <div class="project-card">
+
+
+                    <h3>
+                        🐍 Python Automation
+                    </h3>
+
+
+                    <p>
+                        A growing collection of Python scripts focused on automation, problem solving, file handling, and cloud engineering practice while preparing for enterprise software development.
+                    </p>
+
+
+
+                    <div class="tech-stack">
+
+                        <span>Python</span>
+                        <span>Automation</span>
+                        <span>Git</span>
+                        <span>VS Code</span>
+
+                    </div>
+
+
+                </div>
+
+
+
+            </div>
+
+
+        </section>
+        <!-- ================= CERTIFICATIONS ================= -->
+
+       <section id="certifications" class="reveal">
+
+
+        <h2>
+            Certifications & Learning
+        </h2>
+
+
+        <div class="cert-grid">
+
+
+            <div class="cert-card">
+
+
+                <div class="cert-icon">
+                    ☁
+                </div>
+
+
+                <h3>
+                    Microsoft Azure Fundamentals
+                </h3>
+
+
+                <p class="cert-code">
+                    AZ-900
+                </p>
+
+
+                <p>
+                    Building foundational knowledge of Azure services,
+                    cloud concepts, security, pricing, and governance.
+                </p>
+
+
+                <div class="progress-container">
+
+                    <div class="progress-bar">
+
+                    </div>
+
+                </div>
+
+
+                <span class="cert-status">
+
+                    Currently Studying
+
+                </span>
+
+
+            </div>
+
+
+
+            <div class="cert-card">
+
+
+                <div class="cert-icon">
+                    🚀
+                </div>
+
+
+                <h3>
+                    Azure Administrator Associate
+                </h3>
+
+
+                <p class="cert-code">
+                    AZ-104
+                </p>
+
+
+                <p>
+                    Planned next step focusing on cloud infrastructure,
+                    networking, storage, and identity management.
+                </p>
+
+
+                <span class="cert-status planned">
+
+                    Planned
+
+                </span>
+
+
+            </div>
+
+
+        </div>
+
+
+        </section>
+
+        <!-- ================= JOURNEY ================= -->
+
+        <section id="journey" class="reveal">
+
+
+            <h2>
+                My Cloud Engineering Journey
+            </h2>
+
+
+            <div class="timeline">
+
+
+                <div class="timeline-item">
+
+
+                    <div class="timeline-dot"></div>
+
+
+                    <div class="timeline-card">
+
+                        <span>
+                            2024
+                        </span>
+
+                        <h3>
+                            Software Engineering Foundation
+                        </h3>
+
+                        <p>
+                            Built programming foundations through
+                            software engineering studies, databases,
+                            web development, and application design.
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+
+
+
+                <div class="timeline-item">
+
+
+                    <div class="timeline-dot"></div>
+
+
+                    <div class="timeline-card">
+
+                        <span>
+                            2026
+                        </span>
+
+                        <h3>
+                            Cloud Resume Challenge
+                        </h3>
+
+                        <p>
+                            Designed and deployed a serverless portfolio
+                            using Microsoft Azure, Azure Functions,
+                            JavaScript, and cloud storage.
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+
+
+
+                <div class="timeline-item">
+
+
+                    <div class="timeline-dot"></div>
+
+
+                    <div class="timeline-card">
+
+                        <span>
+                            2026
+                        </span>
+
+                        <h3>
+                            Azure Certification Journey
+                        </h3>
+
+                        <p>
+                            Preparing for Microsoft Azure Fundamentals
+                            (AZ-900) while expanding cloud infrastructure
+                            and automation skills.
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+
+
+
+                <div class="timeline-item">
+
+
+                    <div class="timeline-dot"></div>
+
+
+                    <div class="timeline-card">
+
+                        <span>
+                            Future Goal
+                        </span>
+
+                        <h3>
+                            Cloud Engineer
+                        </h3>
+
+                        <p>
+                            Building expertise in cloud platforms,
+                            DevOps practices, automation, and scalable
+                            infrastructure.
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+        <!-- ================= EDUCATION ================= -->
+        <section id="education" class="reveal">
+
+
+            <h2>
+                Education
+            </h2>
+
+
+
+            <div class="education-card">
+
+
+            <div class="education-icon">
+
+            <i class="fa-solid fa-graduation-cap"></i>
+
+            </div>
+
+
+
+                <div class="education-content">
+
+
+                    <h3>
+                        BSc Information Technology
+                    </h3>
+
+
+                    <h4>
+                        Software Engineering
+                    </h4>
+
+
+
+                    <p class="institution">
+
+                        Eduvos
+
+                    </p>
+
+
+
+                    <p>
+
+                        Developing skills in software engineering,
+                        cloud technologies, databases, web development,
+                        enterprise programming, and modern IT practices.
+
+                    </p>
+
+
+
+                    <div class="education-tags">
+
+
+                        <span>
+                            Software Engineering
+                        </span>
+
+
+                        <span>
+                            Cloud Computing
+                        </span>
+
+
+                        <span>
+                            Databases
+                        </span>
+
+
+                        <span>
+                            Web Development
+                        </span>
+
+
+                    </div>
+
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+       <!-- ================= CONTACT ================= -->
+
+        <section id="contact" class="reveal">
+
+
+            <h2>
+                Let's Connect
+            </h2>
+
+
+            <p>
+
+                I'm open to cloud engineering opportunities,
+                internships, collaborations, and conversations
+                around Azure, automation, and software engineering.
+
+            </p>
+
+
+
+            <div class="contact-buttons">
+
+
+                <a href="https://github.com/SimplyAlice"
+                target="_blank"
+                class="btn-primary">
+
+                    GitHub
+
+                </a>
+
+
+
+                <a href="https://www.linkedin.com/in/alice-matarise-778bb6374/"
+                target="_blank"
+                class="btn-secondary">
+
+                    LinkedIn
+
+                </a>
+
+
+
+                <a href="C:\Users\Miner\OneDrive - Eduvos\Downloads\Alice Matarise (1).pdf"
+                download
+                class="btn-secondary">
+
+                    Download CV
+
+                </a>
+
+
+
+                <a href="mailto:Minervamatarise@gmail.com"
+                class="btn-secondary">
+
+                    Email Me
+
+                </a>
+
+
+            </div>
+
+
+        </section>
+
+    <!-- ================= FOOTER ================= -->
+
+        <footer>
+
+
+            <div class="footer-content">
+
+
+                <div class="footer-brand">
+
+                    <h3>
+                        Alice Matarise
+                    </h3>
+
+                    <p>
+                        Aspiring Cloud Engineer building solutions
+                        with Azure, Python, and modern software practices.
+                    </p>
+
+                </div>
+
+
+
+                <div class="footer-links">
+
+
+                    <a href="https://github.com/SimplyAlice"
+                    target="_blank">
+
+                        <i class="fa-brands fa-github"></i>
+                        GitHub
+
+                    </a>
+
+
+
+                    <a href="https://linkedin.com"
+                    target="_blank">
+
+                        <i class="fa-brands fa-linkedin"></i>
+                        LinkedIn
+
+                    </a>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="footer-bottom">
+
+
+                <p>
+                    © 2026 Alice Matarise
+                </p>
+
+
+                <p>
+                    Built with HTML, CSS, JavaScript & Microsoft Azure ☁
+                </p>
+
+
+            </div>
+
+
+        </footer>
+
+    <script src="assets/js/script.js"></script>
 </body>
 
 </html>
