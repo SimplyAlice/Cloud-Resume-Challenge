@@ -13,10 +13,6 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
 
-    defaults:
-      run:
-        working-directory: api
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -27,11 +23,12 @@ jobs:
           node-version: "20"
 
       - name: Install dependencies
+        working-directory: api
         run: npm install
 
       - name: Deploy Azure Function
         uses: Azure/functions-action@v1
         with:
           app-name: alice-cloud-counter
-          package: api
+          package: ./api
           publish-profile: ${{ secrets.AZURE_FUNCTIONAPP_PUBLISH_PROFILE }}
