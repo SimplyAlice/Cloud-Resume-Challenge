@@ -1,4 +1,4 @@
-# Cloud Resume Challenge — Alice Matarise
+# Cloud Resume Challenge 
 
 A cloud-hosted portfolio website built as part of the Cloud Resume Challenge, demonstrating practical experience with Microsoft Azure, serverless computing, cloud storage, JavaScript, and CI/CD automation.
 
