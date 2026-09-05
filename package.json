@@ -1,0 +1,24 @@
+{
+  "name": "cloud-resume-challenge",
+  "version": "1.0.0",
+  "description": "A cloud-hosted portfolio website built as part of the Cloud Resume Challenge, demonstrating practical experience with Microsoft Azure, serverless computing, cloud storage, JavaScript, and CI/CD automation.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SimplyAlice/Cloud-Resume-Challenge.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/SimplyAlice/Cloud-Resume-Challenge/issues"
+  },
+  "homepage": "https://github.com/SimplyAlice/Cloud-Resume-Challenge#readme",
+  "dependencies": {
+    "@neondatabase/serverless": "^1.1.0"
+  }
+}

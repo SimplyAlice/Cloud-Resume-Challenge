@@ -216,3 +216,7 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+.vercel
+.env*.local
+
+node_modules/

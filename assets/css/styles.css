@@ -2613,3 +2613,200 @@ footer{
     line-height:1.4;
 
 }
+/* ===========================
+   FLOATING LOCAL TIME
+   =========================== */
+
+.floating-time-widget {
+    position: fixed;
+
+    right: 25px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    padding: 16px 20px;
+
+    background: rgba(10, 15, 30, 0.82);
+    backdrop-filter: blur(14px);
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    border-radius: 16px;
+
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.35);
+
+    z-index: 1000;
+
+    transition: all 0.3s ease;
+}
+
+.floating-time-widget:hover {
+    transform: translateY(-50%) translateX(-5px);
+}
+
+.time-icon {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    font-size: 18px;
+}
+
+.time-info {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.time-label {
+    font-size: 10px;
+    letter-spacing: 2px;
+    opacity: 0.65;
+}
+
+.time-info strong {
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+.time-zone {
+    font-size: 10px;
+    opacity: 0.55;
+}
+
+
+/* ===========================
+   MOBILE
+   =========================== */
+
+@media (max-width: 768px) {
+
+    .floating-time-widget {
+        right: 15px;
+        bottom: 20px;
+        top: auto;
+
+        transform: none;
+
+        padding: 12px 15px;
+    }
+
+    .floating-time-widget:hover {
+        transform: translateY(-3px);
+    }
+
+    .time-icon {
+        width: 36px;
+        height: 36px;
+    }
+
+    .time-info strong {
+        font-size: 16px;
+    }
+
+}
+/* ===========================
+   FLOATING LOCAL TIME
+   =========================== */
+
+.local-time-widget {
+    position: fixed;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 190px;
+    padding: 18px 20px;
+
+    background: rgba(10, 20, 35, 0.88);
+    border: 1px solid rgba(100, 210, 255, 0.35);
+    border-radius: 16px;
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    box-shadow:
+        0 10px 35px rgba(0, 0, 0, 0.35),
+        0 0 25px rgba(0, 180, 255, 0.12);
+
+    color: #ffffff;
+
+    z-index: 999;
+
+    text-align: center;
+
+    transition: all 0.3s ease;
+}
+
+/* Clock icon */
+
+.local-time-widget i {
+    color: #5ddcff;
+    font-size: 20px;
+    margin-bottom: 8px;
+
+    display: block;
+}
+
+/* Cape Town label */
+
+.local-time-widget .time-location {
+    color: #9edfff;
+    font-size: 11px;
+    font-weight: 600;
+
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+
+    margin-bottom: 4px;
+}
+
+/* Actual time */
+
+.local-time-widget #local-time {
+    display: block;
+
+    color: #ffffff;
+
+    font-size: 24px;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    text-shadow:
+        0 0 10px rgba(93, 220, 255, 0.35);
+}
+
+/* Timezone */
+
+.local-time-widget .timezone {
+    color: #8fa9bd;
+
+    font-size: 11px;
+
+    margin-top: 6px;
+}
+
+/* Hover effect */
+
+.local-time-widget:hover {
+    transform: translateY(-50%) translateY(-3px);
+
+    border-color: rgba(93, 220, 255, 0.65);
+
+    box-shadow:
+        0 12px 40px rgba(0, 0, 0, 0.4),
+        0 0 30px rgba(0, 180, 255, 0.2);
+}

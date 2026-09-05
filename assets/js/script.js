@@ -4,23 +4,48 @@
 
 async function updateCounter() {
 
-    const response = await fetch(
-        "https://alice-cloud-counter-d3g5b3ejd2cydbby.southafricanorth-01.azurewebsites.net/api/VisitorCounter"
-    );
+    try {
 
-    const data = await response.json();
+        const response = await fetch(
+            "/api/visitors"
+        );
 
+        if (!response.ok) {
+            throw new Error("Visitor API request failed");
+        }
 
-    animateCounter(data.count);
+        const data = await response.json();
 
+        const count = Number(data.count) || 0;
 
-    const heroVisitors =
-    document.getElementById("hero-visitors");
+        // Main visitor counter
+        animateCounter(count);
 
+        // Hero visitor counter
+        const heroVisitors =
+            document.getElementById("hero-visitors");
 
-    if(heroVisitors){
+        if (heroVisitors) {
+            heroVisitors.textContent = count;
+        }
 
-        heroVisitors.textContent = data.count;
+    } catch (error) {
+
+        console.error("Visitor counter error:", error);
+
+        const counter =
+            document.getElementById("visitor-count");
+
+        const heroVisitors =
+            document.getElementById("hero-visitors");
+
+        if (counter) {
+            counter.textContent = "—";
+        }
+
+        if (heroVisitors) {
+            heroVisitors.textContent = "—";
+        }
 
     }
 
@@ -28,30 +53,30 @@ async function updateCounter() {
 
 updateCounter();
 
+
 // ===========================
 // ANIMATED VISITOR COUNTER
 // ===========================
 
-function animateCounter(target){
+function animateCounter(target) {
 
     const counter =
-    document.getElementById("visitor-count");
+        document.getElementById("visitor-count");
 
+    if (!counter) {
+        return;
+    }
 
     let current = 0;
 
-
     const increment =
-    Math.ceil(target / 60);
-
+        Math.max(1, Math.ceil(target / 60));
 
     const timer = setInterval(() => {
 
-
         current += increment;
 
-
-        if(current >= target){
+        if (current >= target) {
 
             current = target;
 
@@ -59,53 +84,79 @@ function animateCounter(target){
 
         }
 
-
         counter.textContent = current;
-
 
     }, 30);
 
 }
 
 
+// ===========================
+// CAPE TOWN LOCAL TIME
+// ===========================
+
+function updateLocalTime() {
+
+    const localTime =
+        document.getElementById("local-time");
+
+    if (!localTime) {
+        return;
+    }
+
+    const now = new Date();
+
+    localTime.textContent =
+        now.toLocaleTimeString("en-ZA", {
+
+            timeZone: "Africa/Johannesburg",
+
+            hour: "2-digit",
+
+            minute: "2-digit",
+
+            second: "2-digit",
+
+            hour12: false
+
+        });
+
+}
+
+updateLocalTime();
+
+setInterval(updateLocalTime, 1000);
+
 
 // ===========================
 // SCROLL REVEAL ANIMATION
 // ===========================
 
-const reveals = document.querySelectorAll(".reveal");
+const reveals =
+    document.querySelectorAll(".reveal");
 
+const observer =
+    new IntersectionObserver(
 
-const observer = new IntersectionObserver(
+        entries => {
 
-    entries => {
+            entries.forEach(entry => {
 
+                if (entry.isIntersecting) {
 
-        entries.forEach(entry => {
+                    entry.target.classList.add("active");
 
+                }
 
-            if(entry.isIntersecting){
+            });
 
+        },
 
-                entry.target.classList.add("active");
+        {
+            threshold: 0.15
+        }
 
-
-            }
-
-
-        });
-
-
-    },
-
-    {
-
-        threshold:0.15
-
-    }
-
-);
-
+    );
 
 reveals.forEach(section => {
 
@@ -114,60 +165,76 @@ reveals.forEach(section => {
 });
 
 
-
 // ===========================
 // SCROLL PROGRESS BAR
 // ===========================
 
 window.addEventListener("scroll", () => {
 
-
-    const scrollTop = window.scrollY;
-
+    const scrollTop =
+        window.scrollY;
 
     const docHeight =
-    document.documentElement.scrollHeight -
-    window.innerHeight;
-
+        document.documentElement.scrollHeight -
+        window.innerHeight;
 
     const progress =
-    (scrollTop / docHeight) * 100;
+        docHeight > 0
+            ? (scrollTop / docHeight) * 100
+            : 0;
 
+    const progressBar =
+        document.getElementById("progress-bar");
 
-    document.getElementById("progress-bar").style.width =
-    progress + "%";
+    if (progressBar) {
 
+        progressBar.style.width =
+            progress + "%";
+
+    }
 
 });
+
+
 // ===========================
 // CURSOR GLOW
 // ===========================
 
-const glow = document.querySelector(".cursor-glow");
+const glow =
+    document.querySelector(".cursor-glow");
 
+document.addEventListener("mousemove", (e) => {
 
-document.addEventListener("mousemove", (e)=>{
+    if (!glow) {
+        return;
+    }
 
+    glow.style.left =
+        e.clientX + "px";
 
-    glow.style.left = e.clientX + "px";
-
-    glow.style.top = e.clientY + "px";
-
+    glow.style.top =
+        e.clientY + "px";
 
 });
+
+
 // ===========================
 // MOUSE TRAIL
 // ===========================
 
 document.addEventListener("mousemove", (e) => {
 
-    const dot = document.createElement("div");
+    const dot =
+        document.createElement("div");
 
-    dot.className = "trail-dot";
+    dot.className =
+        "trail-dot";
 
-    dot.style.left = e.clientX + "px";
+    dot.style.left =
+        e.clientX + "px";
 
-    dot.style.top = e.clientY + "px";
+    dot.style.top =
+        e.clientY + "px";
 
     document.body.appendChild(dot);
 
