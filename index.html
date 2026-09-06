@@ -170,44 +170,39 @@
         <!-- RIGHT SIDE CLOUD DASHBOARD -->
 
         <div class="cloud-dashboard">
-
             <div class="dashboard-header">
-                Azure Resources
+                Portfolio Infrastructure
             </div>
 
             <div class="dashboard-item">
                 <span class="status-dot"></span>
-                Static Website
-                <strong>Running</strong>
+                Vercel
+                <strong>Deployed</strong>
             </div>
 
             <div class="dashboard-item">
                 <span class="status-dot"></span>
-                Azure Function
+                Visitor API
                 <strong>Healthy</strong>
             </div>
 
             <div class="dashboard-item">
                 <span class="status-dot"></span>
-                Table Storage
+                Neon PostgreSQL
                 <strong>Connected</strong>
             </div>
 
             <div class="dashboard-item">
                 <span class="status-dot"></span>
-                GitHub Actions
-                <strong>Deployed</strong>
+                GitHub
+                <strong>Synced</strong>
             </div>
 
             <div class="dashboard-footer">
                 Visitor Count:
                 <strong id="hero-visitors">Loading...</strong>
             </div>
-
         </div>
-
-    </div>
-
 
 </header>
 <!-- ================= FLOATING LOCAL TIME ================= -->
@@ -245,13 +240,6 @@
 
     <h2>About Me</h2>
 
-    <div class="visitor-box">
-
-        <p>Portfolio Visitors</p>
-
-        <h3 id="visitor-count">Loading...</h3>
-
-    </div>
 
     <div class="about-card">
 
@@ -288,13 +276,15 @@
             <div class="skills-grid">
 
                 <div class="skill-card">
-                    <h3>☁ Cloud</h3>
+                <h3>☁ Cloud & Infrastructure</h3>
+
                     <ul>
                         <li>Microsoft Azure</li>
-                        <li>Azure Functions</li>
-                        <li>Azure Storage</li>
-                        <li>Azure Table Storage</li>
-                        <li>Azure CLI</li>
+                        <li>Vercel</li>
+                        <li>Neon PostgreSQL</li>
+                        <li>Serverless Architecture</li>
+                        <li>Cloud Infrastructure</li>
+                        <li>REST APIs</li>
                     </ul>
                 </div>
 
@@ -326,539 +316,391 @@
 <!-- ================= CLOUD ARCHITECTURE ================= -->
 
         <section id="architecture" class="reveal">
+            <h2>Cloud Architecture</h2>
 
+        <p class="section-description">
+            A serverless architecture powering this portfolio using Vercel, a serverless API, and Neon PostgreSQL.
+        </p>
 
-            <h2>
-                Cloud Architecture
-            </h2>
+        <div class="architecture-flow">
 
-
-            <p class="section-description">
-
-                A serverless Azure architecture powering this portfolio.
-
-            </p>
-
-
-
-            <div class="architecture-flow">
-
-
-                <div class="architecture-card">
-
-                    <div class="architecture-icon">
-
-                        <i class="fa-solid fa-user"></i>
-
-                    </div>
-
-                    <h3>
-                        Visitor
-                    </h3>
-
-                    <p>
-                        User accesses the portfolio website.
-                    </p>
-
-                    <div class="architecture-info">
-                        Every visit starts here. The browser loads the static website hosted in Azure.
-                    </div>
-
+            <div class="architecture-card">
+                <div class="architecture-icon">
+                    <i class="fa-solid fa-user"></i>
                 </div>
 
+                <h3>Visitor</h3>
 
+                <p>
+                    User accesses the portfolio website.
+                </p>
 
-                <div class="architecture-arrow">
-
-                    <span></span>
-
+                <div class="architecture-info">
+                    The browser requests the portfolio from the Vercel deployment.
                 </div>
-
-
-
-
-                <div class="architecture-card">
-
-                    <div class="architecture-icon">
-
-                        <i class="fa-solid fa-cloud"></i>
-
-                    </div>
-
-                    <h3>
-                        Azure Static Website
-                    </h3>
-
-                    <p>
-                        Hosts HTML, CSS and JavaScript files.
-                    </p>
-
-                    <div class="architecture-info">
-                        Azure Storage serves the HTML, CSS and JavaScript files quickly from the cloud.
-                    </div>
-
-                </div>
-
-
-
-                <div class="architecture-arrow">
-
-                    <span></span>
-
-                </div>
-
-
-
-
-                <div class="architecture-card">
-
-                    <div class="architecture-icon">
-
-                        <i class="fa-solid fa-bolt"></i>
-
-                    </div>
-
-
-                    <h3>
-                        Azure Functions
-                    </h3>
-
-
-                    <p>
-                        Serverless API handling visitor requests.
-                    </p>
-                    <div class="architecture-info">
-
-                        A serverless API receives the request, updates the visitor count and returns the latest value.
-
-                    </div>                    
-
-                </div>
-
-
-
-
-                <div class="architecture-arrow">
-
-                    <span></span>
-
-                </div>
-
-
-
-
-                <div class="architecture-card">
-
-                    <div class="architecture-icon">
-
-                        <i class="fa-solid fa-database"></i>
-
-                    </div>
-
-
-                    <h3>
-                        Storage Database
-                    </h3>
-
-
-                    <p>
-                        Stores and retrieves visitor count data.
-                    </p>
-                    <div class="architecture-info">
-
-                        Azure Table Storage stores the visitor count so every visit is permanently recorded.
-
-                    </div>
-
-                </div>
-
-
             </div>
 
+            <div class="architecture-arrow">
+                <span></span>
+            </div>
+
+            <div class="architecture-card">
+                <div class="architecture-icon">
+                    <i class="fa-solid fa-cloud"></i>
+                </div>
+
+                <h3>Vercel</h3>
+
+                <p>
+                    Hosts the portfolio website.
+                </p>
+
+                <div class="architecture-info">
+                    Vercel serves the HTML, CSS, JavaScript, and other static assets that make up the portfolio.
+                </div>
+            </div>
+
+            <div class="architecture-arrow">
+                <span></span>
+            </div>
+
+            <div class="architecture-card">
+                <div class="architecture-icon">
+                    <i class="fa-solid fa-bolt"></i>
+                </div>
+
+                <h3>Visitor API</h3>
+
+                <p>
+                    Serverless API handling visitor requests.
+                </p>
+
+                <div class="architecture-info">
+                    The API receives visitor requests, updates the visitor counter, and returns the latest value.
+                </div>
+            </div>
+
+            <div class="architecture-arrow">
+                <span></span>
+            </div>
+
+            <div class="architecture-card">
+                <div class="architecture-icon">
+                    <i class="fa-solid fa-database"></i>
+                </div>
+
+                <h3>Neon PostgreSQL</h3>
+
+                <p>
+                    Stores visitor count data.
+                </p>
+
+                <div class="architecture-info">
+                    Neon PostgreSQL stores the visitor counter and persists the data between requests.
+                </div>
+            </div>
+
+        </div>
+       
 
         </section>
 
 
 
-        <!-- ================= PROJECTS ================= -->
 
+       <!-- ================= PROJECTS ================= -->
 
         <section id="projects" class="reveal">
 
+        <h2>
+            Featured Projects
+        </h2>
 
-            <h2>
-                Featured Projects
-            </h2>
+        <div class="projects-grid">
 
+            <!-- Cloud Resume Challenge -->
 
-            <div class="projects-grid">
+            <div class="project-card">
 
+                <h3>
+                    ☁ Cloud Resume Challenge
+                </h3>
 
+                <p>
+                    Built and deployed a cloud-hosted portfolio using Vercel, Neon PostgreSQL, JavaScript, HTML, and CSS. The website includes a serverless visitor counter API that records and retrieves visitor data from a PostgreSQL database.
+                </p>
 
-                <div class="project-card">
-
-
-                    <h3>
-                        ☁ Cloud Resume Challenge
-                    </h3>
-
-
-                    <p>
-                        Built and deployed a cloud-hosted portfolio using Microsoft Azure Static Website Hosting, Azure Functions, Azure Storage, JavaScript, HTML, and CSS. The website includes a live visitor counter powered by a serverless API.
-                    </p>
-
-
-                    <div class="tech-stack">
-
-                        <span>Azure</span>
-                        <span>JavaScript</span>
-                        <span>Azure Functions</span>
-                        <span>Azure Storage</span>
-                        <span>GitHub</span>
-
-                    </div>
-
-
-
-                    <div class="project-links">
-
-
-                        <a href="https://simplyaliceportfolio.z1.web.core.windows.net/"
-                        target="_blank"
-                        class="btn-primary">
-
-                            Live Demo
-
-                        </a>
-
-
-
-                        <a href="https://github.com/SimplyAlice/Cloud-Resume-Challenge"
-                        target="_blank"
-                        class="btn-secondary">
-
-                            GitHub
-
-                        </a>
-
-
-                    </div>
-
-
+                <div class="tech-stack">
+                    <span>Vercel</span>
+                    <span>JavaScript</span>
+                    <span>Serverless API</span>
+                    <span>Neon PostgreSQL</span>
+                    <span>GitHub</span>
                 </div>
 
+                <div class="project-links">
 
+                    <a href="https://cloud-resume-challenge-six.vercel.app/"
+                    target="_blank"
+                    class="btn-primary">
+                        Live Demo
+                    </a>
 
-
-
-                <div class="project-card">
-
-
-                    <h3>
-                        🚀 CareerOS
-                    </h3>
-
-
-                    <p>
-                        An AI-powered career platform currently under development that will help users discover jobs, tailor CVs, manage applications, and organize their job search using modern cloud technologies.
-                    </p>
-
-
-
-                    <div class="tech-stack">
-
-                        <span>Python</span>
-                        <span>FastAPI</span>
-                        <span>Azure</span>
-                        <span>PostgreSQL</span>
-                        <span>AI</span>
-
-                    </div>
-
-
-
-                    <div class="project-links">
-
-
-                        <a href="#"
-                        class="btn-primary">
-
-                            Coming Soon
-
-                        </a>
-
-
-                    </div>
-
+                    <a href="https://github.com/SimplyAlice/Cloud-Resume-Challenge"
+                    target="_blank"
+                    class="btn-secondary">
+                        GitHub
+                    </a>
 
                 </div>
-
-
-
-
-
-
-                <div class="project-card">
-
-
-                    <h3>
-                        🐍 Python Automation
-                    </h3>
-
-
-                    <p>
-                        A growing collection of Python scripts focused on automation, problem solving, file handling, and cloud engineering practice while preparing for enterprise software development.
-                    </p>
-
-
-
-                    <div class="tech-stack">
-
-                        <span>Python</span>
-                        <span>Automation</span>
-                        <span>Git</span>
-                        <span>VS Code</span>
-
-                    </div>
-
-
-                </div>
-
-
 
             </div>
 
 
+            <!-- OpsOS -->
+
+            <div class="project-card">
+
+                <h3>
+                    🚀 OpsOS
+                </h3>
+
+                <p>
+                    An AI-powered intelligent operations system designed to monitor systems, understand operational events, investigate incidents, and execute authorised actions through connected tools.
+                </p>
+
+                <div class="tech-stack">
+                    <span>Python</span>
+                    <span>FastAPI</span>
+                    <span>PostgreSQL</span>
+                    <span>AI</span>
+                    <span>Cloud Infrastructure</span>
+                </div>
+
+                <div class="project-links">
+
+                    <a href="#"
+                    class="btn-primary">
+                        Coming Soon
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Python Automation -->
+
+            <div class="project-card">
+
+                <h3>
+                    🐍 Python Automation
+                </h3>
+
+                <p>
+                    A growing collection of Python scripts focused on automation, problem solving, file handling, and cloud engineering practice.
+                </p>
+
+                <div class="tech-stack">
+                    <span>Python</span>
+                    <span>Automation</span>
+                    <span>Git</span>
+                    <span>VS Code</span>
+                </div>
+
+            </div>
+
+        </div>
+    
+
         </section>
-        <!-- ================= CERTIFICATIONS ================= -->
 
-       <section id="certifications" class="reveal">
+       <!-- ================= CERTIFICATIONS ================= -->
 
+        <section id="certifications" class="reveal">
 
+    
         <h2>
             Certifications & Learning
         </h2>
 
-
         <div class="cert-grid">
 
-
             <div class="cert-card">
-
 
                 <div class="cert-icon">
                     ☁
                 </div>
 
-
                 <h3>
                     Microsoft Azure Fundamentals
                 </h3>
-
 
                 <p class="cert-code">
                     AZ-900
                 </p>
 
-
                 <p>
-                    Building foundational knowledge of Azure services,
-                    cloud concepts, security, pricing, and governance.
+                    Building foundational knowledge of cloud concepts,
+                    Azure services, security, pricing, governance, and
+                    core cloud infrastructure.
                 </p>
-
 
                 <div class="progress-container">
 
                     <div class="progress-bar">
-
                     </div>
 
                 </div>
 
-
                 <span class="cert-status">
-
                     Currently Studying
-
                 </span>
-
 
             </div>
 
 
-
             <div class="cert-card">
-
 
                 <div class="cert-icon">
                     🚀
                 </div>
 
-
                 <h3>
                     Azure Administrator Associate
                 </h3>
-
 
                 <p class="cert-code">
                     AZ-104
                 </p>
 
-
                 <p>
-                    Planned next step focusing on cloud infrastructure,
-                    networking, storage, and identity management.
+                    Planned next step focusing on Azure administration,
+                    networking, storage, identity, security, and cloud
+                    infrastructure management.
                 </p>
 
-
                 <span class="cert-status planned">
-
                     Planned
-
                 </span>
-
 
             </div>
 
-
         </div>
-
+     
 
         </section>
 
-        <!-- ================= JOURNEY ================= -->
+<!-- ================= CLOUD JOURNEY ================= -->
 
         <section id="journey" class="reveal">
 
+        ```
+        <h2>
+            My Cloud Engineering Journey
+        </h2>
 
-            <h2>
-                My Cloud Engineering Journey
-            </h2>
+        <div class="timeline">
 
+            <div class="timeline-item">
 
-            <div class="timeline">
+                <div class="timeline-dot"></div>
 
+                <div class="timeline-card">
 
-                <div class="timeline-item">
+                    <span>
+                        2024
+                    </span>
 
+                    <h3>
+                        Software Engineering Foundation
+                    </h3>
 
-                    <div class="timeline-dot"></div>
-
-
-                    <div class="timeline-card">
-
-                        <span>
-                            2024
-                        </span>
-
-                        <h3>
-                            Software Engineering Foundation
-                        </h3>
-
-                        <p>
-                            Built programming foundations through
-                            software engineering studies, databases,
-                            web development, and application design.
-                        </p>
-
-                    </div>
-
+                    <p>
+                        Built strong foundations through software engineering studies,
+                        databases, web development, application design, and IT systems.
+                    </p>
 
                 </div>
-
-
-
-
-                <div class="timeline-item">
-
-
-                    <div class="timeline-dot"></div>
-
-
-                    <div class="timeline-card">
-
-                        <span>
-                            2026
-                        </span>
-
-                        <h3>
-                            Cloud Resume Challenge
-                        </h3>
-
-                        <p>
-                            Designed and deployed a serverless portfolio
-                            using Microsoft Azure, Azure Functions,
-                            JavaScript, and cloud storage.
-                        </p>
-
-                    </div>
-
-
-                </div>
-
-
-
-
-                <div class="timeline-item">
-
-
-                    <div class="timeline-dot"></div>
-
-
-                    <div class="timeline-card">
-
-                        <span>
-                            2026
-                        </span>
-
-                        <h3>
-                            Azure Certification Journey
-                        </h3>
-
-                        <p>
-                            Preparing for Microsoft Azure Fundamentals
-                            (AZ-900) while expanding cloud infrastructure
-                            and automation skills.
-                        </p>
-
-                    </div>
-
-
-                </div>
-
-
-
-
-                <div class="timeline-item">
-
-
-                    <div class="timeline-dot"></div>
-
-
-                    <div class="timeline-card">
-
-                        <span>
-                            Future Goal
-                        </span>
-
-                        <h3>
-                            Cloud Engineer
-                        </h3>
-
-                        <p>
-                            Building expertise in cloud platforms,
-                            DevOps practices, automation, and scalable
-                            infrastructure.
-                        </p>
-
-                    </div>
-
-
-                </div>
-
 
             </div>
 
+
+            <div class="timeline-item">
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-card">
+
+                    <span>
+                        2026
+                    </span>
+
+                    <h3>
+                        Cloud Resume Challenge
+                    </h3>
+
+                    <p>
+                        Built and deployed a serverless cloud portfolio using Vercel,
+                        a serverless visitor API, Neon PostgreSQL, JavaScript, HTML,
+                        and CSS.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="timeline-item">
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-card">
+
+                    <span>
+                        2026
+                    </span>
+
+                    <h3>
+                        Azure Certification Journey
+                    </h3>
+
+                    <p>
+                        Preparing for Microsoft Azure Fundamentals (AZ-900) while
+                        developing practical knowledge of cloud infrastructure,
+                        networking, security, identity, and automation.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="timeline-item">
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-card">
+
+                    <span>
+                        Future Goal
+                    </span>
+
+                    <h3>
+                        Cloud Engineer
+                    </h3>
+
+                    <p>
+                        Building deeper expertise in cloud platforms, technical
+                        operations, infrastructure, automation, and DevOps practices.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+        ```
 
         </section>
 
@@ -904,12 +746,12 @@
                     </p>
 
 
-
                     <p>
 
-                        Developing skills in software engineering,
-                        cloud technologies, databases, web development,
-                        enterprise programming, and modern IT practices.
+                        Final-year BSc Information Technology student specialising in
+                        Software Engineering, with academic experience across cloud
+                        computing, databases, web development, enterprise programming,
+                        and modern IT practices.
 
                     </p>
 
@@ -961,9 +803,7 @@
 
             <p>
 
-                I'm open to cloud engineering opportunities,
-                internships, collaborations, and conversations
-                around Azure, automation, and software engineering.
+                I'm open to cloud engineering opportunities, internships, collaborations, and conversations around cloud infrastructure, technical operations, automation, and modern IT.
 
             </p>
 

@@ -2615,9 +2615,10 @@ footer{
 }
 /* ===========================
    FLOATING LOCAL TIME
-   =========================== */
+=========================== */
 
 .floating-time-widget {
+
     position: fixed;
 
     right: 25px;
@@ -2631,25 +2632,31 @@ footer{
 
     padding: 16px 20px;
 
-    background: rgba(10, 15, 30, 0.82);
-    backdrop-filter: blur(14px);
+    background: rgba(15, 23, 42, 0.92);
 
-    border: 1px solid rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    border: 1px solid rgba(96, 165, 250, 0.35);
 
     border-radius: 16px;
 
-    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.35);
+    box-shadow:
+        0 10px 35px rgba(15, 23, 42, 0.25),
+        0 0 25px rgba(37, 99, 235, 0.12);
+
+    color: #ffffff;
 
     z-index: 1000;
 
     transition: all 0.3s ease;
 }
 
-.floating-time-widget:hover {
-    transform: translateY(-50%) translateX(-5px);
-}
 
-.time-icon {
+/* Clock icon */
+
+.floating-time-widget .time-icon {
+
     width: 42px;
     height: 42px;
 
@@ -2659,154 +2666,125 @@ footer{
 
     border-radius: 50%;
 
-    background: rgba(255, 255, 255, 0.08);
+    background: rgba(96, 165, 250, 0.15);
+
+    color: #7dd3fc;
 
     font-size: 18px;
+
 }
 
-.time-info {
+
+/* Time information */
+
+.floating-time-widget .time-info {
+
     display: flex;
     flex-direction: column;
     gap: 3px;
+
 }
 
-.time-label {
+
+/* Cape Town */
+
+.floating-time-widget .time-label {
+
+    color: #bae6fd;
+
     font-size: 10px;
+
+    font-weight: 600;
+
     letter-spacing: 2px;
-    opacity: 0.65;
+
 }
 
-.time-info strong {
+
+/* Actual time */
+
+.floating-time-widget #local-time {
+
+    display: block;
+
+    color: #ffffff;
+
     font-size: 20px;
+
+    font-weight: 700;
+
     letter-spacing: 1px;
+
+    text-shadow:
+        0 0 10px rgba(125, 211, 252, 0.35);
+
 }
 
-.time-zone {
+
+/* Timezone */
+
+.floating-time-widget .time-zone {
+
+    color: #cbd5e1;
+
     font-size: 10px;
-    opacity: 0.55;
+
+    opacity: 0.9;
+
+}
+
+
+/* Hover */
+
+.floating-time-widget:hover {
+
+    transform: translateY(-50%) translateX(-5px);
+
+    border-color: rgba(125, 211, 252, 0.65);
+
+    box-shadow:
+        0 12px 40px rgba(15, 23, 42, 0.3),
+        0 0 30px rgba(37, 99, 235, 0.18);
+
 }
 
 
 /* ===========================
-   MOBILE
-   =========================== */
+   TIME WIDGET — MOBILE
+=========================== */
 
 @media (max-width: 768px) {
 
     .floating-time-widget {
+
         right: 15px;
+
         bottom: 20px;
         top: auto;
 
         transform: none;
 
         padding: 12px 15px;
+
     }
 
     .floating-time-widget:hover {
+
         transform: translateY(-3px);
+
     }
 
-    .time-icon {
+    .floating-time-widget .time-icon {
+
         width: 36px;
         height: 36px;
+
     }
 
-    .time-info strong {
+    .floating-time-widget #local-time {
+
         font-size: 16px;
+
     }
 
-}
-/* ===========================
-   FLOATING LOCAL TIME
-   =========================== */
-
-.local-time-widget {
-    position: fixed;
-    right: 30px;
-    top: 50%;
-    transform: translateY(-50%);
-
-    width: 190px;
-    padding: 18px 20px;
-
-    background: rgba(10, 20, 35, 0.88);
-    border: 1px solid rgba(100, 210, 255, 0.35);
-    border-radius: 16px;
-
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-
-    box-shadow:
-        0 10px 35px rgba(0, 0, 0, 0.35),
-        0 0 25px rgba(0, 180, 255, 0.12);
-
-    color: #ffffff;
-
-    z-index: 999;
-
-    text-align: center;
-
-    transition: all 0.3s ease;
-}
-
-/* Clock icon */
-
-.local-time-widget i {
-    color: #5ddcff;
-    font-size: 20px;
-    margin-bottom: 8px;
-
-    display: block;
-}
-
-/* Cape Town label */
-
-.local-time-widget .time-location {
-    color: #9edfff;
-    font-size: 11px;
-    font-weight: 600;
-
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-
-    margin-bottom: 4px;
-}
-
-/* Actual time */
-
-.local-time-widget #local-time {
-    display: block;
-
-    color: #ffffff;
-
-    font-size: 24px;
-    font-weight: 700;
-
-    letter-spacing: 1px;
-
-    text-shadow:
-        0 0 10px rgba(93, 220, 255, 0.35);
-}
-
-/* Timezone */
-
-.local-time-widget .timezone {
-    color: #8fa9bd;
-
-    font-size: 11px;
-
-    margin-top: 6px;
-}
-
-/* Hover effect */
-
-.local-time-widget:hover {
-    transform: translateY(-50%) translateY(-3px);
-
-    border-color: rgba(93, 220, 255, 0.65);
-
-    box-shadow:
-        0 12px 40px rgba(0, 0, 0, 0.4),
-        0 0 30px rgba(0, 180, 255, 0.2);
 }
