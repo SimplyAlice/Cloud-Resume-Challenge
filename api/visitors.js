@@ -1,8 +1,6 @@
-import { neon } from "@neondatabase/serverless";
+const { neon } = require("@neondatabase/serverless");
 
-const sql = neon(process.env.DATABASE_URL);
-
-export default async function handler(req, res) {
+module.exports = async function handler(req, res) {
 
     if (req.method !== "GET") {
         return res.status(405).json({
@@ -11,6 +9,13 @@ export default async function handler(req, res) {
     }
 
     try {
+        if (!process.env.DATABASE_URL) {
+            return res.status(500).json({
+                error: "Database is not configured"
+            });
+        }
+
+        const sql = neon(process.env.DATABASE_URL);
 
         const result = await sql`
             INSERT INTO visitor_counter (id, count)
@@ -34,4 +39,4 @@ export default async function handler(req, res) {
 
     }
 
-}
+};
