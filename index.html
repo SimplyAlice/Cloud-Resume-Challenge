@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alice Matarise | Cloud Engineer</title>
+    <meta name="description" content="Alice Matarise is a final-year Software Engineering student building practical cloud, automation, and technical operations projects.">
+    <title>Alice Matarise | Aspiring Cloud Engineer</title>
     <link 
     rel="stylesheet" 
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -37,7 +38,7 @@
 
     <!-- ================= NAVIGATION ================= -->
 
-    <nav class="navbar">
+    <nav class="navbar" aria-label="Primary navigation">
 
         <div class="logo">
             <span class="logo-circle">AM</span>
@@ -89,8 +90,8 @@
             <p>
 
                 BSc Information Technology (Software Engineering) student
-                building cloud-native solutions with Microsoft Azure,
-                Python, and automation.
+                building practical cloud, automation, and technical operations projects
+                with JavaScript, Python, and serverless technologies.
 
             </p>
 
@@ -114,11 +115,6 @@
     <div class="hero-highlights">
 
         <div class="highlight-card">
-            <h3>☁</h3>
-            <p>Cloud Resume Challenge</p>
-        </div>
-
-        <div class="highlight-card">
             <h3>AZ-900</h3>
             <p>Currently Studying</p>
         </div>
@@ -129,8 +125,8 @@
         </div>
 
         <div class="highlight-card">
-            <h3>☁</h3>
-            <p>Cloud Portfolio</p>
+            <h3>Eduvos</h3>
+            <p>BSc IT: Software Engineering</p>
         </div>
 
     </div>
@@ -141,6 +137,7 @@
 
                 <a href="https://github.com/SimplyAlice"
                 target="_blank"
+                rel="noopener noreferrer"
                 class="btn-primary">
 
                     View GitHub
@@ -162,11 +159,6 @@
         </div>
 
 
-
-
-        <!-- RIGHT SIDE CLOUD DASHBOARD -->
-
-
         <!-- RIGHT SIDE CLOUD DASHBOARD -->
 
         <div class="cloud-dashboard">
@@ -177,25 +169,25 @@
             <div class="dashboard-item">
                 <span class="status-dot"></span>
                 Vercel
-                <strong>Deployed</strong>
+                <strong>Hosting</strong>
             </div>
 
             <div class="dashboard-item">
                 <span class="status-dot"></span>
                 Visitor API
-                <strong>Healthy</strong>
+                <strong>Live route</strong>
             </div>
 
             <div class="dashboard-item">
                 <span class="status-dot"></span>
                 Neon PostgreSQL
-                <strong>Connected</strong>
+                <strong>Persistence</strong>
             </div>
 
             <div class="dashboard-item">
                 <span class="status-dot"></span>
                 GitHub
-                <strong>Synced</strong>
+                <strong>Source control</strong>
             </div>
 
             <div class="dashboard-footer">
@@ -251,10 +243,10 @@
         </p>
 
         <p>
-            I enjoy building scalable applications using Microsoft
-            Azure, JavaScript, Python, HTML, and CSS while continuously
-            expanding my knowledge of cloud infrastructure, automation,
-            APIs, and DevOps.
+            I enjoy building practical applications using Vercel, Neon
+            PostgreSQL, JavaScript, Python, HTML, and CSS while expanding
+            my knowledge of cloud infrastructure, automation, APIs, and DevOps.
+            Azure is part of my current learning path.
         </p>
 
         <p>
@@ -300,12 +292,11 @@
                 </div>
 
                 <div class="skill-card">
-                    <h3>🛠 Tools</h3>
+                        <h3>🛠 Tools & DevOps</h3>
                     <ul>
                         <li>Git</li>
                         <li>GitHub</li>
                         <li>Visual Studio Code</li>
-                        <li>REST APIs</li>
                         <li>GitHub Actions</li>
                     </ul>
                 </div>
@@ -319,7 +310,8 @@
             <h2>Cloud Architecture</h2>
 
         <p class="section-description">
-            A serverless architecture powering this portfolio using Vercel, a serverless API, and Neon PostgreSQL.
+            This portfolio uses a small serverless flow: the browser loads the site from Vercel,
+            then requests the visitor count, which persists it in Neon PostgreSQL.
         </p>
 
         <div class="architecture-flow">
@@ -332,11 +324,11 @@
                 <h3>Visitor</h3>
 
                 <p>
-                    User accesses the portfolio website.
+                    Opens the portfolio
                 </p>
 
                 <div class="architecture-info">
-                    The browser requests the portfolio from the Vercel deployment.
+                    The browser loads the static portfolio and requests the visitor count.
                 </div>
             </div>
 
@@ -352,11 +344,11 @@
                 <h3>Vercel</h3>
 
                 <p>
-                    Hosts the portfolio website.
+                    Hosts the frontend
                 </p>
 
                 <div class="architecture-info">
-                    Vercel serves the HTML, CSS, JavaScript, and other static assets that make up the portfolio.
+                    Vercel serves the HTML, CSS, JavaScript, and serverless API route.
                 </div>
             </div>
 
@@ -372,11 +364,11 @@
                 <h3>Visitor API</h3>
 
                 <p>
-                    Serverless API handling visitor requests.
+                    Updates the count
                 </p>
 
                 <div class="architecture-info">
-                    The API receives visitor requests, updates the visitor counter, and returns the latest value.
+                    <code>/api/visitors</code> increments the counter and returns the new value as JSON.
                 </div>
             </div>
 
@@ -392,11 +384,11 @@
                 <h3>Neon PostgreSQL</h3>
 
                 <p>
-                    Stores visitor count data.
+                    Persists the count
                 </p>
 
                 <div class="architecture-info">
-                    Neon PostgreSQL stores the visitor counter and persists the data between requests.
+                    Neon PostgreSQL stores the single visitor counter between requests.
                 </div>
             </div>
 
@@ -427,7 +419,7 @@
                 </h3>
 
                 <p>
-                    Built and deployed a cloud-hosted portfolio using Vercel, Neon PostgreSQL, JavaScript, HTML, and CSS. The website includes a serverless visitor counter API that records and retrieves visitor data from a PostgreSQL database.
+                    Built and deployed a static portfolio with a serverless API and PostgreSQL persistence. The browser calls <code>/api/visitors</code>, the API atomically increments a Neon PostgreSQL counter, and the returned JSON is rendered in the page.
                 </p>
 
                 <div class="tech-stack">
@@ -442,12 +434,14 @@
 
                     <a href="https://cloud-resume-challenge-six.vercel.app/"
                     target="_blank"
+                    rel="noopener noreferrer"
                     class="btn-primary">
                         Live Demo
                     </a>
 
                     <a href="https://github.com/SimplyAlice/Cloud-Resume-Challenge"
                     target="_blank"
+                    rel="noopener noreferrer"
                     class="btn-secondary">
                         GitHub
                     </a>
@@ -479,10 +473,7 @@
 
                 <div class="project-links">
 
-                    <a href="#"
-                    class="btn-primary">
-                        Coming Soon
-                    </a>
+                    <span class="project-status">Coming Soon</span>
 
                 </div>
 
@@ -595,7 +586,6 @@
 
         <section id="journey" class="reveal">
 
-        ```
         <h2>
             My Cloud Engineering Journey
         </h2>
@@ -700,8 +690,6 @@
             </div>
 
         </div>
-        ```
-
         </section>
 
         <!-- ================= EDUCATION ================= -->
@@ -814,6 +802,7 @@
 
                 <a href="https://github.com/SimplyAlice"
                 target="_blank"
+                rel="noopener noreferrer"
                 class="btn-primary">
 
                     GitHub
@@ -824,6 +813,7 @@
 
                 <a href="https://www.linkedin.com/in/alice-matarise-778bb6374/"
                 target="_blank"
+                rel="noopener noreferrer"
                 class="btn-secondary">
 
                     LinkedIn
@@ -871,7 +861,7 @@
 
                     <p>
                         Aspiring Cloud Engineer building solutions
-                        with Azure, Python, and modern software practices.
+                        with Vercel, Neon PostgreSQL, Python, and modern software practices.
                     </p>
 
                 </div>
@@ -882,7 +872,8 @@
 
 
                     <a href="https://github.com/SimplyAlice"
-                    target="_blank">
+                    target="_blank"
+                    rel="noopener noreferrer">
 
                         <i class="fa-brands fa-github"></i>
                         GitHub
@@ -892,7 +883,8 @@
 
 
                     <a href="https://www.linkedin.com/in/alice-matarise-778bb6374/"
-                    target="_blank">
+                    target="_blank"
+                    rel="noopener noreferrer">
 
                         <i class="fa-brands fa-linkedin"></i>
                         LinkedIn
@@ -916,7 +908,7 @@
 
 
                 <p>
-                    Built with HTML, CSS, JavaScript & Microsoft Azure ☁
+                    Built with HTML, CSS, JavaScript, Vercel & Neon PostgreSQL ☁
                 </p>
 
 

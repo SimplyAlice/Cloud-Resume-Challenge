@@ -1,13 +1,13 @@
 # Cloud Resume Challenge 
 
-A cloud-hosted portfolio website built as part of the Cloud Resume Challenge, demonstrating practical experience with Microsoft Azure, serverless computing, cloud storage, JavaScript, and CI/CD automation.
+A cloud-hosted portfolio website built as part of the Cloud Resume Challenge, demonstrating practical experience with serverless APIs, PostgreSQL persistence, JavaScript, and cloud-oriented engineering.
 
 ## 🌐 Live Demo
 
 **Portfolio:**
-https://simplyaliceportfolio.z1.web.core.windows.net/
+https://cloud-resume-challenge-six.vercel.app/
 
-The portfolio is hosted using Azure Storage Static Website Hosting and includes a serverless visitor counter powered by Azure Functions and Azure Table Storage.
+The portfolio is hosted on Vercel and includes a serverless visitor counter powered by a Vercel API route and Neon PostgreSQL.
 
 ---
 
@@ -17,19 +17,16 @@ The Cloud Resume Challenge is a hands-on cloud engineering project designed to d
 
 For this project, I built and deployed a personal cloud portfolio that showcases my software engineering background, cloud engineering interests, projects, education, and certification journey.
 
-The website is not simply a static portfolio. It uses Azure services to provide a functional backend and automated deployment pipeline.
+The website is more than a static portfolio: it includes a production API, persistent visitor data, and a Git/GitHub workflow.
 
 ### Key features
 
 * Responsive personal portfolio website
-* Azure Static Website Hosting
 * Serverless visitor counter
-* Azure Function API
-* Azure Table Storage
+* Vercel serverless API route
+* Neon PostgreSQL persistence
 * JavaScript frontend integration with the API
-* GitHub Actions CI/CD
-* Automated static website deployment
-* Automated Azure Function deployment
+* Git and GitHub workflow
 * Downloadable CV
 * GitHub and LinkedIn integration
 * Cloud architecture documentation
@@ -54,14 +51,14 @@ The application follows a simple serverless architecture:
                     │ HTML / CSS / JS     │
                     └──────────┬──────────┘
                                │
-                               │ Visitor count request
-                               ▼
+                    │       Vercel       │
+                    │  Static Frontend   │
                     ┌─────────────────────┐
                     │   Azure Functions   │
                     │                     │
                     │   Serverless API    │
                     └──────────┬──────────┘
-                               │
+                    │   /api/visitors     │
                                │ Read / update
                                ▼
                     ┌─────────────────────┐
@@ -69,19 +66,17 @@ The application follows a simple serverless architecture:
                     │                     │
                     │  Visitor Counter    │
                     └─────────────────────┘
-```
+                    │  Neon PostgreSQL    │
 
 ### Request flow
 
 1. A visitor opens the portfolio website.
 2. Azure Storage serves the static HTML, CSS, and JavaScript files.
 3. JavaScript sends a request to the Azure Function API.
-4. The Azure Function processes the visitor request.
-5. The visitor count is stored and retrieved from Azure Table Storage.
-6. The updated visitor count is returned to the website.
-7. The visitor count displayed on the portfolio is updated.
-
----
+2. Vercel serves the static HTML, CSS, and JavaScript files.
+3. JavaScript sends a request to `/api/visitors`.
+4. The serverless route atomically increments the visitor count in Neon PostgreSQL.
+5. The updated count is returned as JSON and displayed on the website.
 
 # ☁️ Azure Services
 

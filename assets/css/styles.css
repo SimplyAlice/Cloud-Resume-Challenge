@@ -28,6 +28,8 @@ body{
 
     line-height:1.7;
 
+    overflow-x:hidden;
+
 }
 
 /* ===========================
@@ -449,6 +451,17 @@ body{
     color:white;
 
 }
+
+.btn-primary:focus-visible,
+.btn-secondary:focus-visible,
+.nav-links a:focus-visible,
+.footer-links a:focus-visible{
+
+    outline:3px solid #f59e0b;
+
+    outline-offset:4px;
+
+}
 /* ===========================
    VISITOR COUNTER
 =========================== */
@@ -584,6 +597,11 @@ footer p{
 
         font-size:1.3rem;
 
+    }
+
+    .hero-container{
+        grid-template-columns:1fr;
+        gap:40px;
     }
 
 }
@@ -1197,6 +1215,8 @@ CONTACT
 
         font-size:2.4rem;
 
+        overflow-wrap:anywhere;
+
     }
 
 
@@ -1204,6 +1224,25 @@ CONTACT
 
         line-height:2;
 
+    }
+
+    .hero{
+        min-height:auto;
+        padding:72px 20px 56px;
+    }
+
+    section{
+        padding:64px 20px;
+    }
+
+    .floating-time-widget{
+        position:relative;
+        right:auto;
+        bottom:auto;
+        width:max-content;
+        max-width:100%;
+        margin:0 auto 24px;
+        transform:none;
     }
 
 }
@@ -2757,11 +2796,13 @@ footer{
 
     .floating-time-widget {
 
-        right: 15px;
-
-        bottom: 20px;
+        position: relative;
+        right: auto;
+        bottom: auto;
         top: auto;
-
+        width: max-content;
+        max-width: 100%;
+        margin: 0 auto 24px;
         transform: none;
 
         padding: 12px 15px;
@@ -2785,6 +2826,65 @@ footer{
 
         font-size: 16px;
 
+    }
+
+}
+
+.project-status{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    margin-top:20px;
+
+    padding:8px 14px;
+
+    border:1px solid #cbd5e1;
+
+    border-radius:999px;
+
+    color:#475569;
+
+    font-size:.85rem;
+
+    font-weight:600;
+
+}
+
+code{
+
+    padding:2px 6px;
+
+    background:#e0efff;
+
+    border-radius:5px;
+
+    color:#1d4ed8;
+
+    font-size:.9em;
+
+}
+
+@media (prefers-reduced-motion: reduce){
+
+    html{
+        scroll-behavior:auto;
+    }
+
+    *,
+    *::before,
+    *::after{
+        animation-duration:.01ms !important;
+        animation-iteration-count:1 !important;
+        transition-duration:.01ms !important;
+    }
+
+    .cursor-glow,
+    #mouse-trail,
+    .floating-particles,
+    .aurora{
+        display:none;
     }
 
 }
