@@ -1,370 +1,72 @@
-# Cloud Resume Challenge 
+# Cloud Resume Portfolio
 
-A cloud-hosted portfolio website built as part of the Cloud Resume Challenge, demonstrating practical experience with serverless APIs, PostgreSQL persistence, JavaScript, and cloud-oriented engineering.
+Personal portfolio for Alice Matarise, a final-year BSc Information Technology (Software Engineering) student at Eduvos pursuing a cloud-focused career.
 
-## 🌐 Live Demo
+**Live portfolio:** https://cloud-resume-challenge-six.vercel.app/
 
-**Portfolio:**
-https://cloud-resume-challenge-six.vercel.app/
+**Source:** https://github.com/SimplyAlice/Cloud-Resume-Challenge
 
-The portfolio is hosted on Vercel and includes a serverless visitor counter powered by a Vercel API route and Neon PostgreSQL.
+## Current production architecture
 
----
-
-## 📌 Project Overview
-
-The Cloud Resume Challenge is a hands-on cloud engineering project designed to demonstrate practical knowledge of cloud infrastructure, serverless architecture, APIs, storage, automation, and continuous deployment.
-
-For this project, I built and deployed a personal cloud portfolio that showcases my software engineering background, cloud engineering interests, projects, education, and certification journey.
-
-The website is more than a static portfolio: it includes a production API, persistent visitor data, and a Git/GitHub workflow.
-
-### Key features
-
-* Responsive personal portfolio website
-* Serverless visitor counter
-* Vercel serverless API route
-* Neon PostgreSQL persistence
-* JavaScript frontend integration with the API
-* Git and GitHub workflow
-* Downloadable CV
-* GitHub and LinkedIn integration
-* Cloud architecture documentation
-
----
-
-# ☁️ Cloud Architecture
-
-The application follows a simple serverless architecture:
+The portfolio is hosted on Vercel. Its visitor counter uses a Vercel serverless API route and Neon PostgreSQL:
 
 ```text
-                    ┌─────────────────────┐
-                    │       Visitor       │
-                    │      Web Browser    │
-                    └──────────┬──────────┘
-                               │
-                               ▼
-                    ┌─────────────────────┐
-                    │   Azure Storage     │
-                    │   Static Website    │
-                    │                     │
-                    │ HTML / CSS / JS     │
-                    └──────────┬──────────┘
-                               │
-                    │       Vercel       │
-                    │  Static Frontend   │
-                    ┌─────────────────────┐
-                    │   Azure Functions   │
-                    │                     │
-                    │   Serverless API    │
-                    └──────────┬──────────┘
-                    │   /api/visitors     │
-                               │ Read / update
-                               ▼
-                    ┌─────────────────────┐
-                    │ Azure Table Storage │
-                    │                     │
-                    │  Visitor Counter    │
-                    └─────────────────────┘
-                    │  Neon PostgreSQL    │
-
-### Request flow
-
-1. A visitor opens the portfolio website.
-2. Azure Storage serves the static HTML, CSS, and JavaScript files.
-3. JavaScript sends a request to the Azure Function API.
-2. Vercel serves the static HTML, CSS, and JavaScript files.
-3. JavaScript sends a request to `/api/visitors`.
-4. The serverless route atomically increments the visitor count in Neon PostgreSQL.
-5. The updated count is returned as JSON and displayed on the website.
-
-# ☁️ Azure Services
-
-## Azure Storage Account
-
-Azure Storage provides the static website hosting environment for the portfolio.
-
-The website's frontend files are hosted in Azure Storage and served directly to visitors.
-
-**Used for:**
-
-* Static website hosting
-* HTML files
-* CSS files
-* JavaScript files
-* Portfolio assets
-
----
-
-## Azure Functions
-
-Azure Functions provides the serverless backend for the visitor counter.
-
-The function receives requests from the website and handles the visitor count logic without requiring a traditional continuously running server.
-
-**Used for:**
-
-* HTTP API
-* Visitor count processing
-* Serverless backend logic
-
----
-
-## Azure Table Storage
-
-Azure Table Storage is used to persist the visitor count.
-
-This allows the counter to retain its value between requests rather than storing the count only inside the browser.
-
-**Used for:**
-
-* Persistent visitor count data
-* Reading the current count
-* Updating the count when a visitor accesses the website
-
----
-
-# 🔢 Visitor Counter
-
-The portfolio includes a live visitor counter.
-
-The frontend communicates with the Azure Function API using JavaScript.
-
-The request flow is:
-
-```text
-Portfolio
-    │
-    │ HTTP request
-    ▼
-Azure Function
-    │
-    │ Read / update
-    ▼
-Azure Table Storage
-    │
-    │ Updated count
-    ▼
-Azure Function
-    │
-    │ Response
-    ▼
-Portfolio
+Visitor
+  -> Portfolio on Vercel (HTML, CSS, JavaScript)
+  -> GET /api/visitors
+  -> Vercel serverless Node.js function
+  -> Neon PostgreSQL
 ```
 
-The counter updates when the website is loaded or refreshed.
+When the page loads, `assets/js/script.js` requests `/api/visitors`. The handler in `api/visitors.js` uses `@neondatabase/serverless` and the `DATABASE_URL` environment variable to run an atomic PostgreSQL upsert: it creates the counter row if needed, otherwise increments its count, and returns the updated value as JSON.
 
----
+The API accepts `GET` requests and returns HTTP 405 for other methods. It returns HTTP 500 when the database configuration is missing or a database request fails. The frontend checks the HTTP response and shows an error placeholder if it cannot retrieve the count.
 
-# 🔄 CI/CD with GitHub Actions
+**Microsoft Azure is part of my learning and certification journey; it does not host this portfolio.** The production portfolio and visitor counter currently use Vercel and Neon PostgreSQL.
 
-The project uses GitHub Actions to automate deployment.
+## Project work
 
-Two workflows are configured:
+- Built and deployed a responsive static portfolio with HTML, CSS and JavaScript.
+- Implemented a serverless API and connected it to a persistent PostgreSQL counter.
+- Configured database connectivity through an environment variable rather than storing credentials in source.
+- Managed the project in Git and GitHub and tested the deployed portfolio and API.
+- Documented the production request flow and error handling.
 
-### Static Website Deployment
+## Technology
 
-Changes pushed to the `main` branch trigger the static website deployment workflow.
+- **Frontend:** HTML5, CSS3, JavaScript
+- **API:** Node.js, Vercel serverless functions
+- **Database:** Neon PostgreSQL, `@neondatabase/serverless`
+- **Source control and deployment:** Git, GitHub, Vercel
 
-```text
-GitHub Repository
-        │
-        │ Push to main
-        ▼
-GitHub Actions
-        │
-        ▼
-Azure Storage
-        │
-        ▼
-Updated Portfolio
-```
-
-### Azure Function Deployment
-
-Changes to the `api` directory trigger the Azure Function deployment workflow.
+## Repository layout
 
 ```text
-GitHub Repository
-        │
-        │ API changes
-        ▼
-GitHub Actions
-        │
-        ▼
-Azure Function
-        │
-        ▼
-Updated API
-```
-
-The Azure Function workflow was also tested through a manual GitHub Actions run and successfully deployed the function.
-
----
-
-# 🛠️ Technologies Used
-
-### Frontend
-
-* HTML5
-* CSS3
-* JavaScript
-
-### Cloud
-
-* Microsoft Azure
-* Azure Storage
-* Azure Static Website Hosting
-* Azure Functions
-* Azure Table Storage
-
-### DevOps
-
-* Git
-* GitHub
-* GitHub Actions
-* CI/CD
-
-### Development Tools
-
-* Visual Studio Code
-* Azure CLI
-
----
-
-# 📸 Project Screenshots
-
-Screenshots documenting the Azure infrastructure and deployment pipelines are available in:
-
-`assets/images/screenshots/`
-
-### GitHub Actions — Static Website Deployment
-
-![GitHub Actions Static Website Deployment](assets/images/screenshots/github-actions-static.png)
-
-### GitHub Actions — Azure Function Deployment
-
-![GitHub Actions Azure Function Deployment](assets/images/screenshots/github-actions-function-success.png)
-
-### Azure Function
-
-![Azure Function](assets/images/screenshots/azure-function.png)
-
-### Azure Function App
-
-![Azure Function App](assets/images/screenshots/azure-function-app.png)
-
-### Azure Storage Account
-
-![Azure Storage Account](assets/images/screenshots/azure-storage-account.png)
-
-### Azure Table Storage
-
-![Azure Table Storage](assets/images/screenshots/azure-table-storage.png)
-
-### Azure Static Website
-
-![Azure Static Website](assets/images/screenshots/web-container.png)
-
----
-
-# 📁 Project Structure
-
-```text
-Cloud-Resume-Challenge/
-│
-├── .github/
-│   └── workflows/
-│       ├── static-site-deploy.yml
-│       └── function-app-deploy.yml
-│
+.
 ├── api/
-│   ├── host.json
-│   ├── package.json
-│   └── ...
-│
+│   └── visitors.js
 ├── assets/
-│   ├── css/
-│   │   └── styles.css
-│   │
-│   ├── js/
-│   │   └── script.js
-│   │
-│   ├── images/
-│   │
-│   └── screenshots/
-│
+│   ├── css/styles.css
+│   ├── documents/Alice-Matarise-CV.pdf
+│   ├── images/screenshots/
+│   └── js/script.js
 ├── index.html
+├── package.json
 └── README.md
 ```
 
----
+## Local checks
 
-# 🎓 What I Learned
+The repository does not currently define an automated test suite. The visitor API requires `DATABASE_URL` to run against a database. JavaScript syntax can be checked with:
 
-This project gave me practical experience with cloud engineering concepts beyond simply writing frontend code.
+```sh
+node --check assets/js/script.js
+node --check api/visitors.js
+```
 
-### Cloud
+## About
 
-* Deploying a static website to Azure Storage
-* Working with Azure resources
-* Understanding serverless architecture
-* Using Azure Functions as an API backend
-* Persisting application data using Azure Table Storage
+I am developing practical experience in cloud engineering, software development, APIs, automation and technical operations while studying toward the Microsoft Azure Fundamentals (AZ-900) certification.
 
-### Development
-
-* Connecting a JavaScript frontend to a serverless API
-* Working with HTTP requests and API responses
-* Structuring a cloud-enabled web application
-* Debugging deployment and configuration issues
-
-### DevOps
-
-* Managing source code with Git and GitHub
-* Creating GitHub Actions workflows
-* Automating static website deployments
-* Automating Azure Function deployments
-* Troubleshooting CI/CD workflow failures
-
-### Problem Solving
-
-One of the challenges during deployment involved correcting the Azure Function GitHub Actions workflow path and resolving deployment authentication issues.
-
-The deployment pipeline was subsequently configured successfully and verified through GitHub Actions.
-
----
-
-# 🚀 Future Improvements
-
-Potential future improvements include:
-
-* Adding additional Azure services
-* Improving monitoring and logging
-* Adding automated testing
-* Expanding the backend functionality
-* Implementing infrastructure as code
-* Adding more cloud security controls
-* Improving performance and accessibility
-
----
-
-# 👩🏽‍💻 About Me
-
-I'm Alice Matarise, a final-year BSc Information Technology (Software Engineering) student at Eduvos with an interest in cloud engineering, automation, software development, and modern cloud infrastructure.
-
-I'm currently building practical experience with Microsoft Azure, Python, APIs, DevOps, and serverless technologies while working towards the Microsoft Azure Fundamentals (AZ-900) certification.
-
-### Connect with me
-
-* GitHub: https://github.com/SimplyAlice
-* LinkedIn: https://www.linkedin.com/in/alice-matarise-778bb6374/
-
----
-
-## 📄 License
-
-This project was created as a personal portfolio and learning project.
-
-
-
+- GitHub: https://github.com/SimplyAlice
+- LinkedIn: https://www.linkedin.com/in/alice-matarise-778bb6374/

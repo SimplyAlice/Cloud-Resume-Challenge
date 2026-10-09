@@ -1999,6 +1999,48 @@ CONTACT
     margin:10px 0;
 
 }
+
+.experience-card{
+
+    border-left:4px solid #2563eb;
+
+}
+
+.experience-card .experience-date{
+
+    color:#2563eb;
+
+    font-weight:700;
+
+}
+
+.experience-employer{
+
+    color:#334155;
+
+    font-weight:600;
+
+}
+
+.experience-card ul{
+
+    margin:14px 0 0 18px;
+
+    color:#64748b;
+
+}
+
+.experience-card li + li{
+
+    margin-top:8px;
+
+}
+
+.project-card p{
+
+    margin-bottom:14px;
+
+}
 /* ===========================
    CONTACT UPGRADE
 =========================== */

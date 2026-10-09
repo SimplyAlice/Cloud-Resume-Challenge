@@ -1,7 +1,7 @@
 {
   "name": "cloud-resume-challenge",
   "version": "1.0.0",
-  "description": "A cloud-hosted portfolio website built as part of the Cloud Resume Challenge, demonstrating practical experience with Microsoft Azure, serverless computing, cloud storage, JavaScript, and CI/CD automation.",
+  "description": "A personal portfolio hosted on Vercel with a serverless visitor API backed by Neon PostgreSQL.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

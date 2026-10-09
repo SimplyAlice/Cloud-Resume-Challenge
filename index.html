@@ -47,6 +47,7 @@
 
         <ul class="nav-links">
             <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#certifications">Certifications</a></li>
@@ -259,6 +260,69 @@
 
 </section>
 
+        <!-- Professional Experience -->
+
+        <section id="experience" class="reveal">
+
+            <h2>Professional Experience</h2>
+
+            <p class="section-description">
+                Customer-facing, operational and administrative experience developed
+                alongside my software engineering studies.
+            </p>
+
+            <div class="timeline experience-timeline">
+
+                <div class="timeline-item">
+                    <span class="timeline-dot" aria-hidden="true"></span>
+                    <article class="timeline-card experience-card">
+                        <span class="experience-date">
+                            <time datetime="2022-09">September 2022</time> – Present
+                        </span>
+                        <h3>Events Steward</h3>
+                        <p class="experience-employer">Ignite Events</p>
+                        <ul>
+                            <li>Provide customer service and work with event teams to support event operations.</li>
+                            <li>Follow operational procedures and coordinate with colleagues in busy event environments.</li>
+                        </ul>
+                    </article>
+                </div>
+
+                <div class="timeline-item">
+                    <span class="timeline-dot" aria-hidden="true"></span>
+                    <article class="timeline-card experience-card">
+                        <span class="experience-date">
+                            <time datetime="2022-03">March 2022</time> – Present
+                        </span>
+                        <h3>Marketing and Advertising</h3>
+                        <p class="experience-employer">The Drain Surgeon</p>
+                        <ul>
+                            <li>Support promotional communication and customer engagement to help maintain business visibility.</li>
+                            <li>Assist with social media and marketing activities.</li>
+                        </ul>
+                    </article>
+                </div>
+
+                <div class="timeline-item">
+                    <span class="timeline-dot" aria-hidden="true"></span>
+                    <article class="timeline-card experience-card">
+                        <span class="experience-date">
+                            <time datetime="2022-03">March 2022</time> –
+                            <time datetime="2024-07">July 2024</time>
+                        </span>
+                        <h3>Administrative Support</h3>
+                        <p class="experience-employer">Capriccio Arts Powered Pre-school</p>
+                        <ul>
+                            <li>Assisted with administrative and operational tasks, including scheduling.</li>
+                            <li>Communicated with customers, teams and management while handling multiple tasks with care.</li>
+                        </ul>
+                    </article>
+                </div>
+
+            </div>
+
+        </section>
+
         <!-- Skills -->
 
         <section id="skills" class="reveal">
@@ -410,57 +474,36 @@
 
         <div class="projects-grid">
 
-            <!-- Cloud Resume Challenge -->
-
-            <div class="project-card">
-
-                <h3>
-                    ☁ Cloud Resume Challenge
-                </h3>
-
-                <p>
-                    Built and deployed a static portfolio with a serverless API and PostgreSQL persistence. The browser calls <code>/api/visitors</code>, the API atomically increments a Neon PostgreSQL counter, and the returned JSON is rendered in the page.
-                </p>
-
-                <div class="tech-stack">
-                    <span>Vercel</span>
-                    <span>JavaScript</span>
-                    <span>Serverless API</span>
-                    <span>Neon PostgreSQL</span>
-                    <span>GitHub</span>
-                </div>
-
-                <div class="project-links">
-
-                    <a href="https://cloud-resume-challenge-six.vercel.app/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="btn-primary">
-                        Live Demo
-                    </a>
-
-                    <a href="https://github.com/SimplyAlice/Cloud-Resume-Challenge"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="btn-secondary">
-                        GitHub
-                    </a>
-
-                </div>
-
-            </div>
-
-
             <!-- Dayform -->
 
-            <div class="project-card">
+            <article class="project-card">
 
                 <h3>
                     🗓 Dayform
                 </h3>
 
                 <p>
-                    An intelligent day-planning app that turns plain-spoken intent into verified, timed itineraries with real-world places, transport options, budget awareness, and adaptive planning.
+                    <strong>Problem:</strong> Planning a Cape Town outing means checking venues, hours, travel and costs across separate sources.
+                </p>
+
+                <p>
+                    <strong>Solution:</strong> Dayform turns a natural-language request into a timed outing plan, bringing together real places, travel buffers and a budget-aware itinerary that can be adjusted when plans change.
+                </p>
+
+                <p>
+                    <strong>My contribution:</strong> I designed and implemented the React and TypeScript interface and its request flow to the planning API.
+                </p>
+
+                <p>
+                    <strong>Implementation:</strong> The frontend sends natural-language planning requests to <code>POST /api/v1/planning/requests</code> on a Python FastAPI backend. PostgreSQL-backed plan storage supports persistence; OpenStreetMap/Overpass supplies venue information, and Open-Meteo supplies weather forecasts.
+                </p>
+
+                <p>
+                    <strong>Engineering decisions:</strong> The planning logic applies explicit rules for opening hours, stop timing, travel buffers and budget limits. Replanning can preserve stops that do not need to change.
+                </p>
+
+                <p>
+                    <strong>Outcome:</strong> The live Vercel demo presents the interactive planning flow, itinerary review and replanning controls.
                 </p>
 
                 <div class="tech-stack">
@@ -470,6 +513,8 @@
                     <span>FastAPI</span>
                     <span>PostgreSQL</span>
                     <span>Vercel</span>
+                    <span>OpenStreetMap</span>
+                    <span>Open-Meteo</span>
                 </div>
 
                 <div class="project-links">
@@ -490,16 +535,63 @@
 
                 </div>
 
-            </div>
+            </article>
 
+            <!-- Cloud Resume Challenge -->
+
+            <article class="project-card">
+
+                <h3>☁ Cloud Resume Challenge</h3>
+
+                <p>
+                    <strong>Problem:</strong> A visitor count should persist across visits rather than exist only in the browser.
+                </p>
+
+                <p>
+                    <strong>Architecture:</strong> Visitor → Vercel-hosted portfolio → serverless <code>/api/visitors</code> endpoint → Neon PostgreSQL.
+                </p>
+
+                <p>
+                    <strong>Implementation:</strong> The page requests the count from the Node.js API. Using <code>DATABASE_URL</code> and the Neon serverless driver, the endpoint atomically increments the database row and returns the updated count as JSON.
+                </p>
+
+                <p>
+                    <strong>Engineering work:</strong> The endpoint accepts GET and returns HTTP 405 for other methods; configuration and query failures return HTTP 500. The frontend checks the response and reports a placeholder if the request fails. I also manage the source in GitHub and validate the deployed site and API.
+                </p>
+
+                <div class="tech-stack">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                    <span>Node.js</span>
+                    <span>Vercel</span>
+                    <span>Neon PostgreSQL</span>
+                    <span>GitHub</span>
+                </div>
+
+                <div class="project-links">
+                    <a href="https://cloud-resume-challenge-six.vercel.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn-primary">
+                        Live Demo
+                    </a>
+
+                    <a href="https://github.com/SimplyAlice/Cloud-Resume-Challenge"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn-secondary">
+                        GitHub
+                    </a>
+                </div>
+
+            </article>
 
             <!-- Python Automation -->
 
-            <div class="project-card">
+            <article class="project-card">
 
-                <h3>
-                    🐍 Python Automation
-                </h3>
+                <h3>🐍 Python Automation</h3>
 
                 <p>
                     A growing collection of Python scripts focused on automation, problem solving, file handling, and cloud engineering practice.
@@ -512,7 +604,7 @@
                     <span>VS Code</span>
                 </div>
 
-            </div>
+            </article>
 
         </div>
     
