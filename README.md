@@ -31,6 +31,7 @@ I am a final-year BSc Information Technology (Software Engineering) student at E
 ### Project experience
 
 - **Dayform:** Developed and shipped a full-stack natural-language outing planner using a React/TypeScript frontend, Python/FastAPI backend, PostgreSQL persistence, and venue/transport data integrations. The live application is deployed on Vercel.
+- **Zazen Matcha & Tea Co.:** Engineered and deployed a full-stack e-commerce web platform for single-origin Japanese ceremonial matcha and loose-leaf artisan tea using PHP, MariaDB, CSS Grid, and Apache. Features atomic transactional checkout (`SELECT ... FOR UPDATE`), session security, catalog CRUD, and live SSL/TLS deployment on Alwaysdata. [Live site](https://zazen-matcha.alwaysdata.net/) • [Source](https://github.com/SimplyAlice/Zazen-Matcha).
 - **Cloud Resume Challenge:** Built a portfolio using Azure Functions, Azure Table Storage, and GitHub Actions CI/CD during my cloud learning. The current live version uses the Vercel and Neon architecture described above.
 - **Career Connect:** Served as project manager and frontend Android developer on a six-person Agile academic team. Led research, UI/UX, implementation, and QA; built frontend components with Kotlin, XML, Android Studio, and Material Design; coordinated frontend/backend integration.
 
