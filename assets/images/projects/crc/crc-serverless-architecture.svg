@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 430" width="1100" height="430" role="img" aria-labelledby="crc-arch-title crc-arch-desc">
+  <title id="crc-arch-title">Cloud Resume Challenge — Production Serverless Architecture &amp; Phase 1 Azure Evolution</title>
+  <desc id="crc-arch-desc">Architectural diagram showing active Phase 2 production traffic flowing from the visitor browser through Vercel Edge CDN to the Node.js serverless function api/visitors.js and Neon Serverless PostgreSQL atomic upsert, contrasted with the historical Phase 1 Azure Storage, Azure Functions, and Azure Table Storage implementation.</desc>
+  <defs>
+    <pattern id="crc-grid" width="28" height="28" patternUnits="userSpaceOnUse">
+      <path d="M 28 0 L 0 0 0 28" fill="none" stroke="#E5D8DE" stroke-width="0.65"/>
+    </pattern>
+    <marker id="crc-arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#6E1F42"/>
+    </marker>
+    <marker id="crc-arrow-muted" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#854664"/>
+    </marker>
+  </defs>
+
+  <!-- Warm Ivory Drafting Sheet Canvas -->
+  <rect width="1100" height="430" fill="#FAF6F3"/>
+  <rect width="1100" height="430" fill="url(#crc-grid)"/>
+  <rect x="14" y="14" width="1072" height="402" fill="none" stroke="#854664" stroke-width="1"/>
+
+  <!-- Plate Header -->
+  <text x="36" y="44" font-family="'JetBrains Mono', Consolas, monospace" font-size="11" font-weight="600" letter-spacing="1.6" fill="#6E1F42">ARCHITECTURAL PLATE 05 // CLOUD RESUME CHALLENGE — PRODUCTION VERCEL + NEON PG VS. PHASE 1 AZURE</text>
+  <text x="1064" y="44" text-anchor="end" font-family="'JetBrains Mono', Consolas, monospace" font-size="10.5" fill="#58475C">LIVE: CLOUD-RESUME-CHALLENGE-SIX.VERCEL.APP</text>
+  <line x1="36" y1="58" x2="1064" y2="58" stroke="#C7B2BC" stroke-width="1"/>
+
+  <!-- ================= PHASE 2: ACTIVE PRODUCTION ARCHITECTURE (VERCEL + NEON POSTGRESQL) ================= -->
+  <g transform="translate(36, 74)">
+    <rect width="1028" height="178" rx="4" fill="#FFFFFF" stroke="#6E1F42" stroke-width="1.3"/>
+    <rect width="1028" height="28" rx="4" fill="#FBE4EE"/>
+    <text x="18" y="19" font-family="'JetBrains Mono', Consolas, monospace" font-size="10.5" font-weight="700" fill="#6E1F42">PHASE 2 · ACTIVE PRODUCTION ARCHITECTURE (VERCEL EDGE CDN + SERVERLESS NODE.JS API + NEON POSTGRESQL)</text>
+    <text x="1010" y="19" text-anchor="end" font-family="'JetBrains Mono', Consolas, monospace" font-size="10" font-weight="600" fill="#165935">STATUS: LIVE IN PRODUCTION</text>
+
+    <!-- Node 1: Visitor Browser -->
+    <g transform="translate(20, 44)">
+      <rect width="215" height="114" rx="5" fill="#FAF6F3" stroke="#854664" stroke-width="1.2"/>
+      <text x="14" y="22" font-family="'JetBrains Mono', Consolas, monospace" font-size="10" font-weight="700" fill="#854664">01 // CLIENT VIEWPORT</text>
+      <text x="14" y="45" font-family="sans-serif" font-size="14" font-weight="700" fill="#141115">Visitor Browser (HTTPS)</text>
+      <text x="14" y="66" font-family="sans-serif" font-size="11.5" fill="#2E2532">Semantic HTML5, Soft Power CSS,</text>
+      <text x="14" y="82" font-family="sans-serif" font-size="11.5" fill="#2E2532">dual scroll-scrub video stages</text>
+      <text x="14" y="102" font-family="'JetBrains Mono', Consolas, monospace" font-size="10.5" fill="#6E1F42">fetch('/api/visitors')</text>
+    </g>
+
+    <line x1="235" y1="101" x2="273" y2="101" stroke="#6E1F42" stroke-width="1.6" stroke-dasharray="4 3" marker-end="url(#crc-arrow)"/>
+
+    <!-- Node 2: Vercel Edge CDN -->
+    <g transform="translate(278, 44)">
+      <rect width="215" height="114" rx="5" fill="#FAF6F3" stroke="#854664" stroke-width="1.2"/>
+      <text x="14" y="22" font-family="'JetBrains Mono', Consolas, monospace" font-size="10" font-weight="700" fill="#854664">02 // FRONTEND &amp; EDGE CD</text>
+      <text x="14" y="45" font-family="sans-serif" font-size="14" font-weight="700" fill="#141115">Vercel Edge Network</text>
+      <text x="14" y="66" font-family="sans-serif" font-size="11.5" fill="#2E2532">Auto-deploys from GitHub main</text>
+      <text x="14" y="82" font-family="sans-serif" font-size="11.5" fill="#2E2532">TLS termination &amp; HTTP 206 Range</text>
+      <text x="14" y="102" font-family="'JetBrains Mono', Consolas, monospace" font-size="10.5" fill="#6E1F42">index.html · assets/*</text>
+    </g>
+
+    <line x1="493" y1="101" x2="531" y2="101" stroke="#6E1F42" stroke-width="1.6" stroke-dasharray="4 3" marker-end="url(#crc-arrow)"/>
+
+    <!-- Node 3: Serverless Function -->
+    <g transform="translate(536, 44)">
+      <rect width="215" height="114" rx="5" fill="#FAF6F3" stroke="#854664" stroke-width="1.2"/>
+      <text x="14" y="22" font-family="'JetBrains Mono', Consolas, monospace" font-size="10" font-weight="700" fill="#854664">03 // SERVERLESS API</text>
+      <text x="14" y="45" font-family="sans-serif" font-size="14" font-weight="700" fill="#141115">GET /api/visitors</text>
+      <text x="14" y="66" font-family="sans-serif" font-size="11.5" fill="#2E2532">Method guard (405 non-GET)</text>
+      <text x="14" y="82" font-family="sans-serif" font-size="11.5" fill="#2E2532">Server-side DATABASE_URL check</text>
+      <text x="14" y="102" font-family="'JetBrains Mono', Consolas, monospace" font-size="10.5" fill="#6E1F42">api/visitors.js → { count }</text>
+    </g>
+
+    <line x1="751" y1="101" x2="789" y2="101" stroke="#6E1F42" stroke-width="1.6" stroke-dasharray="4 3" marker-end="url(#crc-arrow)"/>
+
+    <!-- Node 4: Neon PostgreSQL -->
+    <g transform="translate(794, 44)">
+      <rect width="214" height="114" rx="5" fill="#1C1118" stroke="#6E1F42" stroke-width="1.4"/>
+      <text x="14" y="22" font-family="'JetBrains Mono', Consolas, monospace" font-size="10" font-weight="700" fill="#F4B8D2">04 // RELATIONAL STORE</text>
+      <text x="14" y="45" font-family="sans-serif" font-size="14" font-weight="700" fill="#FAF6F3">Neon PostgreSQL</text>
+      <text x="14" y="66" font-family="sans-serif" font-size="11.5" fill="#D5C6DA">@neondatabase/serverless</text>
+      <text x="14" y="82" font-family="sans-serif" font-size="11.5" fill="#D5C6DA">Atomic single-row counter upsert</text>
+      <text x="14" y="102" font-family="'JetBrains Mono', Consolas, monospace" font-size="10.5" fill="#D6A9E8">ON CONFLICT (id) DO UPDATE</text>
+    </g>
+  </g>
+
+  <!-- ================= PHASE 1: HISTORICAL AZURE IMPLEMENTATION (ARCHIVAL FOUNDATION) ================= -->
+  <g transform="translate(36, 268)">
+    <rect width="1028" height="106" rx="4" fill="#F7F2EC" stroke="#C7B2BC" stroke-width="1.1"/>
+    <text x="18" y="23" font-family="'JetBrains Mono', Consolas, monospace" font-size="10.5" font-weight="700" fill="#854664">PHASE 1 · HISTORICAL MICROSOFT AZURE IMPLEMENTATION (MIGRATED IN COMMIT f3edaf2 — ARCHIVAL CAPTURES PRESERVED)</text>
+
+    <g transform="translate(20, 36)">
+      <rect width="232" height="54" rx="4" fill="#FFFFFF" stroke="#C7B2BC" stroke-width="1"/>
+      <text x="12" y="21" font-family="'JetBrains Mono', Consolas, monospace" font-size="10" font-weight="700" fill="#6E1F42">GITHUB ACTIONS CI/CD</text>
+      <text x="12" y="40" font-family="sans-serif" font-size="11.5" fill="#2E2532">static-site-deploy &amp; function-app-deploy</text>
+    </g>
+
+    <line x1="252" y1="63" x2="278" y2="63" stroke="#854664" stroke-width="1.3" marker-end="url(#crc-arrow-muted)"/>
+
+    <g transform="translate(283, 36)">
+      <rect width="232" height="54" rx="4" fill="#FFFFFF" stroke="#C7B2BC" stroke-width="1"/>
+      <text x="12" y="21" font-family="'JetBrains Mono', Consolas, monospace" font-size="10" font-weight="700" fill="#6E1F42">AZURE BLOB STORAGE ($web)</text>
+      <text x="12" y="40" font-family="sans-serif" font-size="11.5" fill="#2E2532">simplyaliceportfolio static endpoint</text>
+    </g>
+
+    <line x1="515" y1="63" x2="541" y2="63" stroke="#854664" stroke-width="1.3" marker-end="url(#crc-arrow-muted)"/>
+
+    <g transform="translate(546, 36)">
+      <rect width="232" height="54" rx="4" fill="#FFFFFF" stroke="#C7B2BC" stroke-width="1"/>
+      <text x="12" y="21" font-family="'JetBrains Mono', Consolas, monospace" font-size="10" font-weight="700" fill="#6E1F42">AZURE FUNCTIONS</text>
+      <text x="12" y="40" font-family="sans-serif" font-size="11.5" fill="#2E2532">HTTP trigger (alice-cloud-counter)</text>
+    </g>
+
+    <line x1="778" y1="63" x2="804" y2="63" stroke="#854664" stroke-width="1.3" marker-end="url(#crc-arrow-muted)"/>
+
+    <g transform="translate(809, 36)">
+      <rect width="199" height="54" rx="4" fill="#FFFFFF" stroke="#C7B2BC" stroke-width="1"/>
+      <text x="12" y="21" font-family="'JetBrains Mono', Consolas, monospace" font-size="10" font-weight="700" fill="#6E1F42">AZURE TABLE STORAGE</text>
+      <text x="12" y="40" font-family="sans-serif" font-size="11.5" fill="#2E2532">NoSQL key-attribute entity row</text>
+    </g>
+  </g>
+
+  <!-- Footer Note -->
+  <text x="36" y="400" font-family="'JetBrains Mono', Consolas, monospace" font-size="10.5" fill="#58475C">LOCAL SAFE MODE: script.js detects localhost / 127.0.0.1 / file: and serves a deterministic mock (101) so local testing never inflates Neon PostgreSQL</text>
+</svg>
