@@ -1,0 +1,170 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 560" width="1120" height="560" role="img" aria-labelledby="qf-schema-title qf-schema-desc">
+  <title id="qf-schema-title">Quote_Flow Relational Schema and Deterministic Ingestion Architecture</title>
+  <desc id="qf-schema-desc">Architectural diagram of Quote_Flow's 12 SQLAlchemy 2.0 ORM entities across PostgreSQL 16 (migration 6fe0f6e79dd9 on Feature/Backend-Foundation), illustrating Tenant Isolation, Multi-Supplier 5-Tier SKU Normalization, Immutable Supplier Price Snapshots, and 4-Column Composite Quotation Revision Lineage.</desc>
+  <defs>
+    <pattern id="qf-grid" width="28" height="28" patternUnits="userSpaceOnUse">
+      <path d="M 28 0 L 0 0 0 28" fill="none" stroke="#E5D8DE" stroke-width="0.65"/>
+    </pattern>
+    <marker id="qf-arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#6E1F42"/>
+    </marker>
+    <marker id="qf-arrow-muted" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#854664"/>
+    </marker>
+  </defs>
+
+  <!-- Drafting Paper Base -->
+  <rect width="1120" height="560" fill="#FAF6F3"/>
+  <rect width="1120" height="560" fill="url(#qf-grid)"/>
+  <rect x="14" y="14" width="1092" height="532" fill="none" stroke="#854664" stroke-width="1"/>
+
+  <!-- Architectural corner registration marks -->
+  <g stroke="#6E1F42" stroke-width="1.2">
+    <path d="M 14 34 L 14 14 L 34 14" fill="none"/>
+    <path d="M 1086 14 L 1106 14 L 1106 34" fill="none"/>
+    <path d="M 14 526 L 14 546 L 34 546" fill="none"/>
+    <path d="M 1086 546 L 1106 546 L 1106 526" fill="none"/>
+  </g>
+
+  <!-- Header Plate -->
+  <text x="36" y="46" font-family="'JetBrains Mono', Consolas, monospace" font-size="11" font-weight="600" letter-spacing="1.6" fill="#6E1F42">ARCHITECTURAL PLATE 03 // QUOTE_FLOW PERSISTENCE &amp; PRICING BOUNDARY</text>
+  <text x="36" y="74" font-family="Georgia, 'Times New Roman', serif" font-size="23" font-weight="600" fill="#141115">12-Entity PostgreSQL 16 Schema &amp; Deterministic Financial Invariants</text>
+  <text x="1084" y="46" text-anchor="end" font-family="'JetBrains Mono', Consolas, monospace" font-size="10.5" fill="#58475C">ALEMBIC REV: 6fe0f6e79dd9 · BRANCH: Feature/Backend-Foundation</text>
+  <line x1="36" y1="88" x2="1084" y2="88" stroke="#C7B2BC" stroke-width="1"/>
+
+  <!-- DOMAIN I: MULTI-TENANT GOVERNANCE (Left Column) -->
+  <g transform="translate(36, 110)">
+    <rect width="268" height="412" fill="#FFFFFF" stroke="#854664" stroke-width="1.2"/>
+    <rect width="268" height="32" fill="#141115"/>
+    <text x="14" y="20" font-family="'JetBrains Mono', Consolas, monospace" font-size="11" font-weight="600" fill="#F4B8D2">01 // MULTI-TENANT CORE</text>
+
+    <!-- tenants -->
+    <g transform="translate(16, 48)">
+      <rect width="236" height="96" fill="#FBE4EE" stroke="#6E1F42" stroke-width="1.2"/>
+      <text x="12" y="20" font-family="'JetBrains Mono', Consolas, monospace" font-size="12" font-weight="700" fill="#4D122C">tenants (Root Entity)</text>
+      <text x="12" y="39" font-family="sans-serif" font-size="11" fill="#2E2532">• Tenant slug UK &amp; default currency</text>
+      <text x="12" y="56" font-family="sans-serif" font-size="11" fill="#2E2532">• Min/Target gross margin thresholds</text>
+      <text x="12" y="73" font-family="sans-serif" font-size="11" fill="#2E2532">• 1:N FK tenant_id ON DELETE CASCADE</text>
+      <text x="12" y="88" font-family="'JetBrains Mono', Consolas, monospace" font-size="9.5" fill="#6E1F42">PG NUMERIC (no float columns)</text>
+    </g>
+
+    <!-- users -->
+    <g transform="translate(16, 160)">
+      <rect width="236" height="68" fill="#FAF6F3" stroke="#C7B2BC" stroke-width="1"/>
+      <text x="12" y="21" font-family="'JetBrains Mono', Consolas, monospace" font-size="11.5" font-weight="700" fill="#141115">users</text>
+      <text x="12" y="39" font-family="sans-serif" font-size="11" fill="#58475C">Argon2 + JWT scoped per tenant</text>
+      <text x="12" y="55" font-family="sans-serif" font-size="10.5" fill="#6E1F42">Role-guarded import &amp; quote actions</text>
+    </g>
+
+    <!-- clients -->
+    <g transform="translate(16, 242)">
+      <rect width="236" height="68" fill="#FAF6F3" stroke="#C7B2BC" stroke-width="1"/>
+      <text x="12" y="21" font-family="'JetBrains Mono', Consolas, monospace" font-size="11.5" font-weight="700" fill="#141115">clients</text>
+      <text x="12" y="39" font-family="sans-serif" font-size="11" fill="#58475C">Soft-archive policy (RESTRICT delete)</text>
+      <text x="12" y="55" font-family="sans-serif" font-size="10.5" fill="#6E1F42">Preserves historical quotation audit trail</text>
+    </g>
+
+    <!-- suppliers -->
+    <g transform="translate(16, 324)">
+      <rect width="236" height="72" fill="#FAF6F3" stroke="#C7B2BC" stroke-width="1"/>
+      <text x="12" y="21" font-family="'JetBrains Mono', Consolas, monospace" font-size="11.5" font-weight="700" fill="#141115">suppliers</text>
+      <text x="12" y="39" font-family="sans-serif" font-size="11" fill="#58475C">Multi-wholesaler metadata &amp; VAT defaults</text>
+      <text x="12" y="55" font-family="sans-serif" font-size="10.5" fill="#6E1F42">ON DELETE RESTRICT with history</text>
+    </g>
+  </g>
+
+  <!-- Connector I -> II & III -->
+  <line x1="304" y1="205" x2="344" y2="205" stroke="#6E1F42" stroke-width="1.4" stroke-dasharray="4 3" marker-end="url(#qf-arrow)"/>
+  <line x1="304" y1="455" x2="344" y2="455" stroke="#6E1F42" stroke-width="1.4" stroke-dasharray="4 3" marker-end="url(#qf-arrow)"/>
+
+  <!-- DOMAIN II: CATALOGUE & STAGED INGESTION (Center Column) -->
+  <g transform="translate(348, 110)">
+    <rect width="360" height="412" fill="#FFFFFF" stroke="#854664" stroke-width="1.2"/>
+    <rect width="360" height="32" fill="#6E1F42"/>
+    <text x="14" y="20" font-family="'JetBrains Mono', Consolas, monospace" font-size="11" font-weight="600" fill="#FAF6F3">02 // CATALOGUE &amp; 5-TIER INGESTION</text>
+
+    <!-- catalogue_items -->
+    <g transform="translate(16, 48)">
+      <rect width="328" height="80" fill="#FAF6F3" stroke="#6E1F42" stroke-width="1.1"/>
+      <text x="12" y="20" font-family="'JetBrains Mono', Consolas, monospace" font-size="11.5" font-weight="700" fill="#141115">catalogue_items (Canonical SKU)</text>
+      <text x="12" y="38" font-family="sans-serif" font-size="11" fill="#2E2532">COLLATE "C" ASCII normalization &amp; CHECK invariant</text>
+      <text x="12" y="54" font-family="sans-serif" font-size="10.5" fill="#58475C">Preferred supplier baseline protected during imports</text>
+      <text x="12" y="70" font-family="'JetBrains Mono', Consolas, monospace" font-size="9.5" fill="#6E1F42">uq_catalogue_items_tenant_canonical_sku</text>
+    </g>
+
+    <!-- supplier_catalogue_items -->
+    <g transform="translate(16, 140)">
+      <rect width="328" height="64" fill="#FAF6F3" stroke="#C7B2BC" stroke-width="1"/>
+      <text x="12" y="20" font-family="'JetBrains Mono', Consolas, monospace" font-size="11.5" font-weight="700" fill="#141115">supplier_catalogue_items</text>
+      <text x="12" y="38" font-family="sans-serif" font-size="11" fill="#58475C">Maps wholesaler SKUs → canonical catalogue item</text>
+      <text x="12" y="54" font-family="sans-serif" font-size="10.5" fill="#6E1F42">Tracks latest_unit_cost_excl_tax per supplier</text>
+    </g>
+
+    <!-- import_batches + import_records -->
+    <g transform="translate(16, 216)">
+      <rect width="158" height="90" fill="#FAF6F3" stroke="#C7B2BC" stroke-width="1"/>
+      <text x="10" y="20" font-family="'JetBrains Mono', Consolas, monospace" font-size="11" font-weight="700" fill="#141115">import_batches</text>
+      <text x="10" y="38" font-family="sans-serif" font-size="10.5" fill="#58475C">Staged CSV/XLSX</text>
+      <text x="10" y="53" font-family="sans-serif" font-size="10.5" fill="#58475C">batch header, tax</text>
+      <text x="10" y="68" font-family="sans-serif" font-size="10.5" fill="#58475C">&amp; warning metrics</text>
+
+      <rect x="170" width="158" height="90" fill="#FAF6F3" stroke="#C7B2BC" stroke-width="1"/>
+      <text x="180" y="20" font-family="'JetBrains Mono', Consolas, monospace" font-size="11" font-weight="700" fill="#141115">import_records</text>
+      <text x="180" y="38" font-family="sans-serif" font-size="10.5" fill="#58475C">5-Tier matcher</text>
+      <text x="180" y="53" font-family="sans-serif" font-size="10.5" fill="#58475C">Duplicate SKU gate</text>
+      <text x="180" y="68" font-family="sans-serif" font-size="10.5" fill="#58475C">409 Conflict block</text>
+    </g>
+
+    <!-- supplier_price_snapshots -->
+    <g transform="translate(16, 318)">
+      <rect width="328" height="78" fill="#FBE4EE" stroke="#6E1F42" stroke-width="1"/>
+      <text x="12" y="20" font-family="'JetBrains Mono', Consolas, monospace" font-size="11.5" font-weight="700" fill="#4D122C">supplier_price_snapshots (Immutable)</text>
+      <text x="12" y="38" font-family="sans-serif" font-size="11" fill="#2E2532">Append-only audit cost ledger created on batch confirm.</text>
+      <text x="12" y="56" font-family="sans-serif" font-size="10.5" fill="#6E1F42">Preserves historical pricing across quotation revisions.</text>
+    </g>
+  </g>
+
+  <!-- Connector II -> III -->
+  <line x1="708" y1="358" x2="748" y2="358" stroke="#854664" stroke-width="1.4" stroke-dasharray="4 3" marker-end="url(#qf-arrow-muted)"/>
+
+  <!-- DOMAIN III: QUOTATION ENGINE & FINANCIAL LOCKS (Right Column) -->
+  <g transform="translate(752, 110)">
+    <rect width="332" height="412" fill="#FFFFFF" stroke="#854664" stroke-width="1.2"/>
+    <rect width="332" height="32" fill="#141115"/>
+    <text x="14" y="20" font-family="'JetBrains Mono', Consolas, monospace" font-size="11" font-weight="600" fill="#D6A9E8">03 // QUOTATION REVISION &amp; PRICING</text>
+
+    <!-- quotations -->
+    <g transform="translate(16, 48)">
+      <rect width="300" height="114" fill="#FAF6F3" stroke="#6E1F42" stroke-width="1.2"/>
+      <text x="12" y="21" font-family="'JetBrains Mono', Consolas, monospace" font-size="11.5" font-weight="700" fill="#141115">quotations (Acyclic Revision Tree)</text>
+      <text x="12" y="40" font-family="sans-serif" font-size="11" fill="#2E2532">• Self-referencing 4-col Composite FK lineage</text>
+      <text x="12" y="57" font-family="sans-serif" font-size="11" fill="#2E2532">• Partial UNIQUE index: ≤ 1 active draft/review</text>
+      <text x="12" y="74" font-family="sans-serif" font-size="11" fill="#2E2532">• SELECT … FOR UPDATE family lock on clone</text>
+      <text x="12" y="92" font-family="sans-serif" font-size="10.5" fill="#6E1F42">• Protects issued SENT quotes until replaced</text>
+    </g>
+
+    <!-- Arrow down -->
+    <line x1="166" y1="162" x2="166" y2="184" stroke="#6E1F42" stroke-width="1.4" marker-end="url(#qf-arrow)"/>
+
+    <!-- quotation_line_items -->
+    <g transform="translate(16, 186)">
+      <rect width="300" height="94" fill="#FAF6F3" stroke="#C7B2BC" stroke-width="1"/>
+      <text x="12" y="21" font-family="'JetBrains Mono', Consolas, monospace" font-size="11.5" font-weight="700" fill="#141115">quotation_line_items</text>
+      <text x="12" y="39" font-family="sans-serif" font-size="11" fill="#58475C">Freezes cost_snapshot &amp; source_price_snapshot_id</text>
+      <text x="12" y="56" font-family="sans-serif" font-size="11" fill="#58475C">Pydantic v2 ExactDecimal (strictly no floats)</text>
+      <text x="12" y="73" font-family="sans-serif" font-size="10.5" fill="#6E1F42">Explicit markup_pct / target_gross_margin modes</text>
+    </g>
+
+    <!-- Arrow down -->
+    <line x1="166" y1="280" x2="166" y2="302" stroke="#6E1F42" stroke-width="1.4" marker-end="url(#qf-arrow)"/>
+
+    <!-- quotation_financial_summaries -->
+    <g transform="translate(16, 304)">
+      <rect width="300" height="92" fill="#141115" stroke="#6E1F42" stroke-width="1.2"/>
+      <text x="12" y="22" font-family="'JetBrains Mono', Consolas, monospace" font-size="11.5" font-weight="700" fill="#F4B8D2">quotation_financial_summaries (1:1)</text>
+      <text x="12" y="42" font-family="sans-serif" font-size="11" fill="#FAF6F3">Authoritative materialized financial rollup:</text>
+      <text x="12" y="60" font-family="sans-serif" font-size="10.5" fill="#DFCFD7">materials, labour, overhead, net margin &amp; tax</text>
+      <text x="12" y="77" font-family="'JetBrains Mono', Consolas, monospace" font-size="9.5" fill="#D6A9E8">Verified: 179 Passing Unit + 18 PG16 Integration Tests</text>
+    </g>
+  </g>
+</svg>

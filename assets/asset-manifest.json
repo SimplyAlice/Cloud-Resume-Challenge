@@ -1,0 +1,139 @@
+{
+  "schemaVersion": "2.0.0",
+  "creativeDirection": "Soft Power: Organic Growth Meets Technical Architecture",
+  "palette": {
+    "warmIvory": "#FAF6F3",
+    "parchmentIvory": "#EAE0D5",
+    "powderPink": "#F4B8D2",
+    "dustyRose": "#C4839F",
+    "mutedMauve": "#854664",
+    "deepBerry": "#6E1F42",
+    "plumStudio": "#1C1118",
+    "obsidian": "#141115"
+  },
+  "videos": {
+    "originals": [
+      {
+        "id": "video1-original",
+        "sequenceOrder": 1,
+        "sourceFilename": "Flower_opening_with_architecture.mp4",
+        "path": "assets/video/originals/flower-opening-with-architecture.mp4",
+        "width": 1920,
+        "height": 1080,
+        "fps": 24,
+        "durationSeconds": 3.916667,
+        "frameCount": 94
+      },
+      {
+        "id": "video2-original",
+        "sequenceOrder": 2,
+        "sourceFilename": "Botanical_animation.mp4",
+        "path": "assets/video/originals/botanical-animation.mp4",
+        "width": 1920,
+        "height": 1080,
+        "fps": 24,
+        "durationSeconds": 9.958333,
+        "frameCount": 239
+      }
+    ],
+    "scrubDerivatives": [
+      { "id": "video1-scrub-1080p", "path": "assets/video/scrub/flower-opening-with-architecture-1080p.mp4", "width": 1920, "height": 1080, "fps": 24 },
+      { "id": "video1-scrub-720p", "path": "assets/video/scrub/flower-opening-with-architecture-720p.mp4", "width": 1280, "height": 720, "fps": 24 },
+      { "id": "video2-scrub-1080p", "path": "assets/video/scrub/botanical-animation-1080p.mp4", "width": 1920, "height": 1080, "fps": 24 },
+      { "id": "video2-scrub-720p", "path": "assets/video/scrub/botanical-animation-720p.mp4", "width": 1280, "height": 720, "fps": 24 }
+    ],
+    "posters": [
+      { "id": "v1-open-poster", "path": "assets/images/posters/v1-open.webp", "width": 1920, "height": 1080 },
+      { "id": "v1-close-poster", "path": "assets/images/posters/v1-close.webp", "width": 1920, "height": 1080 },
+      { "id": "v2-open-poster", "path": "assets/images/posters/v2-open.webp", "width": 1920, "height": 1080 },
+      { "id": "v2-close-poster", "path": "assets/images/posters/v2-close.webp", "width": 1920, "height": 1080 }
+    ]
+  },
+  "editorialImages": [
+    {
+      "id": "hero-peony-study",
+      "path": "assets/images/editorial/hero-peony-study.webp",
+      "width": 896,
+      "height": 1200,
+      "section": "Hero"
+    },
+    {
+      "id": "systems-botanical-plate",
+      "path": "assets/images/editorial/systems-botanical-plate.webp",
+      "width": 1376,
+      "height": 768,
+      "section": "Personal Identity & Philosophy"
+    },
+    {
+      "id": "plum-nocturne-peony",
+      "path": "assets/images/editorial/plum-nocturne-peony.webp",
+      "width": 1376,
+      "height": 768,
+      "section": "Contact & Nocturnal Closure"
+    }
+  ],
+  "projectMedia": {
+    "dayform": [
+      { "path": "assets/images/projects/dayform/dayform-walkthrough.gif", "width": 960, "height": 600 },
+      { "path": "assets/images/projects/dayform/dayform-walkthrough-poster.webp", "width": 960, "height": 600 },
+      { "path": "assets/images/projects/dayform/dayform-hero-ui.webp", "width": 1200, "height": 750 },
+      { "path": "assets/images/projects/dayform/dayform-composer-step.webp", "width": 1200, "height": 750 },
+      { "path": "assets/images/projects/dayform/dayform-story-ui.webp", "width": 1200, "height": 750 },
+      { "path": "assets/images/projects/dayform/dayform-itinerary-ui.webp", "width": 1200, "height": 750 },
+      { "path": "assets/images/projects/dayform/dayform-adaptation-ui.webp", "width": 1200, "height": 750 },
+      { "path": "assets/images/projects/dayform/dayform-capabilities-ui.webp", "width": 1200, "height": 750 },
+      { "path": "assets/images/projects/dayform/dayform-core-loop.svg", "viewBox": "0 0 1000 220" },
+      { "path": "assets/images/projects/dayform/dayform-architecture.svg", "viewBox": "0 0 1100 440" }
+    ],
+    "zazenMatcha": [
+      { "path": "assets/images/projects/zazen/zazen-storefront-flow.gif", "width": 960, "height": 600 },
+      { "path": "assets/images/projects/zazen/zazen-storefront-flow-poster.webp", "width": 960, "height": 600 },
+      { "path": "assets/images/projects/zazen/matcha-ritual.gif", "width": 480, "height": 300 },
+      { "path": "assets/images/projects/zazen/matcha-ritual-poster.webp", "width": 480, "height": 300 },
+      { "path": "assets/images/projects/zazen/storefront-desktop.webp", "width": 1200, "height": 750 },
+      { "path": "assets/images/projects/zazen/tea-filters.webp", "width": 1200, "height": 750 },
+      { "path": "assets/images/projects/zazen/product-detail.webp", "width": 1200, "height": 750 },
+      { "path": "assets/images/projects/zazen/shopping-cart.webp", "width": 1200, "height": 750 },
+      { "path": "assets/images/projects/zazen/checkout-summary.webp", "width": 1200, "height": 750 },
+      { "path": "assets/images/projects/zazen/order-confirmation.webp", "width": 1200, "height": 750 },
+      { "path": "assets/images/projects/zazen/admin-dashboard.webp", "width": 1200, "height": 750 },
+      { "path": "assets/images/projects/zazen/admin-product-edit.webp", "width": 1200, "height": 750 },
+      { "path": "assets/images/projects/zazen/admin-order-details.webp", "width": 1200, "height": 750 },
+      { "path": "assets/images/projects/zazen/storefront-mobile.webp", "width": 520, "height": 840 },
+      { "path": "assets/images/projects/zazen/whisked-matcha-bowl.webp", "width": 960, "height": 720 },
+      { "path": "assets/images/projects/zazen/matcha-starter-kit.webp", "width": 960, "height": 960 },
+      { "path": "assets/images/projects/zazen/mariadb-eerd.svg", "viewBox": "0 0 1150 980" }
+    ],
+    "quoteFlow": [
+      { "path": "assets/images/projects/quote-flow/quoteflow-pytest-run.gif", "width": 960, "height": 540 },
+      { "path": "assets/images/projects/quote-flow/quoteflow-pytest-poster.webp", "width": 960, "height": 540 },
+      { "path": "assets/images/projects/quote-flow/relational-schema.svg", "viewBox": "0 0 1120 560" }
+    ],
+    "careerConnect": [
+      { "path": "assets/images/projects/career-connect/app-walkthrough.gif", "width": 520, "height": 538 },
+      { "path": "assets/images/projects/career-connect/app-walkthrough-poster.webp", "width": 520, "height": 538 },
+      { "path": "assets/images/projects/career-connect/01-welcome.webp", "width": 840, "height": 871 },
+      { "path": "assets/images/projects/career-connect/02-login.webp", "width": 840, "height": 871 },
+      { "path": "assets/images/projects/career-connect/03-home-feed.webp", "width": 840, "height": 871 },
+      { "path": "assets/images/projects/career-connect/04-cybersecurity-filter.webp", "width": 840, "height": 871 },
+      { "path": "assets/images/projects/career-connect/05-remotive-jobs.webp", "width": 840, "height": 871 },
+      { "path": "assets/images/projects/career-connect/06-job-details.webp", "width": 840, "height": 871 },
+      { "path": "assets/images/projects/career-connect/07-applications-tracker.webp", "width": 840, "height": 871 },
+      { "path": "assets/images/projects/career-connect/08-system-notification.webp", "width": 840, "height": 871 },
+      { "path": "assets/images/projects/career-connect/09-cv-builder.webp", "width": 840, "height": 871 },
+      { "path": "assets/images/projects/career-connect/10-encrypted-profile.webp", "width": 840, "height": 871 },
+      { "path": "assets/images/projects/career-connect/11-logout-dialog.webp", "width": 840, "height": 957 },
+      { "path": "assets/images/projects/career-connect/career-connect-architecture.svg", "viewBox": "0 0 1100 440" }
+    ],
+    "cloudResumeChallenge": [
+      { "path": "assets/images/projects/crc/crc-v1-azure.webp", "width": 1200, "height": 750 },
+      { "path": "assets/images/screenshots/azure-storage-account.png", "width": 1917, "height": 910 },
+      { "path": "assets/images/screenshots/web-container.png", "width": 1917, "height": 912 },
+      { "path": "assets/images/screenshots/azure-function-app.png", "width": 1917, "height": 917 },
+      { "path": "assets/images/screenshots/azure-function.png", "width": 1917, "height": 907 },
+      { "path": "assets/images/screenshots/azure-table-storage.png", "width": 1917, "height": 917 },
+      { "path": "assets/images/screenshots/github-actions-static.png", "width": 1911, "height": 901 },
+      { "path": "assets/images/screenshots/github-actions-function-success.png", "width": 1905, "height": 906 }
+    ]
+  }
+}

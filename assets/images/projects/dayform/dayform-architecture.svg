@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 440" width="1100" height="440" role="img" aria-labelledby="df-arch-title df-arch-desc">
+  <title id="df-arch-title">Dayform System Architecture and Deployment Boundaries</title>
+  <desc id="df-arch-desc">Architectural diagram of Dayform: Live React and TypeScript SPA hosted on Vercel, connecting to a FastAPI domain planning API currently under asyncpg SSL/TLS and Neon PgBouncer pooler remediation on Render, plus Redis cache, OpenStreetMap Overpass, and Open-Meteo adapters.</desc>
+  <defs>
+    <pattern id="df-grid" width="28" height="28" patternUnits="userSpaceOnUse">
+      <path d="M 28 0 L 0 0 0 28" fill="none" stroke="#E5D8DE" stroke-width="0.65"/>
+    </pattern>
+    <marker id="df-arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#6E1F42"/>
+    </marker>
+    <marker id="df-arrow-warn" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#854664"/>
+    </marker>
+  </defs>
+
+  <rect width="1100" height="440" fill="#FAF6F3"/>
+  <rect width="1100" height="440" fill="url(#df-grid)"/>
+  <rect x="14" y="14" width="1072" height="412" fill="none" stroke="#854664" stroke-width="1"/>
+
+  <text x="36" y="44" font-family="'JetBrains Mono', Consolas, monospace" font-size="11" font-weight="600" letter-spacing="1.6" fill="#6E1F42">ARCHITECTURAL PLATE 01 // DAYFORM CLEAN ARCHITECTURE &amp; OPS STATUS</text>
+  <text x="1064" y="44" text-anchor="end" font-family="'JetBrains Mono', Consolas, monospace" font-size="10.5" fill="#58475C">98 PYTEST MODULES · 4 VITEST SUITES</text>
+  <line x1="36" y1="58" x2="1064" y2="58" stroke="#C7B2BC" stroke-width="1"/>
+
+  <!-- TIER 1: VERCEL LIVE FRONTEND -->
+  <g transform="translate(36, 76)">
+    <rect width="1028" height="68" fill="#FFFFFF" stroke="#6E1F42" stroke-width="1.3"/>
+    <rect width="14" height="68" fill="#1F5E3B"/>
+    <text x="30" y="25" font-family="'JetBrains Mono', Consolas, monospace" font-size="10.5" font-weight="700" fill="#1F5E3B">PRODUCTION LIVE (VERCEL EDGE) // CLIENT PRESENTATION TIER</text>
+    <text x="30" y="49" font-family="sans-serif" font-size="14" font-weight="700" fill="#141115">React + TypeScript SPA (dayform-live.vercel.app) · Interactive Itinerary Stage · RFC-5545 .ics Calendar Export</text>
+  </g>
+
+  <line x1="550" y1="144" x2="550" y2="170" stroke="#854664" stroke-width="1.6" stroke-dasharray="4 3" marker-end="url(#df-arrow-warn)"/>
+
+  <!-- TIER 2: FASTAPI ON RENDER -->
+  <g transform="translate(36, 174)">
+    <rect width="1028" height="70" fill="#FFFFFF" stroke="#854664" stroke-width="1.3"/>
+    <rect width="14" height="70" fill="#854664"/>
+    <text x="30" y="25" font-family="'JetBrains Mono', Consolas, monospace" font-size="10.5" font-weight="700" fill="#6E1F42">ACTIVE REMEDIATION (RENDER API) // FASTAPI RUNTIME LAYER</text>
+    <text x="30" y="49" font-family="sans-serif" font-size="13.5" font-weight="700" fill="#141115">Python 3.12+ FastAPI (`/api/v1/auth`, `/planning/requests`, `/planning/adapt`) · Cold-Start DB Handshake Remediation</text>
+  </g>
+
+  <line x1="550" y1="244" x2="550" y2="270" stroke="#6E1F42" stroke-width="1.5" marker-end="url(#df-arrow)"/>
+
+  <!-- TIER 3: 4 DOMAIN BOUNDARIES -->
+  <g transform="translate(36, 274)">
+    <g transform="translate(0, 0)">
+      <rect width="242" height="72" fill="#FFFFFF" stroke="#C7B2BC" stroke-width="1"/>
+      <text x="14" y="24" font-family="'JetBrains Mono', Consolas, monospace" font-size="10.5" font-weight="700" fill="#6E1F42">01 · PLANNING DOMAIN</text>
+      <text x="14" y="44" font-family="sans-serif" font-size="11.5" fill="#2E2532">Natural-language constraint &amp;</text>
+      <text x="14" y="60" font-family="sans-serif" font-size="11.5" fill="#2E2532">budget headroom invariants</text>
+    </g>
+    <g transform="translate(262, 0)">
+      <rect width="242" height="72" fill="#FFFFFF" stroke="#C7B2BC" stroke-width="1"/>
+      <text x="14" y="24" font-family="'JetBrains Mono', Consolas, monospace" font-size="10.5" font-weight="700" fill="#6E1F42">02 · MOBILITY &amp; TRANSIT</text>
+      <text x="14" y="44" font-family="sans-serif" font-size="11.5" fill="#2E2532">Paced Cape Town travel buffers</text>
+      <text x="14" y="60" font-family="sans-serif" font-size="11.5" fill="#2E2532">&amp; non-destructive schedule diffs</text>
+    </g>
+    <g transform="translate(524, 0)">
+      <rect width="242" height="72" fill="#FFFFFF" stroke="#C7B2BC" stroke-width="1"/>
+      <text x="14" y="24" font-family="'JetBrains Mono', Consolas, monospace" font-size="10.5" font-weight="700" fill="#6E1F42">03 · EXTERNAL ADAPTERS</text>
+      <text x="14" y="44" font-family="sans-serif" font-size="11.5" fill="#2E2532">OpenStreetMap Overpass API</text>
+      <text x="14" y="60" font-family="sans-serif" font-size="11.5" fill="#2E2532">&amp; Open-Meteo rainfall forecasts</text>
+    </g>
+    <g transform="translate(786, 0)">
+      <rect width="242" height="72" fill="#141115" stroke="#6E1F42" stroke-width="1.2"/>
+      <text x="14" y="24" font-family="'JetBrains Mono', Consolas, monospace" font-size="10.5" font-weight="700" fill="#F4B8D2">04 · PERSISTENCE &amp; POOLING</text>
+      <text x="14" y="44" font-family="sans-serif" font-size="11" fill="#FAF6F3">SQLAlchemy 2.0 (asyncpg) + Redis</text>
+      <text x="14" y="60" font-family="sans-serif" font-size="11" fill="#D6A9E8">Fix: Neon -pooler SSL &amp; statement cache</text>
+    </g>
+  </g>
+
+  <!-- FOOTER BAR -->
+  <text x="36" y="392" font-family="'JetBrains Mono', Consolas, monospace" font-size="10.5" fill="#58475C">CURRENT REMEDIATION TARGET: backend/app/core/config.py &amp; session.py → disable asyncpg prepared-statement cache for PgBouncer transaction pooling</text>
+</svg>

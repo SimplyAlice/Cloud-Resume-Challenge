@@ -1,17 +1,26 @@
 {
   "name": "cloud-resume-challenge",
-  "version": "1.0.0",
-  "description": "A personal portfolio hosted on Vercel with a serverless visitor API backed by Neon PostgreSQL.",
+  "version": "1.1.0",
+  "description": "Editorial software engineering and cloud operations portfolio for Alice Matarise, hosted on Vercel with a serverless visitor API backed by Neon PostgreSQL.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node --test tests/portfolio.test.js",
+    "check": "node --check assets/js/script.js && node --check api/visitors.js && node --check tests/portfolio.test.js",
+    "verify": "npm run check && npm test"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/SimplyAlice/Cloud-Resume-Challenge.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "cloud-resume-challenge",
+    "portfolio",
+    "cloud-engineering",
+    "software-engineering",
+    "vercel",
+    "neon-postgresql"
+  ],
+  "author": "Alice Matarise",
   "license": "ISC",
   "type": "commonjs",
   "bugs": {

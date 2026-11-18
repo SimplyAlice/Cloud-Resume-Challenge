@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 440" width="1100" height="440" role="img" aria-labelledby="cc-arch-title cc-arch-desc">
+  <title id="cc-arch-title">Career Connect Android Client, Cloud Firestore and Cryptography Architecture</title>
+  <desc id="cc-arch-desc">System architecture diagram for Career Connect: 11 Kotlin Android Activities, Retrofit 2 integration with the public Remotive REST API, hardware-backed AndroidKeyStore AES-256-GCM encryption for local profile storage, Cloud Firestore composite-key tracking under firestore.rules, and scope boundary notes.</desc>
+  <defs>
+    <pattern id="cc-grid" width="28" height="28" patternUnits="userSpaceOnUse">
+      <path d="M 28 0 L 0 0 0 28" fill="none" stroke="#E5D8DE" stroke-width="0.65"/>
+    </pattern>
+    <marker id="cc-arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#6E1F42"/>
+    </marker>
+  </defs>
+
+  <rect width="1100" height="440" fill="#FAF6F3"/>
+  <rect width="1100" height="440" fill="url(#cc-grid)"/>
+  <rect x="14" y="14" width="1072" height="412" fill="none" stroke="#854664" stroke-width="1"/>
+
+  <text x="36" y="44" font-family="'JetBrains Mono', Consolas, monospace" font-size="11" font-weight="600" letter-spacing="1.6" fill="#6E1F42">ARCHITECTURAL PLATE 04 // CAREER CONNECT MOBILE &amp; FIREBASE TOPOLOGY</text>
+  <text x="1064" y="44" text-anchor="end" font-family="'JetBrains Mono', Consolas, monospace" font-size="10.5" fill="#58475C">KOTLIN · API 24–37 · 26 JUNIT 4 TESTS</text>
+  <line x1="36" y1="58" x2="1064" y2="58" stroke="#C7B2BC" stroke-width="1"/>
+
+  <!-- ZONE 1: KOTLIN CLIENT -->
+  <g transform="translate(36, 78)">
+    <rect width="530" height="328" fill="#FFFFFF" stroke="#854664" stroke-width="1.2"/>
+    <rect width="530" height="32" fill="#141115"/>
+    <text x="14" y="20" font-family="'JetBrains Mono', Consolas, monospace" font-size="11" font-weight="600" fill="#F4B8D2">01 // NATIVE ANDROID CLIENT (11 KOTLIN ACTIVITIES + XML)</text>
+
+    <rect x="18" y="48" width="494" height="72" fill="#FAF6F3" stroke="#C7B2BC"/>
+    <text x="30" y="68" font-family="'JetBrains Mono', Consolas, monospace" font-size="10.5" font-weight="700" fill="#6E1F42">UI &amp; GRADUATE DISCOVERY FLOW</text>
+    <text x="30" y="88" font-family="sans-serif" font-size="11.5" fill="#2E2532">Welcome → Login → MainActivity Feed → JobDetails → ApplicationsTracker</text>
+    <text x="30" y="106" font-family="sans-serif" font-size="11" fill="#58475C">Curated 12-item SA dataset in JobRepository + Remotive classification tiers</text>
+
+    <rect x="18" y="132" width="494" height="82" fill="#FAF6F3" stroke="#C7B2BC"/>
+    <text x="30" y="152" font-family="'JetBrains Mono', Consolas, monospace" font-size="10.5" font-weight="700" fill="#6E1F42">DOMAIN LOGIC &amp; STATE VALIDATION (JUNIT 4 TESTED)</text>
+    <text x="30" y="172" font-family="sans-serif" font-size="11.5" fill="#2E2532">StatusRules.kt: application transition guard &amp; 14-day stale PENDING auto-archival</text>
+    <text x="30" y="190" font-family="sans-serif" font-size="11" fill="#58475C">StatusNotifier.kt: foreground Firestore addSnapshotListener status updates</text>
+    <text x="30" y="206" font-family="sans-serif" font-size="10.5" fill="#6E1F42">NotificationActivity.kt remains static informational view (FCM background planned)</text>
+
+    <rect x="18" y="226" width="494" height="84" fill="#FBE4EE" stroke="#6E1F42" stroke-width="1.1"/>
+    <text x="30" y="247" font-family="'JetBrains Mono', Consolas, monospace" font-size="10.5" font-weight="700" fill="#4D122C">ON-DEVICE CRYPTOGRAPHY (ProfileActivity &amp; CVBuilderActivity)</text>
+    <text x="30" y="267" font-family="sans-serif" font-size="11.5" fill="#141115">Hardware-backed AndroidKeyStore AES-256-GCM (`AES/GCM/NoPadding`, 128-bit tag)</text>
+    <text x="30" y="285" font-family="sans-serif" font-size="11" fill="#2E2532">Encrypts personal &amp; CV fields in SharedPreferences · CV shares text via Intent.ACTION_SEND</text>
+  </g>
+
+  <!-- CONNECTORS -->
+  <line x1="566" y1="158" x2="612" y2="158" stroke="#6E1F42" stroke-width="1.5" marker-end="url(#cc-arrow)"/>
+  <line x1="566" y1="306" x2="612" y2="306" stroke="#6E1F42" stroke-width="1.5" marker-end="url(#cc-arrow)"/>
+
+  <!-- ZONE 2: FIREBASE -->
+  <g transform="translate(616, 78)">
+    <rect width="448" height="164" fill="#FFFFFF" stroke="#6E1F42" stroke-width="1.2"/>
+    <rect width="448" height="32" fill="#6E1F42"/>
+    <text x="14" y="20" font-family="'JetBrains Mono', Consolas, monospace" font-size="11" font-weight="600" fill="#FAF6F3">02 // FIREBASE AUTHENTICATION &amp; CLOUD FIRESTORE</text>
+    <text x="18" y="54" font-family="sans-serif" font-size="12.5" font-weight="700" fill="#141115">Direct Prototype Backend (standalone backend/ is .gitkeep only)</text>
+    <text x="18" y="76" font-family="sans-serif" font-size="11.5" fill="#2E2532">• Firebase Auth manages student login &amp; UID identity binding</text>
+    <text x="18" y="96" font-family="sans-serif" font-size="11.5" fill="#2E2532">• Composite Firestore document key: ${uid}_${jobId}</text>
+    <text x="18" y="116" font-family="sans-serif" font-size="11.5" fill="#2E2532">• Declarative `firestore.rules` enforce owner-scoped read/write</text>
+    <text x="18" y="136" font-family="'JetBrains Mono', Consolas, monospace" font-size="10" fill="#6E1F42">Client-side deletion strictly denied (`allow delete: if false`)</text>
+  </g>
+
+  <!-- ZONE 3: REMOTIVE API -->
+  <g transform="translate(616, 258)">
+    <rect width="448" height="148" fill="#FFFFFF" stroke="#854664" stroke-width="1.2"/>
+    <rect width="448" height="32" fill="#141115"/>
+    <text x="14" y="20" font-family="'JetBrains Mono', Consolas, monospace" font-size="11" font-weight="600" fill="#D6A9E8">03 // EXTERNAL JOBS API (RETROFIT 2 + GSON)</text>
+    <text x="18" y="56" font-family="sans-serif" font-size="12.5" font-weight="700" fill="#141115">JobApi.kt → GET https://remotive.com/api/remote-jobs</text>
+    <text x="18" y="78" font-family="sans-serif" font-size="11.5" fill="#2E2532">• Live remote job feed delayed 24h by Remotive public API</text>
+    <text x="18" y="98" font-family="sans-serif" font-size="11.5" fill="#2E2532">• Filters out geographic exclusions &amp; ranks SA-eligible roles first</text>
+    <text x="18" y="122" font-family="'JetBrains Mono', Consolas, monospace" font-size="10" fill="#58475C">6-Person Agile Academic Prototype (Eduvos)</text>
+  </g>
+</svg>

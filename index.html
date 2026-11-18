@@ -3,1134 +3,1468 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Alice Matarise is a final-year BSc Information Technology (Software Engineering) student seeking early-career opportunities in cloud support, cloud engineering, and technical operations.">
-    <title>Alice Matarise | Aspiring Cloud Engineer</title>
-    <link 
-    rel="stylesheet" 
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Alice Matarise — Software Engineering &amp; Cloud Operations Portfolio</title>
+    <meta name="description" content="Portfolio of Alice Matarise — Software Engineering student at Eduvos (Cape Town), Aspiring Cloud Engineer, and Technical Problem Solver building full-stack systems, deterministic Python/FastAPI and PHP 8 backends, and serverless cloud infrastructure.">
+    <meta name="author" content="Alice Matarise">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#FAF6F3">
+    <link rel="canonical" href="https://cloud-resume-challenge-six.vercel.app/">
+
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Alice Matarise — Engineering Portfolio">
+    <meta property="og:title" content="Alice Matarise | Software Engineering Student · Aspiring Cloud Engineer">
+    <meta property="og:description" content="Software Engineering student (Eduvos, Cape Town) building full-stack systems, deterministic Python/FastAPI &amp; PHP backends, and serverless cloud infrastructure across AWS, Azure, Vercel, and PostgreSQL.">
+    <meta property="og:url" content="https://cloud-resume-challenge-six.vercel.app/">
+    <meta property="og:locale" content="en_ZA">
+
+    <!-- Twitter / X Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Alice Matarise | Software Engineering &amp; Cloud Operations">
+    <meta name="twitter:description" content="Editorial engineering portfolio showcasing Dayform, Zazen Matcha &amp; Tea Co., Quote_Flow, Career Connect, and the Cloud Resume Challenge architecture.">
+
+    <!-- Inline SVG Favicon (Soft Power Monogram) -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%231C1118'/%3E%3Crect x='3' y='3' width='58' height='58' rx='6' fill='none' stroke='%23F4B8D2' stroke-width='1.5' stroke-opacity='0.45'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' fill='%23F4B8D2' font-family='Georgia, serif' font-size='26' font-weight='600' letter-spacing='1'%3EAM%3C/text%3E%3C/svg%3E">
+
+    <!-- Typography: Cormorant Garamond (Display), Plus Jakarta Sans (Body), JetBrains Mono (Technical) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&amp;family=JetBrains+Mono:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="assets/css/styles.css">
+
+    <!-- Structured Data (Schema.org Person & ProfilePage) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfilePage",
+      "url": "https://cloud-resume-challenge-six.vercel.app/",
+      "name": "Alice Matarise — Software Engineering & Cloud Operations Portfolio",
+      "mainEntity": {
+        "@type": "Person",
+        "name": "Alice Matarise",
+        "jobTitle": "Software Engineering Student | Aspiring Cloud Engineer | Technical Problem Solver",
+        "email": "mailto:Minervamatarise@gmail.com",
+        "url": "https://cloud-resume-challenge-six.vercel.app/",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Cape Town",
+          "addressRegion": "Western Cape",
+          "addressCountry": "ZA"
+        },
+        "alumniOf": {
+          "@type": "CollegeOrUniversity",
+          "name": "Eduvos",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Cape Town",
+            "addressCountry": "ZA"
+          }
+        },
+        "knowsAbout": [
+          "Cloud Computing",
+          "Amazon Web Services (S3, EC2)",
+          "Microsoft Azure (Storage, Functions, DNS, CDN, RBAC)",
+          "Software Engineering",
+          "Python",
+          "FastAPI",
+          "TypeScript",
+          "PostgreSQL",
+          "SQLAlchemy",
+          "Alembic",
+          "PHP 8",
+          "MariaDB",
+          "Docker",
+          "GitHub Actions CI/CD",
+          "PowerShell",
+          "Kotlin Android Development"
+        ],
+        "sameAs": [
+          "https://github.com/SimplyAlice",
+          "https://www.linkedin.com/in/alice-matarise-778bb6374/"
+        ]
+      }
+    }
+    </script>
 </head>
 <body>
-    <!-- FLOATING CLOUD PARTICLES -->
+    <a href="#main-heading" class="skip-link visually-hidden">Skip to main content</a>
 
-    <div class="floating-particles">
+    <div id="progress-bar" aria-hidden="true"></div>
 
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-
-    </div>
-
-    <div id="progress-bar"></div>
-
-    <div class="cursor-glow"></div>
-
-    <div id="mouse-trail"></div>
-
-    <div class="aurora">
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
-
-    <!-- ================= NAVIGATION ================= -->
-
-    <nav class="navbar" aria-label="Primary navigation">
-
-        <div class="logo">
-            <span class="logo-circle">AM</span>
-            <span class="logo-name">Alice Matarise</span>
-        </div>
-
-        <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#certifications">Certifications</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-
-    </nav>
-
-
-
-<!-- ================= HERO ================= -->
-
-<header class="hero">
-
-    <div class="hero-container">
-
-
-        <!-- LEFT SIDE -->
-
-        <div class="hero-content">
-
-
-            <div class="status-badge">
-
-                ☁ Building cloud skills with Azure & AWS
-
-            </div>
-
-
-            <h1>
-                Alice Matarise
-            </h1>
-
-
-            <h2>
-                Aspiring Cloud Engineer
-            </h2>
-
-
-            <p>
-
-                BSc Information Technology (Software Engineering) student
-                building toward a career in cloud engineering and technical operations.
-                Seeking early-career opportunities in cloud support, cloud engineering,
-                and technical operations.
-
-            </p>
-
-
-            <div class="tech-focus">
-
-                <span>☁ Azure & AWS</span>
-
-                <span>🐍 Python</span>
-
-                <span>⚙ Automation</span>
-
-                <span>🚀 Cloud Infrastructure</span>
-
-            </div>
-
-
-
-<!-- HERO HIGHLIGHTS -->
-
-    <div class="hero-highlights">
-
-        <div class="highlight-card">
-            <h3>AZ-900</h3>
-            <p>Preparing</p>
-        </div>
-
-        <div class="highlight-card">
-            <h3>🎓</h3>
-            <p>Final Year Software Engineering</p>
-        </div>
-
-        <div class="highlight-card">
-            <h3>Eduvos</h3>
-            <p>BSc IT: Software Engineering</p>
-        </div>
-
-    </div>
-
-
-            <div class="hero-buttons">
-
-
-                <a href="https://github.com/SimplyAlice"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="btn-primary">
-
-                    View GitHub
-
+    <!-- ================= COMPACT LIGHT EDITORIAL HEADER ================= -->
+    <header class="site-header">
+        <div class="masthead-bar" aria-label="Location and serverless visitor status">
+            <div class="container masthead-bar-inner">
+                <span class="masthead-note">CAPE TOWN, ZA · SAST <strong id="local-time">--:--:--</strong></span>
+                <a href="#architecture" class="masthead-api-pill">
+                    <span class="telemetry-dot" aria-hidden="true"></span>
+                    <span>CRC API Visits</span>
+                    <strong id="hero-visitors">Loading…</strong>
                 </a>
-
-
-                <a href="#projects"
-                class="btn-secondary">
-
-                    View Projects
-
-                </a>
-
-
-            </div>
-
-
-        </div>
-
-
-        <!-- RIGHT SIDE CLOUD DASHBOARD -->
-
-        <div class="cloud-dashboard">
-            <div class="dashboard-header">
-                Portfolio Infrastructure
-            </div>
-
-            <div class="dashboard-item">
-                <span class="status-dot"></span>
-                Vercel
-                <strong>Hosting</strong>
-            </div>
-
-            <div class="dashboard-item">
-                <span class="status-dot"></span>
-                Visitor API
-                <strong>Live route</strong>
-            </div>
-
-            <div class="dashboard-item">
-                <span class="status-dot"></span>
-                Neon PostgreSQL
-                <strong>Persistence</strong>
-            </div>
-
-            <div class="dashboard-item">
-                <span class="status-dot"></span>
-                GitHub
-                <strong>Source control</strong>
-            </div>
-
-            <div class="dashboard-footer">
-                Visitor Count:
-                <strong id="hero-visitors">Loading...</strong>
             </div>
         </div>
 
-</header>
-<!-- ================= FLOATING LOCAL TIME ================= -->
+        <div class="container navbar">
+            <a href="#" class="brand-lockup" aria-label="Alice Matarise — Return to top">
+                <span class="brand-monogram" aria-hidden="true">AM</span>
+                <span class="brand-text">
+                    <span class="brand-name">Alice Matarise</span>
+                    <span class="brand-sub">Software &amp; Cloud Engineering</span>
+                </span>
+            </a>
 
-<div class="floating-time-widget">
+            <nav class="site-nav" aria-label="Primary">
+                <button
+                    type="button"
+                    class="nav-toggle"
+                    id="nav-toggle"
+                    aria-expanded="false"
+                    aria-controls="primary-nav-list"
+                >
+                    <span class="nav-toggle-label">Menu</span>
+                    <span class="nav-toggle-bars" aria-hidden="true"></span>
+                </button>
 
-    <div class="time-icon">
-        <i class="fa-regular fa-clock"></i>
-    </div>
-
-    <div class="time-info">
-
-        <span class="time-label">
-            CAPE TOWN
-        </span>
-
-        <strong id="local-time">
-            Loading...
-        </strong>
-
-        <span class="time-zone">
-            South Africa · SAST
-        </span>
-
-    </div>
-
-</div>
-    <!-- ================= MAIN ================= -->
-
-<main>
-
-        <!-- About -->
-
-<section id="about" class="reveal">
-
-    <h2>About Me</h2>
-
-
-    <div class="about-card">
-
-        <p>
-            I'm <strong>Alice Matarise</strong>, a final-year BSc Information
-            Technology (Software Engineering) student at Eduvos, expected to
-            graduate in May 2027.
-        </p>
-
-        <p>
-            I combine a software engineering foundation with hands-on work in
-            cloud services, software development, APIs, databases, and deployment.
-            My projects include a full-stack outing planner and a serverless portfolio.
-        </p>
-
-        <p>
-            I'm seeking early-career opportunities in cloud support, cloud
-            engineering, and technical operations. I am preparing for Microsoft
-            Azure Fundamentals (AZ-900) and have completed AWS Skills Center
-            cloud fundamentals classroom training.
-        </p>
-
-    </div>
-
-</section>
-
-        <!-- Professional Experience -->
-
-        <section id="experience" class="reveal">
-
-            <h2>Professional Experience</h2>
-
-            <p class="section-description">
-                Customer-facing, operational and administrative experience developed
-                alongside my software engineering studies.
-            </p>
-
-            <div class="timeline experience-timeline">
-
-                <div class="timeline-item">
-                    <span class="timeline-dot" aria-hidden="true"></span>
-                    <article class="timeline-card experience-card">
-                        <span class="experience-date">
-                            <time datetime="2022-09">September 2022</time> – Present
-                        </span>
-                        <h3>Events Steward</h3>
-                        <p class="experience-employer">Ignite Events · Cape Town</p>
-                        <ul>
-                            <li>Coordinate fast-paced event workflows, manage competing priorities and adapt to changing requirements.</li>
-                            <li>Collaborate with teams to support smooth event operations and delivery.</li>
-                        </ul>
-                    </article>
-                </div>
-
-                <div class="timeline-item">
-                    <span class="timeline-dot" aria-hidden="true"></span>
-                    <article class="timeline-card experience-card">
-                        <h3>Marketing &amp; Advertising Assistant</h3>
-                        <p class="experience-employer">The Drain Surgeon Cape Town Central · Cape Town</p>
-                        <ul>
-                            <li>Coordinate with clients and partners while supporting delivery of marketing services.</li>
-                            <li>Work independently to resolve day-to-day operational challenges.</li>
-                        </ul>
-                    </article>
-                </div>
-
-                <div class="timeline-item">
-                    <span class="timeline-dot" aria-hidden="true"></span>
-                    <article class="timeline-card experience-card">
-                        <span class="experience-date">
-                            <time datetime="2022-03">March 2022</time> –
-                            <time datetime="2024-07">July 2024</time>
-                        </span>
-                        <h3>Administrative Assistant</h3>
-                        <p class="experience-employer">Capriccio Arts Powered Pre-school · Cape Town</p>
-                        <p>Provided administrative support at the pre-school.</p>
-                    </article>
-                </div>
-
-            </div>
-
-        </section>
-
-        <!-- Skills -->
-
-        <section id="skills" class="reveal">
-
-            <h2>Technical Skills</h2>
-
-            <div class="skills-grid">
-
-                <div class="skill-card">
-                <h3>☁ Cloud & Infrastructure</h3>
-
-                    <ul>
-                        <li>Microsoft Azure</li>
-                        <li>Azure Functions</li>
-                        <li>Azure Storage</li>
-                        <li>Vercel</li>
-                        <li>Neon PostgreSQL</li>
-                        <li>Serverless Architecture</li>
-                        <li>GitHub Actions &amp; CI/CD</li>
-                    </ul>
-                </div>
-
-                <div class="skill-card">
-                    <h3>💻 Programming</h3>
-                    <ul>
-                        <li>Python</li>
-                        <li>TypeScript</li>
-                        <li>JavaScript</li>
-                        <li>React</li>
-                        <li>Kotlin</li>
-                        <li>FastAPI &amp; REST APIs</li>
-                        <li>HTML5</li>
-                        <li>CSS3</li>
-                    </ul>
-                </div>
-
-                <div class="skill-card">
-                    <h3>🗄 Data &amp; Tools</h3>
-                    <ul>
-                        <li>PostgreSQL &amp; MySQL</li>
-                        <li>SQL &amp; Database Design</li>
-                        <li>Git</li>
-                        <li>GitHub</li>
-                        <li>Visual Studio Code</li>
-                        <li>Android Studio &amp; XML</li>
-                        <li>Troubleshooting</li>
-                        <li>Systems Analysis</li>
-                    </ul>
-                </div>
-
-            </div>
-            
-        </section>
-<!-- ================= CLOUD ARCHITECTURE ================= -->
-
-        <section id="architecture" class="reveal">
-            <h2>Cloud Architecture</h2>
-
-        <p class="section-description">
-            This portfolio uses a small serverless flow: the browser loads the site from Vercel,
-            then requests the visitor count, which persists it in Neon PostgreSQL.
-        </p>
-
-        <div class="architecture-flow">
-
-            <div class="architecture-card">
-                <div class="architecture-icon">
-                    <i class="fa-solid fa-user"></i>
-                </div>
-
-                <h3>Visitor</h3>
-
-                <p>
-                    Opens the portfolio
-                </p>
-
-                <div class="architecture-info">
-                    The browser loads the static portfolio and requests the visitor count.
-                </div>
-            </div>
-
-            <div class="architecture-arrow">
-                <span></span>
-            </div>
-
-            <div class="architecture-card">
-                <div class="architecture-icon">
-                    <i class="fa-solid fa-cloud"></i>
-                </div>
-
-                <h3>Vercel</h3>
-
-                <p>
-                    Hosts the frontend
-                </p>
-
-                <div class="architecture-info">
-                    Vercel serves the HTML, CSS, JavaScript, and serverless API route.
-                </div>
-            </div>
-
-            <div class="architecture-arrow">
-                <span></span>
-            </div>
-
-            <div class="architecture-card">
-                <div class="architecture-icon">
-                    <i class="fa-solid fa-bolt"></i>
-                </div>
-
-                <h3>Visitor API</h3>
-
-                <p>
-                    Updates the count
-                </p>
-
-                <div class="architecture-info">
-                    <code>/api/visitors</code> increments the counter and returns the new value as JSON.
-                </div>
-            </div>
-
-            <div class="architecture-arrow">
-                <span></span>
-            </div>
-
-            <div class="architecture-card">
-                <div class="architecture-icon">
-                    <i class="fa-solid fa-database"></i>
-                </div>
-
-                <h3>Neon PostgreSQL</h3>
-
-                <p>
-                    Persists the count
-                </p>
-
-                <div class="architecture-info">
-                    Neon PostgreSQL stores the single visitor counter between requests.
-                </div>
-            </div>
-
+                <ul id="primary-nav-list" class="nav-links" role="list">
+                    <li><a href="#about">Identity</a></li>
+                    <li><a href="#video-one">Study I</a></li>
+                    <li><a href="#projects">Selected Works</a></li>
+                    <li><a href="#video-two">Study II</a></li>
+                    <li><a href="#systems">Backend &amp; Mobile</a></li>
+                    <li><a href="#cloud-devops">Cloud &amp; Ops</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#architecture">CRC</a></li>
+                    <li><a href="#contact" class="nav-cta">Contact</a></li>
+                </ul>
+            </nav>
         </div>
-       
-
-        </section>
-
-
-
-
-       <!-- ================= PROJECTS ================= -->
-
-        <section id="projects" class="reveal">
-
-        <h2>
-            Featured Projects
-        </h2>
-
-        <div class="projects-grid">
-
-            <!-- Dayform -->
-
-            <article class="project-card">
-
-                <h3>
-                    🗓 Dayform
-                </h3>
-
-                <p>
-                    <strong>Problem:</strong> Planning a Cape Town outing means checking venues, hours, travel and costs across separate sources.
-                </p>
-
-                <p>
-                    <strong>Solution:</strong> Dayform turns a natural-language request into a timed outing plan, bringing together real places, travel buffers and a budget-aware itinerary that can be adjusted when plans change.
-                </p>
-
-                <p>
-                    <strong>My contribution:</strong> I developed and shipped the full-stack application, building the Python/FastAPI backend and PostgreSQL persistence as well as the React/TypeScript frontend.
-                </p>
-
-                <p>
-                    <strong>Implementation:</strong> The frontend sends natural-language planning requests to <code>POST /api/v1/planning/requests</code>. The backend integrates venue and transport data; OpenStreetMap/Overpass supplies venue information, while PostgreSQL-backed plan storage supports persistence.
-                </p>
-
-                <p>
-                    <strong>Engineering decisions:</strong> The planning logic applies explicit rules for opening hours, stop timing, travel buffers and budget limits. Replanning can preserve stops that do not need to change.
-                </p>
-
-                <p>
-                    <strong>Outcome:</strong> The live Vercel demo presents the interactive planning flow, itinerary review and replanning controls.
-                </p>
-
-                <div class="tech-stack">
-                    <span>TypeScript</span>
-                    <span>React</span>
-                    <span>Python</span>
-                    <span>FastAPI</span>
-                    <span>PostgreSQL</span>
-                    <span>Vercel</span>
-                    <span>OpenStreetMap</span>
-                    <span>Open-Meteo</span>
-                </div>
-
-                <div class="project-links">
-
-                    <a href="https://dayform-live.vercel.app"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="btn-primary">
-                        Live Demo
-                    </a>
-
-                    <a href="https://github.com/SimplyAlice/dayform"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="btn-secondary">
-                        GitHub
-                    </a>
-
-                </div>
-
-            </article>
-
-            <!-- Cloud Resume Challenge -->
-
-            <article class="project-card">
-
-                <h3>☁ Cloud Resume Challenge</h3>
-
-                <p>
-                    <strong>Problem:</strong> A visitor count should persist across visits rather than exist only in the browser.
-                </p>
-
-                <p>
-                    <strong>Architecture:</strong> Visitor → Vercel-hosted portfolio → serverless <code>/api/visitors</code> endpoint → Neon PostgreSQL.
-                </p>
-
-                <p>
-                    <strong>Cloud learning:</strong> The project also gave me experience with Microsoft Azure services, including Azure Functions and Azure Table Storage, and GitHub Actions CI/CD. The current live portfolio architecture is Vercel and Neon PostgreSQL, not Azure-hosted.
-                </p>
-
-                <p>
-                    <strong>Implementation:</strong> The page requests the count from the Node.js API. Using <code>DATABASE_URL</code> and the Neon serverless driver, the endpoint atomically increments the database row and returns the updated count as JSON.
-                </p>
-
-                <p>
-                    <strong>Engineering work:</strong> The endpoint accepts GET and returns HTTP 405 for other methods; configuration and query failures return HTTP 500. The frontend checks the response and reports a placeholder if the request fails. I also manage the source in GitHub and validate the deployed site and API.
-                </p>
-
-                <div class="tech-stack">
-                    <span>HTML</span>
-                    <span>CSS</span>
-                    <span>JavaScript</span>
-                    <span>Node.js</span>
-                    <span>Vercel</span>
-                    <span>Neon PostgreSQL</span>
-                    <span>GitHub</span>
-                </div>
-
-                <div class="project-links">
-                    <a href="https://cloud-resume-challenge-six.vercel.app/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="btn-primary">
-                        Live Demo
-                    </a>
-
-                    <a href="https://github.com/SimplyAlice/Cloud-Resume-Challenge"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="btn-secondary">
-                        GitHub
-                    </a>
-                </div>
-
-            </article>
-
-            <!-- Zazen Matcha -->
-
-            <article class="project-card">
-
-                <h3>🍵 Zazen Matcha &amp; Tea Co.</h3>
-
-                <p>
-                    <strong>Problem:</strong> Online specialty tea retail often suffers from clunky generic storefronts, opaque grading standards, and ambiguous provenance.
-                </p>
-
-                <p>
-                    <strong>Solution:</strong> A bespoke, full-stack e-commerce platform engineered from foundational web standards without CMS platforms, featuring single-origin Japanese ceremonial matcha, artisan loose-leaf teas, handcrafted teaware, and interactive tea ritual studies.
-                </p>
-
-                <p>
-                    <strong>My contribution:</strong> I designed, engineered, and deployed the full-stack web application, including responsive UI architecture, relational schema, server-side business logic, defensive security controls, and production deployment on Alwaysdata.
-                </p>
-
-                <p>
-                    <strong>Implementation:</strong> Built with native PHP and MariaDB InnoDB. Features an atomic transactional checkout with pessimistic row locking (<code>SELECT ... FOR UPDATE</code>), server-side price revalidation, session cart isolation, CSRF protection, Bcrypt hashing, and an administrative management console with live KPI metrics and catalog CRUD.
-                </p>
-
-                <p>
-                    <strong>Outcome:</strong> Deployed live on Alwaysdata with full SSL/TLS encryption, active relational database persistence, responsive mobile-to-desktop adaptation, and comprehensive academic software engineering documentation.
-                </p>
-
-                <div class="tech-stack">
-                    <span>PHP</span>
-                    <span>MariaDB</span>
-                    <span>JavaScript</span>
-                    <span>CSS Grid</span>
-                    <span>Alwaysdata</span>
-                    <span>Git</span>
-                </div>
-
-                <div class="project-links">
-                    <a href="https://zazen-matcha.alwaysdata.net/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="btn-primary">
-                        Live Demo
-                    </a>
-
-                    <a href="https://github.com/SimplyAlice/Zazen-Matcha"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="btn-secondary">
-                        GitHub
-                    </a>
-                </div>
-
-            </article>
-
-            <!-- Career Connect -->
-
-            <article class="project-card">
-
-                <h3>📱 Career Connect</h3>
-
-                <p>
-                    <strong>Project:</strong> An academic Android career application developed by a six-person Agile student team.
-                </p>
-
-                <p>
-                    <strong>My contribution:</strong> I served as project manager and frontend Android developer, leading the team through research, UI/UX, implementation and QA, and coordinating frontend/backend integration.
-                </p>
-
-                <p>
-                    <strong>Implementation:</strong> I developed Android frontend components using Kotlin, XML, Android Studio and Material Design, and managed Git/GitHub workflows.
-                </p>
-
-                <div class="tech-stack">
-                    <span>Kotlin</span>
-                    <span>XML</span>
-                    <span>Android Studio</span>
-                    <span>Material Design</span>
-                    <span>Git</span>
-                    <span>GitHub</span>
-                </div>
-
-            </article>
-
-            <!-- Python Automation -->
-
-            <article class="project-card">
-
-                <h3>🐍 Python Automation</h3>
-
-                <p>
-                    A growing collection of Python scripts focused on automation, problem solving, file handling, and cloud engineering practice.
-                </p>
-
-                <div class="tech-stack">
-                    <span>Python</span>
-                    <span>Automation</span>
-                    <span>Git</span>
-                    <span>VS Code</span>
-                </div>
-
-            </article>
-
-        </div>
-    
-
-        </section>
-
-       <!-- ================= CERTIFICATIONS ================= -->
-
-        <section id="certifications" class="reveal">
-
-    
-        <h2>
-            Certifications & Learning
-        </h2>
-
-        <div class="cert-grid">
-
-            <div class="cert-card">
-
-                <div class="cert-icon">
-                    ☁
-                </div>
-
-                <h3>
-                    Microsoft Azure Fundamentals
-                </h3>
-
-                <p class="cert-code">
-                    AZ-900
-                </p>
-
-                <p>
-                    Preparing for the AZ-900 certification, with a planned
-                    progression toward AZ-104.
-                </p>
-
-                <div class="progress-container">
-
-                    <div class="progress-bar">
+    </header>
+
+    <main id="main-content">
+
+        <!-- ================= 01. AIRY LIGHT EDITORIAL LANDING PAGE ================= -->
+        <section id="hero" class="hero" aria-labelledby="main-heading">
+            <div class="hero-atmosphere" aria-hidden="true">
+                <svg class="hero-compass-svg" viewBox="0 0 900 900" fill="none">
+                    <circle cx="620" cy="410" r="290" stroke="#C4839F" stroke-opacity="0.22" stroke-width="1"/>
+                    <circle cx="620" cy="410" r="210" stroke="#854664" stroke-opacity="0.18" stroke-width="1" stroke-dasharray="4 6"/>
+                    <circle cx="620" cy="410" r="370" stroke="#C4839F" stroke-opacity="0.14" stroke-width="0.9"/>
+                    <line x1="250" y1="410" x2="880" y2="410" stroke="#854664" stroke-opacity="0.14" stroke-width="0.9"/>
+                    <line x1="620" y1="40" x2="620" y2="790" stroke="#854664" stroke-opacity="0.14" stroke-width="0.9"/>
+                </svg>
+            </div>
+
+            <div class="container hero-composition">
+                <div class="hero-copy-column">
+                    <p class="hero-role-line">
+                        Software Engineering Student <span aria-hidden="true">|</span> Aspiring Cloud Engineer <span aria-hidden="true">|</span> Technical Problem Solver
+                    </p>
+
+                    <h1 id="main-heading" tabindex="-1">
+                        Soft Power in <em>systems</em> that hold under pressure.
+                    </h1>
+
+                    <p class="hero-lead">
+                        I am <strong>Alice Matarise</strong> — a BSc Information Technology (Software Engineering) student at <strong>Eduvos, Cape Town</strong> (2023 – May 2027), building full-stack software, deterministic databases, and practical cloud infrastructure with an eye for craft.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn-primary">Explore Selected Works</a>
+                        <a href="assets/documents/Alice-Matarise-CV.pdf" download="Alice-Matarise-CV.pdf" class="btn-secondary">
+                            Download CV (PDF) <span aria-hidden="true">↓</span>
+                        </a>
+                        <a href="https://github.com/SimplyAlice" target="_blank" rel="noopener noreferrer" class="btn-ghost">
+                            GitHub <span aria-hidden="true">↗</span>
+                        </a>
                     </div>
 
+                    <div class="hero-trajectory-strip" aria-label="Career trajectory and live portfolio status">
+                        <div class="trajectory-path">
+                            <span class="traj-kicker">PATHWAY</span>
+                            <span>Cloud Support &amp; Tech Ops</span>
+                            <span aria-hidden="true">→</span>
+                            <span>Cloud Engineering</span>
+                            <span aria-hidden="true">→</span>
+                            <span>Technical PM</span>
+                        </div>
+
+                        <div class="hero-live-badge">
+                            <span class="live-kicker">GET /api/visitors</span>
+                            <strong id="dossier-visitors" aria-live="polite">Loading…</strong>
+                            <span class="live-meta">Vercel + Neon PG</span>
+                        </div>
+                    </div>
                 </div>
 
-                <span class="cert-status">
-                    Preparing for AZ-900
-                </span>
-
+                <figure class="hero-portrait-column">
+                    <div class="portrait-frame">
+                        <span class="frame-index">PLATE 00 // FIBONACCI STUDY</span>
+                        <img
+                            src="assets/images/editorial/hero-peony-study.webp"
+                            alt="Dewy blush pink peony bud resting on warm ivory drafting paper inscribed with dusty-mauve Fibonacci spirals"
+                            width="896"
+                            height="1200"
+                            fetchpriority="high"
+                            class="hero-plate-image"
+                        >
+                    </div>
+                    <figcaption class="portrait-caption">
+                        Organic experimentation disciplined by geometric proportion — reflected across five verified software and cloud builds below.
+                    </figcaption>
+                </figure>
             </div>
-
-
-            <div class="cert-card">
-
-                <div class="cert-icon">
-                    🚀
-                </div>
-
-                <h3>
-                    Azure Administrator Associate
-                </h3>
-
-                <p class="cert-code">
-                    AZ-104
-                </p>
-
-                <p>
-                    Planned next step after AZ-900.
-                </p>
-
-                <span class="cert-status planned">
-                    Planned
-                </span>
-
-            </div>
-
-            <div class="cert-card">
-
-                <div class="cert-icon">
-                    ☁
-                </div>
-
-                <h3>AWS Skills Center</h3>
-
-                <p class="cert-code">
-                    Becoming a Cloud Practitioner
-                </p>
-
-                <p>
-                    Completed classroom training in September 2026, covering
-                    four AWS cloud fundamentals classes with exposure to
-                    services including Amazon S3 and Amazon EC2.
-                </p>
-
-                <span class="cert-status">
-                    Classroom Training Completed
-                </span>
-
-            </div>
-
-        </div>
-     
-
         </section>
 
-<!-- ================= CLOUD JOURNEY ================= -->
-
-        <section id="journey" class="reveal">
-
-        <h2>
-            My Cloud Engineering Journey
-        </h2>
-
-        <div class="timeline">
-
-            <div class="timeline-item">
-
-                <div class="timeline-dot"></div>
-
-                <div class="timeline-card">
-
-                    <span>
-                        2024
-                    </span>
-
-                    <h3>
-                        Software Engineering Foundation
-                    </h3>
-
-                    <p>
-                        Built strong foundations through software engineering studies,
-                        databases, web development, application design, and IT systems.
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <div class="timeline-item">
-
-                <div class="timeline-dot"></div>
-
-                <div class="timeline-card">
-
-                    <span>
-                        2026
-                    </span>
-
-                    <h3>
-                        Cloud Resume Challenge
-                    </h3>
-
-                    <p>
-                        Built and deployed a serverless cloud portfolio using Vercel,
-                        a serverless visitor API, Neon PostgreSQL, JavaScript, HTML,
-                        and CSS.
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <div class="timeline-item">
-
-                <div class="timeline-dot"></div>
-
-                <div class="timeline-card">
-
-                    <span>September 2026</span>
-
-                    <h3>
-                        AWS Skills Center Training
-                    </h3>
-
-                    <p>
-                        Completed four cloud fundamentals classroom classes,
-                        with exposure to Amazon S3 and Amazon EC2.
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <div class="timeline-item">
-
-                <div class="timeline-dot"></div>
-
-                <div class="timeline-card">
-
-                    <span>
-                        Future Goal
-                    </span>
-
-                    <h3>
-                        Cloud Engineer
-                    </h3>
-
-                    <p>
-                        Building deeper expertise in cloud platforms, technical
-                        operations, infrastructure, automation, and DevOps practices.
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
-        </section>
-
-        <!-- ================= EDUCATION ================= -->
-        <section id="education" class="reveal">
-
-
-            <h2>
-                Education
-            </h2>
-
-
-
-            <div class="education-card">
-
-
-            <div class="education-icon">
-
-            <i class="fa-solid fa-graduation-cap"></i>
-
-            </div>
-
-
-
-                <div class="education-content">
-
-
-                    <h3>
-                        BSc Information Technology
-                    </h3>
-
-
-                    <h4>
-                        Software Engineering
-                    </h4>
-
-
-
-                    <p class="institution">
-                        Eduvos | Cape Town
-                    </p>
-
-                    <p>
-                        2023 – Expected May 2027
-                    </p>
-                    <p>
-
-                        Relevant coursework: Systems Analysis &amp; Design, Database
-                        Systems, Network Security, Web Server Management, Operating
-                        Systems, and IT Project Management.
-
-                    </p>
-
-
-
-                    <div class="education-tags">
-
-
-                        <span>
-                            Software Engineering
-                        </span>
-
-
-                        <span>
-                            Cloud Computing
-                        </span>
-
-
-                        <span>
-                            Databases
-                        </span>
-
-                        <span>
-                            Network Security
-                        </span>
-
-                        <span>
-                            IT Project Management
-                        </span>
-
-
+        <!-- ================= 02. IDENTITY & PHILOSOPHY ================= -->
+        <section id="about" class="section reveal" aria-labelledby="about-heading">
+            <div class="container">
+                <div class="about-editorial-split">
+                    <div class="about-narrative-col">
+                        <span class="section-number">01 // PERSONAL IDENTITY &amp; PHILOSOPHY</span>
+                        <h2 id="about-heading">Graceful interfaces resting on deterministic architecture.</h2>
+                        <p class="prose-lead">
+                            Good engineering never finishes when a build passes on <code>localhost</code>. I care deeply about how software behaves in production — under database concurrency, TLS handshakes, browser caching, and collaborative Git workflows.
+                        </p>
+                        <p>
+                            Alongside my degree in Cape Town and hands-on training at the <strong>AWS Skills Center</strong>, I have built full-stack e-commerce sites deployed over SSH, designed 12-entity PostgreSQL schemas with zero floating-point drift, and debugged serverless poolers in live cloud runtimes.
+                        </p>
+
+                        <dl class="principles-list" aria-label="Core engineering principles">
+                            <div>
+                                <dt>01 · Systems Over Surfaces</dt>
+                                <dd>Authoritative calculations, permissions, and transactional invariants live in hardened backend services.</dd>
+                            </div>
+                            <div>
+                                <dt>02 · Empirical Troubleshooting</dt>
+                                <dd>Verify production releases with SHA-256 hashes, HTTP header inspection, and zero-guesswork root cause analysis.</dd>
+                            </div>
+                            <div>
+                                <dt>03 · Honest Engineering</dt>
+                                <dd>Separate shipped production capabilities from active backend remediation and planned roadmap scaffolds.</dd>
+                            </div>
+                        </dl>
                     </div>
 
+                    <figure class="about-vellum-figure" data-parallax-plate>
+                        <img
+                            src="assets/images/editorial/systems-botanical-plate.webp"
+                            alt="Layered translucent vellum architectural drawings beside blush pink peonies on warm cream drafting table"
+                            width="1376"
+                            height="768"
+                            loading="lazy"
+                        >
+                        <figcaption>
+                            Translucent architectural elevation sheets — layering human clarity over disciplined infrastructure.
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
 
+        <!-- ================= 03. STANDALONE VIDEO ONE — DEEP PLUM STUDIO ================= -->
+        <section
+            id="video-one"
+            class="video-one-section"
+            data-manifest="assets/video/manifest.json"
+            aria-labelledby="video1-heading"
+        >
+            <div class="video-one-track" id="video1-track">
+                <div class="video-one-sticky">
+                    <div class="container video-one-inner">
+                        <div class="video-one-header">
+                            <span class="chapter-kicker">STUDY I // NOCTURNAL CONCEPTION</span>
+                            <h2 id="video1-heading">From closed bud to architectural draft.</h2>
+                        </div>
 
+                        <div class="video-one-frame" id="video1-viewport" data-video-state="loading">
+                            <img
+                                src="assets/images/posters/v1-open.webp"
+                                alt=""
+                                aria-hidden="true"
+                                width="1920"
+                                height="1080"
+                                class="video-poster-layer"
+                            >
+                            <video
+                                id="botanical-video-1"
+                                class="scrub-video-el"
+                                width="1920"
+                                height="1080"
+                                muted
+                                playsinline
+                                preload="metadata"
+                                poster="assets/images/posters/v1-open.webp"
+                                aria-label="Scroll-controlled Video 1: blush peony bud opening in a dark plum studio as white architectural elevations illuminate behind it"
+                            ></video>
+                            <img
+                                id="video1-static-plate"
+                                src="assets/images/posters/v1-open.webp"
+                                alt="Blush peony bud unfolding before architectural blueprints in a deep plum studio"
+                                width="1920"
+                                height="1080"
+                                class="video-static-plate"
+                            >
+                        </div>
+
+                        <div class="video-one-footer">
+                            <div class="v1-caption-block">
+                                <h3 id="video1-beat-title">01 · Unfurling the Problem Space</h3>
+                                <p id="video1-beat-desc">
+                                    In quiet plum darkness, the outer petals open as orthogonal blueprint elevations surface behind the flower — capturing how every build starts as a visual study before taking structural form.
+                                </p>
+                            </div>
+
+                            <div class="v1-controls-col">
+                                <div class="hairline-progress" aria-hidden="true">
+                                    <div class="hairline-fill" id="video1-scrub-fill"></div>
+                                </div>
+                                <div class="chapter-pills" role="group" aria-label="Study I key frames">
+                                    <button type="button" class="chapter-pill is-active" data-v1-jump="0.03" aria-pressed="true">01 Closed Bud</button>
+                                    <button type="button" class="chapter-pill" data-v1-jump="0.52" aria-pressed="false">02 Petals Part</button>
+                                    <button type="button" class="chapter-pill" data-v1-jump="0.96" aria-pressed="false">03 Elevations Lit</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= 04. VISUAL BREAK & FIRST WAVE: DAYFORM & ZAZEN MATCHA ================= -->
+        <section id="projects" class="section section-visual-break reveal" aria-labelledby="projects-heading">
+            <div class="container">
+                <header class="editorial-section-head">
+                    <span class="section-number">02 // FEATURED SYSTEMS · WAVE I</span>
+                    <h2 id="projects-heading">Live interfaces, transactional commerce &amp; honest production ops.</h2>
+                    <p class="section-subtitle">
+                        Stepping back into natural daylight — explore real screenshots, captured interactive flows, and candid architectural assessments of two full-stack products.
+                    </p>
+                </header>
+
+                <!-- ========== SHOWCASE 01: DAYFORM ========== -->
+                <article class="project-band project-band--dayform" aria-labelledby="dayform-title">
+                    <div class="band-topline">
+                        <span class="band-tag">01 // FULL-STACK ITINERARY ENGINE · CAPE TOWN</span>
+                        <span class="status-pill status-dev">
+                            <span class="status-dot" aria-hidden="true"></span>
+                            Frontend Live (Vercel) · Backend DB Connectivity in Active Remediation
+                        </span>
+                    </div>
+
+                    <div class="dayform-stage-grid">
+                        <!-- Left: Interactive Media Stage (Live GIF + 6 Captured App Views + Diagrams) -->
+                        <div class="dayform-media-stage">
+                            <div class="stage-topbar">
+                                <span class="stage-url">dayform-live.vercel.app // CAPTURED FROM SOURCE</span>
+                                <div class="stage-mode-switch" role="tablist" aria-label="Dayform visual views" data-scoped-tablist>
+                                    <button type="button" role="tab" class="mode-tab active" aria-selected="true" aria-controls="df-panel-flow" id="tab-df-flow">Animated Flow</button>
+                                    <button type="button" role="tab" class="mode-tab" aria-selected="false" aria-controls="df-panel-gallery" id="tab-df-gallery">App Screens (6)</button>
+                                    <button type="button" role="tab" class="mode-tab" aria-selected="false" aria-controls="df-panel-arch" id="tab-df-arch">System Plate</button>
+                                </div>
+                            </div>
+
+                            <!-- Tab 1: Interactive Walkthrough GIF + WCAG Toggle -->
+                            <div id="df-panel-flow" role="tabpanel" aria-labelledby="tab-df-flow">
+                                <figure class="gif-showcase-frame" data-gif-container>
+                                    <div class="gif-toolbar">
+                                        <span>DAYFORM UI WALKTHROUGH // NATURAL-LANGUAGE PLANNING</span>
+                                        <button type="button" class="gif-toggle-btn" data-gif-toggle>Pause animation</button>
+                                    </div>
+                                    <img
+                                        src="assets/images/projects/dayform/dayform-walkthrough.gif"
+                                        data-gif-src="assets/images/projects/dayform/dayform-walkthrough.gif"
+                                        data-poster-src="assets/images/projects/dayform/dayform-walkthrough-poster.webp"
+                                        alt="Animated walkthrough of Dayform moving from natural-language prompt through context extraction, staged Cape Town itinerary, and adaptive recalibration"
+                                        width="960"
+                                        height="600"
+                                        loading="lazy"
+                                    >
+                                    <figcaption>
+                                        Real React + TypeScript UI progression captured across prompt entry, transit/budget parsing, and sequenced Cape Town venues.
+                                    </figcaption>
+                                </figure>
+                            </div>
+
+                            <!-- Tab 2: Interactive 6-Screen Selector -->
+                            <div id="df-panel-gallery" role="tabpanel" aria-labelledby="tab-df-gallery" hidden="until-found">
+                                <div class="dayform-screen-viewer">
+                                    <figure class="dayform-main-shot">
+                                        <img
+                                            id="df-active-shot-img"
+                                            src="assets/images/projects/dayform/dayform-hero-ui.webp"
+                                            alt="Dayform Hero UI asking What are we doing today with freeform planning prompt"
+                                            width="1200"
+                                            height="750"
+                                            loading="lazy"
+                                        >
+                                        <figcaption id="df-active-shot-caption">01 / 06 · Prompt Composer &amp; Hero Workspace</figcaption>
+                                    </figure>
+
+                                    <div class="df-thumb-strip" role="group" aria-label="Choose Dayform application screen">
+                                        <button type="button" class="df-thumb-btn is-selected" data-df-shot="assets/images/projects/dayform/dayform-hero-ui.webp" data-df-caption="01 / 06 · Prompt Composer &amp; Hero Workspace" data-df-alt="Dayform Hero UI asking What are we doing today with freeform planning prompt">
+                                            <img src="assets/images/projects/dayform/dayform-hero-ui.webp" alt="" width="1200" height="750" loading="lazy">
+                                            <span>01 Hero</span>
+                                        </button>
+                                        <button type="button" class="df-thumb-btn" data-df-shot="assets/images/projects/dayform/dayform-composer-step.webp" data-df-caption="02 / 06 · Stage 02/06 Context &amp; Constraint Extraction" data-df-alt="Dayform Context Extraction showing mood, rainfall caution, transit, and Rands budget parsing">
+                                            <img src="assets/images/projects/dayform/dayform-composer-step.webp" alt="" width="1200" height="750" loading="lazy">
+                                            <span>02 Context</span>
+                                        </button>
+                                        <button type="button" class="df-thumb-btn" data-df-shot="assets/images/projects/dayform/dayform-story-ui.webp" data-df-caption="03 / 06 · Stage 01/06 Natural-Language Intention" data-df-alt="Dayform Interactive Story highlighting The Intention parsing natural language">
+                                            <img src="assets/images/projects/dayform/dayform-story-ui.webp" alt="" width="1200" height="750" loading="lazy">
+                                            <span>03 Intention</span>
+                                        </button>
+                                        <button type="button" class="df-thumb-btn" data-df-shot="assets/images/projects/dayform/dayform-itinerary-ui.webp" data-df-caption="04 / 06 · Stage 04/06 Sequenced Cape Town Itinerary (Truth Coffee → Zeitz MOCAA → Honest Chocolate)" data-df-alt="Dayform Stage 04 of 06 assembling a coherent timed and budgeted itinerary across Cape Town venues">
+                                            <img src="assets/images/projects/dayform/dayform-itinerary-ui.webp" alt="" width="1200" height="750" loading="lazy">
+                                            <span>04 Itinerary</span>
+                                        </button>
+                                        <button type="button" class="df-thumb-btn" data-df-shot="assets/images/projects/dayform/dayform-adaptation-ui.webp" data-df-caption="05 / 06 · Stage 05/06 Live Constraint Recalibration" data-df-alt="Dayform Stage 05 of 06 adapting downstream itinerary stops after weather or time changes">
+                                            <img src="assets/images/projects/dayform/dayform-adaptation-ui.webp" alt="" width="1200" height="750" loading="lazy">
+                                            <span>05 Adapt</span>
+                                        </button>
+                                        <button type="button" class="df-thumb-btn" data-df-shot="assets/images/projects/dayform/dayform-capabilities-ui.webp" data-df-caption="06 / 06 · Planning Capabilities &amp; .ics Calendar Export" data-df-alt="Dayform capabilities view highlighting deterministic scoring and calendar export">
+                                            <img src="assets/images/projects/dayform/dayform-capabilities-ui.webp" alt="" width="1200" height="750" loading="lazy">
+                                            <span>06 Export</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Tab 3: Core Loop & System Architecture SVGs -->
+                            <div id="df-panel-arch" role="tabpanel" aria-labelledby="tab-df-arch" hidden="until-found">
+                                <div class="df-arch-stack">
+                                    <figure>
+                                        <img src="assets/images/projects/dayform/dayform-core-loop.svg" alt="Dayform core planning loop from intent parsing through spatial matching and timeline sequencing" width="1000" height="220" loading="lazy">
+                                        <figcaption>Core Planning Loop (<code>Intent → Constraints → Spatial &amp; Weather Match → Itinerary</code>)</figcaption>
+                                    </figure>
+                                    <figure>
+                                        <img src="assets/images/projects/dayform/dayform-architecture.svg" alt="Dayform system architecture separating live Vercel React TypeScript SPA from Render FastAPI asyncpg Neon pooler remediation" width="1100" height="440" loading="lazy">
+                                        <figcaption>Deployment Boundary &amp; <code>asyncpg</code> Neon <code>-pooler</code> TLS Remediation Architecture</figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Right: Concise Narrative + Scannable Facts -->
+                        <div class="dayform-copy-col">
+                            <h3 id="dayform-title" class="project-heading">Dayform</h3>
+                            <p class="project-hook">
+                                Turning freeform Cape Town outing prompts into time-sequenced, weather-aware, Rands-bounded itineraries.
+                            </p>
+                            <p>
+                                Built with a clean <strong>React + TypeScript SPA</strong> on Vercel and a Python FastAPI domain engine integrating OpenStreetMap Overpass, Open-Meteo rainfall windows, Redis caching, and RFC-5545 <code>.ics</code> calendar export.
+                            </p>
+
+                            <dl class="fact-pairs" aria-label="Dayform verified engineering facts">
+                                <div>
+                                    <dt>Verified Tests</dt>
+                                    <dd><strong>98 backend Pytest test modules</strong> + 4 frontend Vitest suites across planning, mobility, and auth.</dd>
+                                </div>
+                                <div>
+                                    <dt>Production Reality</dt>
+                                    <dd>Vercel SPA serves live (HTTP 200); Render FastAPI + <code>asyncpg</code> Neon <code>-pooler</code> handshake undergoing active SSL/PgBouncer remediation.</dd>
+                                </div>
+                                <div>
+                                    <dt>Active Fix</dt>
+                                    <dd>Hardening <code>resolve_asyncpg_connect_config</code>, disabling prepared statement caches for pooler mode, and adding <code>pool_recycle</code>.</dd>
+                                </div>
+                            </dl>
+
+                            <ul class="tech-tag-row" role="list" aria-label="Dayform stack">
+                                <li>React + TypeScript</li>
+                                <li>Python 3.12 · FastAPI</li>
+                                <li>SQLAlchemy 2.0 (asyncpg)</li>
+                                <li>Alembic</li>
+                                <li>Redis 7</li>
+                                <li>OSM Overpass · Open-Meteo</li>
+                            </ul>
+
+                            <div class="project-actions">
+                                <a href="https://dayform-live.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn-primary">Open Live Frontend ↗</a>
+                                <a href="https://github.com/SimplyAlice/dayform" target="_blank" rel="noopener noreferrer" class="btn-secondary">GitHub Source ↗</a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- ========== SHOWCASE 02: ZAZEN MATCHA & TEA CO. ========== -->
+                <article class="project-band project-band--zazen" aria-labelledby="zazen-title">
+                    <div class="band-topline">
+                        <span class="band-tag">02 // BESPOKE PHP 8 E-COMMERCE &amp; SSH PRODUCTION OPS</span>
+                        <span class="status-pill status-live">
+                            <span class="status-dot" aria-hidden="true"></span>
+                            Production Deployed (Alwaysdata)
+                        </span>
+                    </div>
+
+                    <div class="zazen-intro-split">
+                        <div class="zazen-copy-pane">
+                            <h3 id="zazen-title" class="project-heading">Zazen Matcha &amp; Tea Co.</h3>
+                            <p class="project-hook">
+                                Hand-engineered PHP 8 &amp; MariaDB storefront with atomic <code>InnoDB</code> checkout locking and cryptographic production rollouts.
+                            </p>
+                            <p>
+                                Every layer — customer browsing, variant filtering, cart state, role-guarded <code>/admin</code> CRUD, and <code>SELECT … FOR UPDATE</code> checkout stock reservation — is written cleanly without frameworks. Production patches ship over SSH/SCP while preserving live database state and verifying file parity via PowerShell <code>Get-FileHash</code> (SHA-256).
+                            </p>
+
+                            <dl class="fact-pairs" aria-label="Zazen Matcha technical highlights">
+                                <div>
+                                    <dt>Concurrency Safety</dt>
+                                    <dd><code>$pdo-&gt;beginTransaction()</code> with <code>FOR UPDATE</code> row locks in <code>customer/checkout.php</code>, <code>bcrypt</code> auth &amp; <code>hash_equals</code> CSRF.</dd>
+                                </div>
+                                <div>
+                                    <dt>Local Working Tree</dt>
+                                    <dd>Refining the interactive Chawan sequence (<code>js/chawan-sequence.js</code>) and pre-release backup automation (<code>capture_pre_stage_a_backup.ps1</code>).</dd>
+                                </div>
+                            </dl>
+
+                            <div class="project-actions">
+                                <a href="https://zazen-matcha.alwaysdata.net/" target="_blank" rel="noopener noreferrer" class="btn-primary">Visit Live Storefront ↗</a>
+                                <a href="https://github.com/SimplyAlice/Zazen-Matcha" target="_blank" rel="noopener noreferrer" class="btn-secondary">Zazen Repository ↗</a>
+                            </div>
+                        </div>
+
+                        <!-- Tactile Studio Photography + Dual Toggleable Motion Loops -->
+                        <div class="zazen-ritual-collage">
+                            <figure class="zazen-flow-card" data-gif-container>
+                                <div class="gif-toolbar">
+                                    <span>STOREFRONT FLOW // LIVE JOURNEY</span>
+                                    <button type="button" class="gif-toggle-btn" data-gif-toggle>Pause animation</button>
+                                </div>
+                                <img
+                                    src="assets/images/projects/zazen/zazen-storefront-flow.gif"
+                                    data-gif-src="assets/images/projects/zazen/zazen-storefront-flow.gif"
+                                    data-poster-src="assets/images/projects/zazen/zazen-storefront-flow-poster.webp"
+                                    alt="Animated walkthrough of Zazen Matcha storefront filtering, product view, cart, checkout, and admin console"
+                                    width="960"
+                                    height="600"
+                                    loading="lazy"
+                                >
+                            </figure>
+
+                            <div class="zazen-photo-pair">
+                                <figure class="zazen-still-photo">
+                                    <img
+                                        src="assets/images/projects/zazen/whisked-matcha-bowl.webp"
+                                        alt="Ceremonial whisked green matcha bowl photographed in natural daylight for Zazen Matcha"
+                                        width="960"
+                                        height="720"
+                                        loading="lazy"
+                                    >
+                                    <figcaption>Ceremonial Uji Photography</figcaption>
+                                </figure>
+
+                                <figure class="zazen-ritual-mini" data-gif-container>
+                                    <div class="gif-toolbar">
+                                        <span>CHAWAN LOOP</span>
+                                        <button type="button" class="gif-toggle-btn" data-gif-toggle>Pause animation</button>
+                                    </div>
+                                    <img
+                                        src="assets/images/projects/zazen/matcha-ritual.gif"
+                                        data-gif-src="assets/images/projects/zazen/matcha-ritual.gif"
+                                        data-poster-src="assets/images/projects/zazen/matcha-ritual-poster.webp"
+                                        alt="Animated bamboo chasen whisking matcha in a ceramic chawan bowl"
+                                        width="480"
+                                        height="300"
+                                        loading="lazy"
+                                    >
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Horizontal Scroll-Snap Filmstrip of Real Screens (CSS Scroll-State Highlight) -->
+                    <div class="zazen-filmstrip-wrapper">
+                        <div class="filmstrip-bar">
+                            <span>REAL STOREFRONT &amp; ADMIN SCREENS (10 CAPTURES — SCROLL HORIZONTALLY)</span>
+                            <div class="filmstrip-controls">
+                                <button type="button" class="filmstrip-nav-btn" data-strip-prev="zazen-strip" aria-label="Scroll Zazen screens left">← Prev</button>
+                                <button type="button" class="filmstrip-nav-btn" data-strip-next="zazen-strip" aria-label="Scroll Zazen screens right">Next →</button>
+                            </div>
+                        </div>
+
+                        <div id="zazen-strip" class="snap-filmstrip" role="region" aria-label="Zazen Matcha application screens" tabindex="0">
+                            <figure class="snap-card">
+                                <div class="snap-card-inner">
+                                    <img src="assets/images/projects/zazen/storefront-desktop.webp" alt="Zazen Matcha editorial homepage hero on desktop" width="1200" height="750" loading="lazy">
+                                    <figcaption>01 · Editorial Storefront Hero</figcaption>
+                                </div>
+                            </figure>
+                            <figure class="snap-card">
+                                <div class="snap-card-inner">
+                                    <img src="assets/images/projects/zazen/tea-filters.webp" alt="Zazen Matcha cultivar and grade filtering interface" width="1200" height="750" loading="lazy">
+                                    <figcaption>02 · Cultivar &amp; Grade Filters</figcaption>
+                                </div>
+                            </figure>
+                            <figure class="snap-card">
+                                <div class="snap-card-inner">
+                                    <img src="assets/images/projects/zazen/product-detail.webp" alt="Matcha product detail view with stock status and tasting notes" width="1200" height="750" loading="lazy">
+                                    <figcaption>03 · Tasting Profile &amp; Stock</figcaption>
+                                </div>
+                            </figure>
+                            <figure class="snap-card">
+                                <div class="snap-card-inner">
+                                    <img src="assets/images/projects/zazen/shopping-cart.webp" alt="Zazen Matcha shopping cart item quantities and totals" width="1200" height="750" loading="lazy">
+                                    <figcaption>04 · Stateful Shopping Cart</figcaption>
+                                </div>
+                            </figure>
+                            <figure class="snap-card">
+                                <div class="snap-card-inner">
+                                    <img src="assets/images/projects/zazen/checkout-summary.webp" alt="Transaction-backed checkout screen" width="1200" height="750" loading="lazy">
+                                    <figcaption>05 · Atomic Checkout Summary</figcaption>
+                                </div>
+                            </figure>
+                            <figure class="snap-card">
+                                <div class="snap-card-inner">
+                                    <img src="assets/images/projects/zazen/order-confirmation.webp" alt="Completed order confirmation receipt page" width="1200" height="750" loading="lazy">
+                                    <figcaption>06 · Verified Order Receipt</figcaption>
+                                </div>
+                            </figure>
+                            <figure class="snap-card">
+                                <div class="snap-card-inner">
+                                    <img src="assets/images/projects/zazen/admin-dashboard.webp" alt="Zazen Admin CRUD overview dashboard" width="1200" height="750" loading="lazy">
+                                    <figcaption>07 · Role-Guarded Admin Console</figcaption>
+                                </div>
+                            </figure>
+                            <figure class="snap-card">
+                                <div class="snap-card-inner">
+                                    <img src="assets/images/projects/zazen/admin-product-edit.webp" alt="Admin catalogue editing and inventory form" width="1200" height="750" loading="lazy">
+                                    <figcaption>08 · Catalogue &amp; Inventory CRUD</figcaption>
+                                </div>
+                            </figure>
+                            <figure class="snap-card">
+                                <div class="snap-card-inner">
+                                    <img src="assets/images/projects/zazen/admin-order-details.webp" alt="Admin order line-item fulfillment inspection" width="1200" height="750" loading="lazy">
+                                    <figcaption>09 · Order Fulfillment Audit</figcaption>
+                                </div>
+                            </figure>
+                            <figure class="snap-card snap-card--portrait">
+                                <div class="snap-card-inner">
+                                    <img src="assets/images/projects/zazen/storefront-mobile.webp" alt="Responsive Zazen Matcha mobile viewport layout" width="520" height="840" loading="lazy">
+                                    <figcaption>10 · Responsive Mobile Storefront</figcaption>
+                                </div>
+                            </figure>
+                        </div>
+                    </div>
+
+                    <details class="schema-disclosure">
+                        <summary>
+                            <span>Inspect Physical 8-Table 3NF MariaDB Schema &amp; Photography Kit (<code>mariadb-eerd.svg</code>)</span>
+                            <span class="drawer-hint">Expand Schema</span>
+                        </summary>
+                        <div class="schema-disclosure-body zazen-disclosure-grid">
+                            <img
+                                src="assets/images/projects/zazen/mariadb-eerd.svg"
+                                alt="Zazen Matcha Enhanced Entity Relationship Diagram showing 8 normalized InnoDB tables in MariaDB 10.4"
+                                width="1150"
+                                height="980"
+                                loading="lazy"
+                            >
+                            <figure class="zazen-kit-card">
+                                <img
+                                    src="assets/images/projects/zazen/matcha-starter-kit.webp"
+                                    alt="Complete Zazen Matcha starter ritual kit photography"
+                                    width="960"
+                                    height="960"
+                                    loading="lazy"
+                                >
+                                <figcaption>Original starter-kit product photography aligned directly with live SKU rows in <code>products</code> &amp; <code>order_items</code>.</figcaption>
+                            </figure>
+                        </div>
+                    </details>
+                </article>
+            </div>
+        </section>
+
+        <!-- ================= 05. STANDALONE VIDEO TWO — RIGHT-SIDE SPLIT-SCREEN (WARM IVORY) ================= -->
+        <section
+            id="video-two"
+            class="video-two-section"
+            data-manifest="assets/video/manifest.json"
+            aria-labelledby="video2-heading"
+        >
+            <div class="video-two-track" id="video2-track">
+                <div class="video-two-sticky">
+                    <div class="container video-two-split">
+                        <!-- Left Column: Dynamic Evolving Editorial Narrative (Desktop Split / Below-Video on Mobile) -->
+                        <div class="video-two-narrative">
+                            <span class="chapter-kicker">STUDY II // ORGANIC GROWTH MEETS GEOMETRY</span>
+                            <h2 id="video2-heading">How intuition calibrates into structure.</h2>
+
+                            <article class="v2-active-beat" aria-live="polite">
+                                <span class="v2-beat-code" id="video2-beat-kicker">BEAT 01 OF 04 // INITIAL HYPOTHESIS</span>
+                                <h3 id="video2-beat-title">01 · Organic Experimentation</h3>
+                                <p id="video2-beat-desc">
+                                    A fresh peony bud rests on warm ivory parchment — mirroring exploratory discovery before imposing strict contracts or constraints.
+                                </p>
+                            </article>
+
+                            <div class="v2-progress-row" aria-hidden="true">
+                                <div class="hairline-progress hairline-progress--ivory">
+                                    <div class="hairline-fill hairline-fill--berry" id="video2-scrub-fill"></div>
+                                </div>
+                            </div>
+
+                            <ol class="v2-beat-list" role="list" aria-label="Study II narrative beats">
+                                <li class="v2-beat-item is-active" data-v2-beat="0">
+                                    <button type="button" class="v2-beat-btn" data-v2-jump="0.04" aria-pressed="true">
+                                        <span class="beat-num">01</span>
+                                        <span class="beat-label">Hypothesis · Unfolding Bud</span>
+                                    </button>
+                                </li>
+                                <li class="v2-beat-item" data-v2-beat="1">
+                                    <button type="button" class="v2-beat-btn" data-v2-jump="0.34" aria-pressed="false">
+                                        <span class="beat-num">02</span>
+                                        <span class="beat-label">Contracts · Petals Open</span>
+                                    </button>
+                                </li>
+                                <li class="v2-beat-item" data-v2-beat="2">
+                                    <button type="button" class="v2-beat-btn" data-v2-jump="0.68" aria-pressed="false">
+                                        <span class="beat-num">03</span>
+                                        <span class="beat-label">Verification · Protractors Appear</span>
+                                    </button>
+                                </li>
+                                <li class="v2-beat-item" data-v2-beat="3">
+                                    <button type="button" class="v2-beat-btn" data-v2-jump="0.96" aria-pressed="false">
+                                        <span class="beat-num">04</span>
+                                        <span class="beat-label">Equilibrium · Calibrated Bloom</span>
+                                    </button>
+                                </li>
+                            </ol>
+                        </div>
+
+                        <!-- Right Column: Large Sticky Peony Video Stage on Warm Ivory -->
+                        <div class="video-two-media-col">
+                            <div class="video-two-frame" id="video2-viewport" data-video-state="loading">
+                                <img
+                                    src="assets/images/posters/v2-open.webp"
+                                    alt=""
+                                    aria-hidden="true"
+                                    width="1920"
+                                    height="1080"
+                                    class="video-poster-layer"
+                                >
+                                <video
+                                    id="botanical-video-2"
+                                    class="scrub-video-el"
+                                    width="1920"
+                                    height="1080"
+                                    muted
+                                    playsinline
+                                    preload="metadata"
+                                    poster="assets/images/posters/v2-open.webp"
+                                    aria-label="Scroll-controlled Video 2: dewy blush peony blooming over warm ivory parchment encircled by precision engineering protractors"
+                                ></video>
+                                <img
+                                    id="video2-static-plate"
+                                    src="assets/images/posters/v2-open.webp"
+                                    alt="Blooming blush peony framed by radial engineering drafting arcs on warm ivory paper"
+                                    width="1920"
+                                    height="1080"
+                                    class="video-static-plate"
+                                >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= 06. WAVE II: INTERACTIVE BACKEND & MOBILE SYSTEMS ================= -->
+        <section id="systems" class="section section-systems reveal" aria-labelledby="systems-heading">
+            <div class="container">
+                <header class="editorial-section-head">
+                    <span class="section-number">03 // INTERACTIVE TECHNICAL WORKS · WAVE II</span>
+                    <h2 id="systems-heading">Deterministic financial engines, Android security &amp; serverless infrastructure.</h2>
+                    <p class="section-subtitle">
+                        Pure systems craftsmanship — inspect interactive ingestion tiers, IEEE 754 float safeguards, Kotlin Activity screens, and real cloud evolution below.
+                    </p>
+                </header>
+
+                <!-- ========== SHOWCASE 03: QUOTE_FLOW ========== -->
+                <article class="project-band project-band--quoteflow" aria-labelledby="quoteflow-title">
+                    <div class="band-topline">
+                        <span class="band-tag">03 // COLLABORATIVE B2B PRICING ENGINE (WITH DATA SCIENCE GRADUATE)</span>
+                        <span class="status-pill status-dev">
+                            <span class="status-dot" aria-hidden="true"></span>
+                            Feature/Backend-Foundation Branch · Backend Tested (179 Unit + 18 Integration)
+                        </span>
+                    </div>
+
+                    <div class="qf-header-row">
+                        <div>
+                            <h3 id="quoteflow-title" class="project-heading">Quote_Flow</h3>
+                            <p class="project-hook">
+                                Multi-tenant supplier catalogue normalisation, deterministic <code>NUMERIC</code> pricing contracts, and immutable quotation revision history for solar &amp; electrical contractors.
+                            </p>
+                        </div>
+                        <a href="https://github.com/SimplyAlice/Quote_Flow" target="_blank" rel="noopener noreferrer" class="btn-primary">
+                            Quote_Flow Repo ↗
+                        </a>
+                    </div>
+
+                    <!-- Interactive Analytical Stage (2 Columns: Left Live Terminal + Float Sandbox, Right Schema Tabs + 5-Tier Pipeline) -->
+                    <div class="qf-analytical-grid">
+                        <!-- Left Column: Empirical Pytest Run GIF + Interactive ExactDecimal Sandbox -->
+                        <div class="qf-left-stack">
+                            <figure class="gif-showcase-frame qf-terminal-frame" data-gif-container>
+                                <div class="gif-toolbar">
+                                    <span>EMPIRICAL PYTEST RUN // Feature/Backend-Foundation</span>
+                                    <button type="button" class="gif-toggle-btn" data-gif-toggle>Pause animation</button>
+                                </div>
+                                <img
+                                    src="assets/images/projects/quote-flow/quoteflow-pytest-run.gif"
+                                    data-gif-src="assets/images/projects/quote-flow/quoteflow-pytest-run.gif"
+                                    data-poster-src="assets/images/projects/quote-flow/quoteflow-pytest-poster.webp"
+                                    alt="Terminal capture verifying Quote_Flow git branches, frontend/.gitkeep scaffold, Alembic 6fe0f6e79dd9, and 179 passing backend unit tests"
+                                    width="960"
+                                    height="540"
+                                    loading="lazy"
+                                >
+                                <figcaption>
+                                    Verified <code>pytest backend/tests/unit</code> run: <strong>179 passed in 9.57s</strong> across 17 unit modules (+ 10 PG16 integration files / 18 tests).
+                                </figcaption>
+                            </figure>
+
+                            <!-- Interactive Financial Contract Inspector (ExactDecimal vs float) -->
+                            <div class="qf-sandbox" role="region" aria-label="Interactive Pydantic ExactDecimal contract simulator">
+                                <div class="sandbox-header">
+                                    <span>CONTRACT SANDBOX // WHY IEEE 754 FLOATS ARE REJECTED</span>
+                                    <div class="sandbox-pills" role="group" aria-label="Test price payloads">
+                                        <button type="button" class="sandbox-btn is-active" data-qf-payload="string" aria-pressed="true">"149.99" (Exact String)</button>
+                                        <button type="button" class="sandbox-btn" data-qf-payload="float" aria-pressed="false">149.99 (JSON Float)</button>
+                                        <button type="button" class="sandbox-btn" data-qf-payload="drift" aria-pressed="false">0.1 + 0.2 Margin</button>
+                                    </div>
+                                </div>
+                                <pre class="sandbox-output" id="qf-sandbox-output" aria-live="polite"><code>Input : { "unit_cost_zar": "149.99" }
+Pydantic v2 ExactDecimal -&gt; ACCEPTED -&gt; Decimal("149.9900")
+PostgreSQL NUMERIC(14,4) -&gt; STORED WITH ZERO MANTISSA DRIFT</code></pre>
+                            </div>
+                        </div>
+
+                        <!-- Right Column: Interactive 5-Tier Matching Pipeline + Tabbed PG16 ERD & Branches -->
+                        <div class="qf-right-stack">
+                            <div class="qf-pipeline-box" role="region" aria-label="5-Tier SKU Ingestion & Matching Pipeline">
+                                <div class="pipeline-header">
+                                    <span>SUPPLIER CATALOGUE INGESTION // 5-TIER MATCHING HIERARCHY</span>
+                                </div>
+                                <div class="pipeline-steps" role="group" aria-label="Ingestion pipeline stages">
+                                    <button type="button" class="pipe-step is-active" data-pipe-idx="0" aria-pressed="true">01 Canonical ASCII</button>
+                                    <button type="button" class="pipe-step" data-pipe-idx="1" aria-pressed="false">02 Alias Lookup</button>
+                                    <button type="button" class="pipe-step" data-pipe-idx="2" aria-pressed="false">03 Fuzzy Trigram</button>
+                                    <button type="button" class="pipe-step" data-pipe-idx="3" aria-pressed="false">04 Baseline Guard</button>
+                                    <button type="button" class="pipe-step" data-pipe-idx="4" aria-pressed="false">05 Revision Key</button>
+                                </div>
+                                <div class="pipe-detail" id="qf-pipe-detail" aria-live="polite">
+                                    <strong>Stage 01 · Canonical ASCII SKU Normalisation (COLLATE "C")</strong>
+                                    <p>Strips whitespace/punctuation into uppercase ASCII keys constrained by PostgreSQL regex <code>CHECK</code> rules so identical supplier parts never duplicate.</p>
+                                </div>
+                            </div>
+
+                            <div class="qf-tabs-card">
+                                <div class="stage-topbar">
+                                    <span class="stage-url">PERSISTENCE &amp; BRANCHES // PG16 &amp; SQLALCHEMY 2.0</span>
+                                    <div class="stage-mode-switch" role="tablist" aria-label="Quote_Flow architecture views" data-scoped-tablist>
+                                        <button type="button" role="tab" class="mode-tab active" aria-selected="true" aria-controls="qf-panel-erd" id="tab-qf-erd">12-Entity ERD</button>
+                                        <button type="button" role="tab" class="mode-tab" aria-selected="false" aria-controls="qf-panel-branches" id="tab-qf-branches">Git Branch State</button>
+                                    </div>
+                                </div>
+
+                                <div id="qf-panel-erd" role="tabpanel" aria-labelledby="tab-qf-erd">
+                                    <div class="qf-tab-inner">
+                                        <img
+                                            src="assets/images/projects/quote-flow/relational-schema.svg"
+                                            alt="Quote_Flow 12-entity PostgreSQL 16 relational schema diagram across tenant core, ingestion batches, immutable price snapshots, and composite quotation revisions"
+                                            width="1120"
+                                            height="560"
+                                            loading="lazy"
+                                        >
+                                    </div>
+                                </div>
+
+                                <div id="qf-panel-branches" role="tabpanel" aria-labelledby="tab-qf-branches" hidden="until-found">
+                                    <div class="qf-tab-inner qf-branch-grid">
+                                        <div>
+                                            <h4>Implemented &amp; Tested (<code>Feature/Backend-Foundation</code>)</h4>
+                                            <ul>
+                                                <li>12 SQLAlchemy 2.0 ORM models + Alembic <code>6fe0f6e79dd9</code> baseline migration.</li>
+                                                <li>17 unit test files (<strong>179 passing unit tests</strong>) + 10 PG16 integration files (18 tests).</li>
+                                                <li>Local FastAPI runtime, Argon2/JWT auth &amp; 6 core routers at commit <code>679fa08</code> awaiting merge.</li>
+                                            </ul>
+                                        </div>
+                                        <div>
+                                            <h4>Collaborator Branches &amp; Planned Frontend</h4>
+                                            <ul>
+                                                <li><code>origin/Feature/Ingestion-Engine</code> &amp; <code>origin/develop</code> integrating supplier CSV/XLSX ingestion.</li>
+                                                <li><code>frontend/</code> holds <code>.gitkeep</code> placeholders only; Next.js 15 frontend planned post-API freeze.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- ========== SHOWCASE 04: CAREER CONNECT (ANDROID PHONE VIEWPORT + ALL 11 SCREENS) ========== -->
+                <article class="project-band project-band--career-connect" aria-labelledby="cc-title">
+                    <div class="band-topline">
+                        <span class="band-tag">04 // COLLABORATIVE KOTLIN ANDROID APPLICATION (6-PERSON TEAM)</span>
+                        <span class="status-pill status-academic">
+                            <span class="status-dot" aria-hidden="true"></span>
+                            Academic Prototype · 26 JUnit 4 Tests · API 24–37
+                        </span>
+                    </div>
+
+                    <div class="cc-stage-layout">
+                        <!-- Left: Interactive Android Phone Frame synced with all 11 screens OR Emulator GIF -->
+                        <div class="cc-device-column">
+                            <div class="cc-mode-bar">
+                                <span class="stage-url">ANDROID EMULATOR STAGE</span>
+                                <div class="stage-mode-switch" role="tablist" aria-label="Career Connect device view mode" data-scoped-tablist>
+                                    <button type="button" role="tab" class="mode-tab active" aria-selected="true" aria-controls="cc-panel-interactive" id="tab-cc-screens">Interactive Screens (11)</button>
+                                    <button type="button" role="tab" class="mode-tab" aria-selected="false" aria-controls="cc-panel-gif" id="tab-cc-walkthrough">Walkthrough GIF</button>
+                                </div>
+                            </div>
+
+                            <div id="cc-panel-interactive" role="tabpanel" aria-labelledby="tab-cc-screens">
+                                <div class="android-device-stage">
+                                    <div class="phone-bezel">
+                                        <div class="phone-speaker" aria-hidden="true"></div>
+                                        <img
+                                            id="cc-phone-screen"
+                                            src="assets/images/projects/career-connect/03-home-feed.webp"
+                                            alt="Career Connect Android Home screen with graduate role recommendations"
+                                            width="840"
+                                            height="871"
+                                            loading="lazy"
+                                        >
+                                    </div>
+                                    <div class="phone-annotation" aria-live="polite">
+                                        <span class="annot-code" id="cc-screen-code">SCREEN 03 / 11 · MainActivity.kt</span>
+                                        <h4 id="cc-screen-title">Home Feed &amp; Curated SA Roles</h4>
+                                        <p id="cc-screen-desc">Pairs <code>JobRepository.kt</code>'s 12-item curated South African entry-level dataset with interactive field filters.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="cc-panel-gif" role="tabpanel" aria-labelledby="tab-cc-walkthrough" hidden="until-found">
+                                <figure class="gif-showcase-frame cc-gif-card" data-gif-container>
+                                    <div class="gif-toolbar">
+                                        <span>ANDROID FLOW // 13.5s EMULATOR CAPTURE</span>
+                                        <button type="button" class="gif-toggle-btn" data-gif-toggle>Pause animation</button>
+                                    </div>
+                                    <img
+                                        src="assets/images/projects/career-connect/app-walkthrough.gif"
+                                        data-gif-src="assets/images/projects/career-connect/app-walkthrough.gif"
+                                        data-poster-src="assets/images/projects/career-connect/app-walkthrough-poster.webp"
+                                        alt="Animated Android emulator walkthrough across Career Connect Activities"
+                                        width="520"
+                                        height="538"
+                                        loading="lazy"
+                                    >
+                                    <figcaption>End-to-end Android emulator walkthrough from login through encrypted student profile.</figcaption>
+                                </figure>
+                            </div>
+                        </div>
+
+                        <!-- Right: Interactive 11-Screen Selector Strip + Honest Architecture Breakdown -->
+                        <div class="cc-details-column">
+                            <h3 id="cc-title" class="project-heading">Career Connect</h3>
+                            <p class="project-hook">
+                                Native Kotlin application pairing Firebase Auth, Firestore application tracking, live Remotive remote jobs, and hardware-backed <code>AndroidKeyStore</code> AES-256-GCM encryption.
+                            </p>
+
+                            <div class="cc-screen-picker" role="group" aria-label="Select any of the 11 Android screens">
+                                <button type="button" class="cc-screen-chip" data-cc-idx="0" aria-pressed="false">01 Welcome</button>
+                                <button type="button" class="cc-screen-chip" data-cc-idx="1" aria-pressed="false">02 Sign In</button>
+                                <button type="button" class="cc-screen-chip is-selected" data-cc-idx="2" aria-pressed="true">03 Home Feed</button>
+                                <button type="button" class="cc-screen-chip" data-cc-idx="3" aria-pressed="false">04 Field Filter</button>
+                                <button type="button" class="cc-screen-chip" data-cc-idx="4" aria-pressed="false">05 Remotive API</button>
+                                <button type="button" class="cc-screen-chip" data-cc-idx="5" aria-pressed="false">06 Role Detail</button>
+                                <button type="button" class="cc-screen-chip" data-cc-idx="6" aria-pressed="false">07 Firestore Tracker</button>
+                                <button type="button" class="cc-screen-chip" data-cc-idx="7" aria-pressed="false">08 OS Notification</button>
+                                <button type="button" class="cc-screen-chip" data-cc-idx="8" aria-pressed="false">09 CV Builder</button>
+                                <button type="button" class="cc-screen-chip" data-cc-idx="9" aria-pressed="false">10 AES-256 Profile</button>
+                                <button type="button" class="cc-screen-chip" data-cc-idx="10" aria-pressed="false">11 Session Exit</button>
+                            </div>
+
+                            <figure class="cc-arch-diagram">
+                                <img
+                                    src="assets/images/projects/career-connect/career-connect-architecture.svg"
+                                    alt="Career Connect Android system boundary across Retrofit 2, Firestore rules, and AndroidKeyStore AES-256-GCM"
+                                    width="1100"
+                                    height="440"
+                                    loading="lazy"
+                                >
+                            </figure>
+
+                            <dl class="fact-pairs" aria-label="Career Connect honest implementation boundaries">
+                                <div>
+                                    <dt>Implemented &amp; Tested</dt>
+                                    <dd>11 Kotlin Activities, Firestore <code>${uid}_${jobId}</code> composite key &amp; 14-day stale rule (<code>firestore.rules</code>), <strong>26 JUnit 4 unit tests</strong>, hardware-backed <code>AES/GCM/NoPadding</code> encryption.</dd>
+                                </div>
+                                <div>
+                                    <dt>Prototype Boundaries</dt>
+                                    <dd><code>StatusNotifier.kt</code> triggers foreground alerts only while open; <code>NotificationActivity.kt</code> is static; CV exports formatted plain text via <code>Intent.ACTION_SEND</code>; <code>backend/</code> holds <code>.gitkeep</code> only.</dd>
+                                </div>
+                            </dl>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- ================= 07. CLOUD RESUME CHALLENGE ARCHITECTURE & EVOLUTION SLIDER ================= -->
+        <section id="architecture" class="section section-tinted reveal" aria-labelledby="crc-heading">
+            <div class="container">
+                <header class="editorial-section-head">
+                    <span class="section-number">04 // CLOUD RESUME CHALLENGE ARCHITECTURE &amp; EVOLUTION</span>
+                    <h2 id="crc-heading">From Azure Static Blob v1 to hardened Vercel + Neon PostgreSQL.</h2>
+                    <p class="section-subtitle">
+                        Drag the interactive divider below to compare my Phase 1 Azure implementation against the current production serverless portfolio, inspect live <code>GET /api/visitors</code> telemetry, and browse all 7 original Azure Portal &amp; GitHub Actions captures.
+                    </p>
+                </header>
+
+                <!-- Interactive Before / After Comparison Slider (Native <input type="range">) -->
+                <div class="crc-comparison-showcase">
+                    <div class="compare-stage" id="crc-compare-stage" style="--compare-pct: 52%;">
+                        <!-- Under Layer: Current Soft Power Production Serverless Summary -->
+                        <div class="compare-layer compare-layer--after">
+                            <div class="compare-after-visual">
+                                <span class="compare-badge">AFTER // PRODUCTION VERCEL + NEON PG</span>
+                                <h3>Soft Power Serverless Architecture</h3>
+                                <svg role="img" aria-labelledby="arch-svg-title" viewBox="0 0 960 210" class="arch-svg">
+                                    <title id="arch-svg-title">Vercel Edge CDN -> api/visitors.js -> Neon Serverless PostgreSQL request lifecycle</title>
+                                    <g transform="translate(20, 30)">
+                                        <rect width="195" height="145" rx="6" fill="#FAF6F3" stroke="#854664" stroke-width="1.5"/>
+                                        <rect width="195" height="28" rx="6" fill="#FBE4EE"/>
+                                        <text x="16" y="19" fill="#6E1F42" font-family="JetBrains Mono, monospace" font-size="11" font-weight="600">01 // CLIENT</text>
+                                        <text x="16" y="60" fill="#141115" font-family="Plus Jakarta Sans, sans-serif" font-size="15" font-weight="700">Visitor Browser</text>
+                                        <text x="16" y="84" fill="#58475C" font-family="Plus Jakarta Sans, sans-serif" font-size="12">Semantic HTML / CSS</text>
+                                        <text x="16" y="102" fill="#58475C" font-family="Plus Jakarta Sans, sans-serif" font-size="12">&amp; dual scroll-scrub video</text>
+                                        <text x="16" y="130" fill="#6E1F42" font-family="JetBrains Mono, monospace" font-size="11">fetch('/api/visitors')</text>
+                                    </g>
+                                    <g>
+                                        <line x1="215" y1="102" x2="265" y2="102" stroke="#6E1F42" stroke-width="1.75" stroke-dasharray="4 3"/>
+                                        <polygon points="265,97 275,102 265,107" fill="#6E1F42"/>
+                                    </g>
+                                    <g transform="translate(275, 30)">
+                                        <rect width="195" height="145" rx="6" fill="#FAF6F3" stroke="#854664" stroke-width="1.5"/>
+                                        <rect width="195" height="28" rx="6" fill="#FBE4EE"/>
+                                        <text x="16" y="19" fill="#6E1F42" font-family="JetBrains Mono, monospace" font-size="11" font-weight="600">02 // EDGE HOSTING</text>
+                                        <text x="16" y="60" fill="#141115" font-family="Plus Jakarta Sans, sans-serif" font-size="15" font-weight="700">Vercel CDN</text>
+                                        <text x="16" y="84" fill="#58475C" font-family="Plus Jakarta Sans, sans-serif" font-size="12">Automatic HTTPS/TLS &amp;</text>
+                                        <text x="16" y="102" fill="#58475C" font-family="Plus Jakarta Sans, sans-serif" font-size="12">Git CD from main</text>
+                                        <text x="16" y="130" fill="#6E1F42" font-family="JetBrains Mono, monospace" font-size="11">Zero exposed secrets</text>
+                                    </g>
+                                    <g>
+                                        <line x1="470" y1="102" x2="520" y2="102" stroke="#6E1F42" stroke-width="1.75" stroke-dasharray="4 3"/>
+                                        <polygon points="520,97 530,102 520,107" fill="#6E1F42"/>
+                                    </g>
+                                    <g transform="translate(530, 30)">
+                                        <rect width="195" height="145" rx="6" fill="#FAF6F3" stroke="#854664" stroke-width="1.5"/>
+                                        <rect width="195" height="28" rx="6" fill="#FBE4EE"/>
+                                        <text x="16" y="19" fill="#6E1F42" font-family="JetBrains Mono, monospace" font-size="11" font-weight="600">03 // FUNCTION</text>
+                                        <text x="16" y="60" fill="#141115" font-family="Plus Jakarta Sans, sans-serif" font-size="15" font-weight="700">api/visitors.js</text>
+                                        <text x="16" y="84" fill="#58475C" font-family="Plus Jakarta Sans, sans-serif" font-size="12">GET guard (HTTP 405)</text>
+                                        <text x="16" y="102" fill="#58475C" font-family="Plus Jakarta Sans, sans-serif" font-size="12">ENV check (HTTP 500)</text>
+                                        <text x="16" y="130" fill="#6E1F42" font-family="JetBrains Mono, monospace" font-size="11">HTTP 200 { count }</text>
+                                    </g>
+                                    <g>
+                                        <line x1="725" y1="102" x2="765" y2="102" stroke="#6E1F42" stroke-width="1.75" stroke-dasharray="4 3"/>
+                                        <polygon points="765,97 775,102 765,107" fill="#6E1F42"/>
+                                    </g>
+                                    <g transform="translate(775, 30)">
+                                        <rect width="165" height="145" rx="6" fill="#1C1118" stroke="#6E1F42" stroke-width="1.5"/>
+                                        <rect width="165" height="28" rx="6" fill="#321F2A"/>
+                                        <text x="14" y="19" fill="#F4B8D2" font-family="JetBrains Mono, monospace" font-size="11" font-weight="600">04 // NEON PG</text>
+                                        <text x="14" y="60" fill="#FAF6F3" font-family="Plus Jakarta Sans, sans-serif" font-size="15" font-weight="700">Neon PostgreSQL</text>
+                                        <text x="14" y="84" fill="#DFCFD7" font-family="Plus Jakarta Sans, sans-serif" font-size="12">Atomic SQL upsert on</text>
+                                        <text x="14" y="102" fill="#DFCFD7" font-family="Plus Jakarta Sans, sans-serif" font-size="12">visitor_counter row</text>
+                                        <text x="14" y="130" fill="#D6A9E8" font-family="JetBrains Mono, monospace" font-size="11">ON CONFLICT UPDATE</text>
+                                    </g>
+                                </svg>
+                            </div>
+                        </div>
+
+                        <!-- Clip Overlay Layer: Authentic Phase 1 Azure v1 Portfolio Screenshot -->
+                        <div class="compare-layer compare-layer--before">
+                            <span class="compare-badge compare-badge--v1">BEFORE // PHASE 1 AZURE STATIC WEBSITE</span>
+                            <img
+                                src="assets/images/projects/crc/crc-v1-azure.webp"
+                                alt="Phase 1 Microsoft Azure $web static portfolio site from commit d1433c2"
+                                width="1200"
+                                height="750"
+                                loading="lazy"
+                            >
+                        </div>
+
+                        <div class="compare-divider-line" aria-hidden="true"></div>
+                    </div>
+
+                    <div class="compare-controls-row">
+                        <label for="crc-compare-slider" class="compare-label">
+                            Evolution Split: <strong id="crc-compare-readout">52% Phase 1 Azure / 48% Soft Power Serverless</strong>
+                        </label>
+                        <input
+                            type="range"
+                            id="crc-compare-slider"
+                            class="soft-range-slider"
+                            min="10"
+                            max="90"
+                            value="52"
+                            aria-valuetext="52 percent Phase 1 Azure, 48 percent current production architecture"
+                        >
+                    </div>
                 </div>
 
+                <!-- Live Serverless API Verifier + Counter Strip -->
+                <div class="crc-live-bar" role="region" aria-label="Live serverless counter verification">
+                    <div class="crc-counter-stat">
+                        <span class="stat-kicker">PERSISTED COUNTER</span>
+                        <strong id="visitor-count" class="crc-big-count" aria-live="polite">Loading…</strong>
+                        <span id="project-crc-visitors" class="visually-hidden" aria-hidden="true">Loading…</span>
+                    </div>
 
+                    <div class="crc-status-details">
+                        <span id="api-status-badge" class="crc-api-badge">Connecting to /api/visitors…</span>
+                        <span class="crc-meta-inline">
+                            <code>INSERT INTO visitor_counter ... ON CONFLICT (id) DO UPDATE</code>
+                            · <span id="api-latency">Latency: —</span>
+                        </span>
+                    </div>
+
+                    <button type="button" id="verify-api-btn" class="btn-secondary">
+                        Verify Live API Endpoint
+                    </button>
+                </div>
+
+                <!-- Visible Horizontal Scroll Strip of 7 Original Azure & GitHub Actions Captures -->
+                <div class="azure-strip-wrapper">
+                    <div class="filmstrip-bar">
+                        <span>PHASE 1 AZURE &amp; GITHUB ACTIONS EVIDENCE (7 ORIGINAL ARCHIVAL CAPTURES)</span>
+                        <div class="filmstrip-controls">
+                            <button type="button" class="filmstrip-nav-btn" data-strip-prev="azure-strip" aria-label="Scroll Azure evidence left">← Prev</button>
+                            <button type="button" class="filmstrip-nav-btn" data-strip-next="azure-strip" aria-label="Scroll Azure evidence right">Next →</button>
+                        </div>
+                    </div>
+
+                    <div id="azure-strip" class="snap-filmstrip" role="region" aria-label="Phase 1 Azure and GitHub Actions deployment captures" tabindex="0">
+                        <figure class="snap-card">
+                            <div class="snap-card-inner">
+                                <img src="assets/images/screenshots/azure-storage-account.png" alt="Azure Portal view of the simplyaliceportfolio Azure Storage account" width="1917" height="910" loading="lazy">
+                                <figcaption>01 · Azure Storage (<code>simplyaliceportfolio</code>)</figcaption>
+                            </div>
+                        </figure>
+                        <figure class="snap-card">
+                            <div class="snap-card-inner">
+                                <img src="assets/images/screenshots/web-container.png" alt="Azure Blob Storage $web container holding static assets" width="1917" height="912" loading="lazy">
+                                <figcaption>02 · Blob <code>$web</code> Static Container</figcaption>
+                            </div>
+                        </figure>
+                        <figure class="snap-card">
+                            <div class="snap-card-inner">
+                                <img src="assets/images/screenshots/azure-function-app.png" alt="Azure Portal overview of serverless Function App" width="1917" height="917" loading="lazy">
+                                <figcaption>03 · Azure Function App Provisioned</figcaption>
+                            </div>
+                        </figure>
+                        <figure class="snap-card">
+                            <div class="snap-card-inner">
+                                <img src="assets/images/screenshots/azure-function.png" alt="HTTP-triggered Azure Function configuration" width="1917" height="907" loading="lazy">
+                                <figcaption>04 · HTTP Trigger Function Endpoint</figcaption>
+                            </div>
+                        </figure>
+                        <figure class="snap-card">
+                            <div class="snap-card-inner">
+                                <img src="assets/images/screenshots/azure-table-storage.png" alt="Azure Table Storage visitor entity persistence" width="1917" height="917" loading="lazy">
+                                <figcaption>05 · Azure Table Storage Entity</figcaption>
+                            </div>
+                        </figure>
+                        <figure class="snap-card">
+                            <div class="snap-card-inner">
+                                <img src="assets/images/screenshots/github-actions-static.png" alt="GitHub Actions static site deploy workflow run" width="1911" height="901" loading="lazy">
+                                <figcaption>06 · GitHub Actions Static CI/CD</figcaption>
+                            </div>
+                        </figure>
+                        <figure class="snap-card">
+                            <div class="snap-card-inner">
+                                <img src="assets/images/screenshots/github-actions-function-success.png" alt="GitHub Actions Azure Function deploy success" width="1905" height="906" loading="lazy">
+                                <figcaption>07 · GitHub Actions Function Deploy</figcaption>
+                            </div>
+                        </figure>
+                    </div>
+                </div>
+
+                <!-- Reference Table Disclosed Cleanly -->
+                <details class="schema-disclosure">
+                    <summary>
+                        <span>Cloud Resume Challenge Requirements Matrix (Implemented vs. Azure Phase 1 vs. Roadmap)</span>
+                        <span class="drawer-hint">View Table</span>
+                    </summary>
+                    <div class="crc-table-wrapper">
+                        <table class="crc-table">
+                            <caption>Cloud Resume Challenge Requirements — Implemented vs. Historical &amp; Planned</caption>
+                            <thead>
+                                <tr>
+                                    <th scope="col">Challenge Requirement</th>
+                                    <th scope="col">Status</th>
+                                    <th scope="col">Active Production Implementation (Vercel &amp; Neon)</th>
+                                    <th scope="col">Phase 1 Azure / Roadmap</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">Static Cloud Hosting &amp; HTTPS</th>
+                                    <td><span class="table-status-ok">Implemented</span></td>
+                                    <td>Live on Vercel with automatic HTTPS/TLS at <code>cloud-resume-challenge-six.vercel.app</code>.</td>
+                                    <td>Originally hosted in Azure Storage <code>$web</code> container.</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Serverless API &amp; Counter</th>
+                                    <td><span class="table-status-ok">Implemented</span></td>
+                                    <td>Node.js <code>api/visitors.js</code> enforcing GET-only (HTTP 405) &amp; config check (HTTP 500).</td>
+                                    <td>Migrated from HTTP-triggered Azure Function (commit <code>f3edaf2</code>).</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Relational Persistence</th>
+                                    <td><span class="table-status-ok">Implemented</span></td>
+                                    <td>Neon Serverless PostgreSQL atomic <code>ON CONFLICT UPDATE</code>.</td>
+                                    <td>Previously stored in Azure Table Storage.</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Automated Verification</th>
+                                    <td><span class="table-status-ok">Implemented</span></td>
+                                    <td><code>node --test</code> suite verifying handler responses, media integrity &amp; DOM landmarks.</td>
+                                    <td>Scheduled extension: CI Playwright regression gate.</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">IaC &amp; Custom Domain</th>
+                                    <td><span class="table-status-planned">Planned</span></td>
+                                    <td>Configured via Vercel bindings and isolated environment secrets.</td>
+                                    <td>Codify provisioning in Terraform / Bicep + bind custom apex DNS.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </details>
+            </div>
+        </section>
+
+        <!-- ================= 08. CLOUD OPERATIONS, SKILLS, ENVIRONMENT & EDUCATION ================= -->
+        <section id="cloud-devops" class="section reveal" aria-labelledby="cloud-heading">
+            <div class="container">
+                <header class="editorial-section-head">
+                    <span class="section-number">05 // CLOUD ENGINEERING &amp; OPERATIONAL EXPERIENCE</span>
+                    <h2 id="cloud-heading">Cloud platforms, production troubleshooting &amp; real-world coordination.</h2>
+                </header>
+
+                <div class="cloud-matrix-grid">
+                    <article class="cloud-column">
+                        <span class="pillar-tag">AWS · SKILLS CENTER</span>
+                        <h3>Amazon Web Services</h3>
+                        <p>Four instructor-led <em>Becoming a Cloud Practitioner</em> sessions at AWS Skills Center Cape Town (Sep 2026): Amazon S3 object storage, EC2 virtual compute, security groups, and shared responsibility foundations.</p>
+                    </article>
+
+                    <article class="cloud-column">
+                        <span class="pillar-tag">AZURE · AZ-900 / AZ-104</span>
+                        <h3>Microsoft Azure</h3>
+                        <p>Applied in Phase 1 Cloud Resume Challenge (<code>$web</code> static hosting, Azure Functions, Table Storage) plus active AZ-900 preparation covering RBAC, DNS, CDN, and virtual networking.</p>
+                    </article>
+
+                    <article class="cloud-column">
+                        <span class="pillar-tag">OPERATIONS &amp; TOOLING</span>
+                        <h3>DevOps &amp; Diagnostics</h3>
+                        <p>GitHub Actions CI/CD, Docker Compose multi-container workflows, SSH/SCP zero-data-loss production releases, SHA-256 asset verification, cache-busting, and HTTP header debugging.</p>
+                    </article>
+                </div>
+
+                <div class="ops-roles-band" aria-label="Operational work experience">
+                    <div class="ops-role">
+                        <span class="ops-date"><time datetime="2022-09">Sep 2022</time> – Present</span>
+                        <h4>Events Steward · Ignite Events</h4>
+                        <p>Live event coordination under real-time schedule constraints across Cape Town venues.</p>
+                    </div>
+                    <div class="ops-role">
+                        <span class="ops-date">Cape Town</span>
+                        <h4>Marketing &amp; Admin Assistant · The Drain Surgeon</h4>
+                        <p>Client communications, dispatch coordination, and resolving service bottlenecks independently.</p>
+                    </div>
+                    <div class="ops-role">
+                        <span class="ops-date"><time datetime="2022-03">Mar 2022</time> – <time datetime="2024-07">Jul 2024</time></span>
+                        <h4>Admin Assistant · Capriccio Pre-school</h4>
+                        <p>Structured front-desk operations and accurate institutional record administration.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= TECHNICAL SKILLS MATRIX & SOFT POWER TERMINAL ================= -->
+        <section id="skills" class="section section-tinted reveal" aria-labelledby="skills-heading">
+            <div class="container">
+                <header class="editorial-section-head">
+                    <span class="section-number">06 // TECHNICAL SPECIFICATION &amp; DEVELOPER WORKFLOW</span>
+                    <h2 id="skills-heading">Core capabilities &amp; customised PowerShell 7 Soft Power shell.</h2>
+                </header>
+
+                <dl class="skills-spec-rows" aria-label="Technical skills by discipline">
+                    <div class="spec-row">
+                        <dt>Cloud &amp; Serverless</dt>
+                        <dd>AWS (S3, EC2, Cloud Fundamentals) · Microsoft Azure (Storage, Functions, Table Storage, DNS, CDN, RBAC) · Vercel Serverless Functions · Neon PostgreSQL · Firebase Auth &amp; Cloud Firestore (<code>firestore.rules</code>)</dd>
+                    </div>
+                    <div class="spec-row">
+                        <dt>DevOps &amp; Operations</dt>
+                        <dd>Git &amp; GitHub Branch Governance · GitHub Actions CI/CD · Docker &amp; Docker Compose · Linux CLI &amp; PowerShell 7.6.9 · SSH/SCP Rollouts · SHA-256 Parity &amp; HTTP Header Diagnostics</dd>
+                    </div>
+                    <div class="spec-row">
+                        <dt>Backend &amp; Data</dt>
+                        <dd>Python 3.11–3.13 &amp; FastAPI · PHP 8 (PDO) · PostgreSQL 15/16 &amp; MariaDB (InnoDB) · SQLAlchemy 2.0 &amp; Alembic · Pydantic v2 <code>Decimal</code> · Redis TTL Caching · REST APIs</dd>
+                    </div>
+                    <div class="spec-row">
+                        <dt>Frontend, Mobile &amp; QA</dt>
+                        <dd>TypeScript &amp; JavaScript (ES6+) · React (Vite) · Semantic HTML5 &amp; Modern CSS · Kotlin Android (API 24–37, AndroidKeyStore AES-256-GCM) · Pytest, JUnit 4, Vitest, Ruff, Node Test Runner</dd>
+                    </div>
+                </dl>
+
+                <!-- Developer Environment Terminal & Education Grid -->
+                <div id="environment" class="env-education-split">
+                    <div class="terminal-window" role="region" aria-label="Custom PowerShell 7.6.9 Soft Power terminal showcase">
+                        <div class="terminal-titlebar">
+                            <div class="terminal-dots" aria-hidden="true">
+                                <span class="dot-rose"></span>
+                                <span class="dot-mauve"></span>
+                                <span class="dot-lavender"></span>
+                            </div>
+                            <span class="terminal-title">pwsh 7.6.9 — soft-power.omp.json</span>
+                            <div class="terminal-tabs" role="tablist" aria-label="Terminal views" data-scoped-tablist>
+                                <button type="button" role="tab" class="term-tab active" aria-selected="true" aria-controls="term-panel-devcheck" id="tab-devcheck">devcheck</button>
+                                <button type="button" role="tab" class="term-tab" aria-selected="false" aria-controls="term-panel-diagnostics" id="tab-diagnostics">diagnostics</button>
+                                <button type="button" role="tab" class="term-tab" aria-selected="false" aria-controls="term-panel-profile" id="tab-profile">profile.ps1</button>
+                            </div>
+                        </div>
+
+                        <div id="term-panel-devcheck" role="tabpanel" aria-labelledby="tab-devcheck">
+                            <div class="terminal-body">
+<pre><code><span class="t-banner">  SOFT POWER // Oh My Posh + PSReadLine</span>
+<span class="t-path">♡ ~/OneDrive/Documents/GitHub/Quote_Flow</span> <span class="t-git">on Feature/Backend-Foundation ✎</span>
+<span class="t-prompt">❯</span> <span class="t-cmd">devcheck</span>
+git 2.47.1 · Python 3.13.13 · Docker 27.4.0 · oh-my-posh 24.11.2
+Shortcuts: gs · glog · dps · ports · httpcheck &lt;Uri&gt; · zazen · qf</code></pre>
+                            </div>
+                        </div>
+
+                        <div id="term-panel-diagnostics" role="tabpanel" aria-labelledby="tab-diagnostics" hidden="until-found">
+                            <div class="terminal-body">
+<pre><code><span class="t-path">♡ ~/Documents/Software Engineering/Cloud-Resume-Challenge</span> <span class="t-git">on main</span>
+<span class="t-prompt">❯</span> <span class="t-cmd">httpcheck https://zazen-matcha.alwaysdata.net/</span>
+StatusCode : 200 OK · Server : Apache · SHA-256 Parity Verified
+
+<span class="t-prompt">❯</span> <span class="t-cmd">ports</span>
+127.0.0.1:5432 (PG16)  ·  127.0.0.1:8000 (FastAPI)</code></pre>
+                            </div>
+                        </div>
+
+                        <div id="term-panel-profile" role="tabpanel" aria-labelledby="tab-profile" hidden="until-found">
+                            <div class="terminal-body">
+<pre><code>$theme = Join-Path $HOME ".config\oh-my-posh\soft-power.omp.json"
+oh-my-posh init pwsh --config $theme | Invoke-Expression
+function gs    { git status }
+function ports { Get-NetTCPConnection -State Listen | Sort-Object LocalPort }
+function httpcheck { param([string]$Uri) Invoke-WebRequest -Uri $Uri -Method Head }</code></pre>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="education" class="education-compact">
+                        <span class="pillar-tag">ACADEMIC &amp; CLOUD PATHWAY</span>
+                        <h3>BSc Information Technology (Software Engineering)</h3>
+                        <p class="edu-sub"><strong>Eduvos, Cape Town</strong> · 2023 – May 2027 (Final Year)</p>
+                        <p>Coursework: Systems Analysis &amp; Design, Database Systems, Network Security, Web Server Management, Operating Systems, IT Project Management.</p>
+                        <ul class="cert-path-list" role="list">
+                            <li><strong>Completed:</strong> AWS Skills Center Cape Town — <em>Becoming a Cloud Practitioner</em> (Sep 2026)</li>
+                            <li><strong>In Progress:</strong> Microsoft Azure Fundamentals (<strong>AZ-900</strong>)</li>
+                            <li><strong>Planned Next:</strong> Microsoft Azure Administrator Associate (<strong>AZ-104</strong>)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= 09. CONTACT & NOCTURNAL CLOSURE ================= -->
+        <section id="contact" class="section section-contact reveal" aria-labelledby="contact-heading">
+            <div class="contact-ambient-media" aria-hidden="true">
+                <img
+                    src="assets/images/editorial/plum-nocturne-peony.webp"
+                    alt=""
+                    width="1376"
+                    height="768"
+                    loading="lazy"
+                    class="contact-bg-img"
+                >
             </div>
 
+            <div class="container contact-grid">
+                <div class="contact-editorial">
+                    <span class="section-number contact-kicker">07 // CORRESPONDENCE &amp; NEXT ROLES</span>
+                    <h2 id="contact-heading">Open to Cloud Support, Junior Cloud Engineering, Technical Operations &amp; Graduate Software teams.</h2>
+                    <p>
+                        Based in <strong>Cape Town, South Africa</strong> — ready for hands-on infrastructure debugging, reliable software delivery, and collaborative engineering culture (Cape Town hybrid or remote).
+                    </p>
+                </div>
 
-        </section>
-       <!-- ================= CONTACT ================= -->
-
-        <section id="contact" class="reveal">
-
-
-            <h2>
-                Let's Connect
-            </h2>
-
-
-            <p>
-
-                I'm open to cloud engineering opportunities, internships, collaborations, and conversations around cloud infrastructure, technical operations, automation, and modern IT.
-
-            </p>
-
-
-
-            <div class="contact-buttons">
-
-
-                <a href="https://github.com/SimplyAlice"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="btn-primary">
-
-                    GitHub
-
-                </a>
-
-
-
-                <a href="https://www.linkedin.com/in/alice-matarise-778bb6374/"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="btn-secondary">
-
-                    LinkedIn
-
-                </a>
-
-
-
-                <a href="assets/documents/Alice-Matarise-CV.pdf"
-                download="Alice-Matarise-CV.pdf"
-                class="btn-secondary">
-
-                    Download CV
-
-                </a>
-
-
-
-                <a href="mailto:Minervamatarise@gmail.com"
-                class="btn-secondary">
-
-                    Email Me
-
-                </a>
-
-
+                <div class="contact-panel">
+                    <h3>Direct Channels</h3>
+                    <ul class="contact-list" role="list">
+                        <li>
+                            <span class="contact-channel-label">Email</span>
+                            <a href="mailto:Minervamatarise@gmail.com" class="contact-link">Minervamatarise@gmail.com</a>
+                        </li>
+                        <li>
+                            <span class="contact-channel-label">GitHub</span>
+                            <a href="https://github.com/SimplyAlice" target="_blank" rel="noopener noreferrer" class="contact-link">github.com/SimplyAlice ↗</a>
+                        </li>
+                        <li>
+                            <span class="contact-channel-label">LinkedIn</span>
+                            <a href="https://www.linkedin.com/in/alice-matarise-778bb6374/" target="_blank" rel="noopener noreferrer" class="contact-link">linkedin.com/in/alice-matarise-778bb6374 ↗</a>
+                        </li>
+                        <li>
+                            <span class="contact-channel-label">Curriculum Vitae</span>
+                            <a href="assets/documents/Alice-Matarise-CV.pdf" download="Alice-Matarise-CV.pdf" class="contact-link">Download Alice-Matarise-CV.pdf ↓</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-
-
         </section>
+
+    </main>
 
     <!-- ================= FOOTER ================= -->
-
-        <footer>
-
-
-            <div class="footer-content">
-
-
-                <div class="footer-brand">
-
-                    <h3>
-                        Alice Matarise
-                    </h3>
-
-                    <p>
-                        Aspiring Cloud Engineer building solutions
-                        with Vercel, Neon PostgreSQL, Python, and modern software practices.
-                    </p>
-
-                </div>
-
-
-
-                <div class="footer-links">
-
-
-                    <a href="https://github.com/SimplyAlice"
-                    target="_blank"
-                    rel="noopener noreferrer">
-
-                        <i class="fa-brands fa-github"></i>
-                        GitHub
-
-                    </a>
-
-
-
-                    <a href="https://www.linkedin.com/in/alice-matarise-778bb6374/"
-                    target="_blank"
-                    rel="noopener noreferrer">
-
-                        <i class="fa-brands fa-linkedin"></i>
-                        LinkedIn
-
-                    </a>
-
-
-                </div>
-
-
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div class="footer-colophon">
+                <p class="footer-brand-title">Alice Matarise</p>
+                <p class="footer-tagline">Software Engineering Student · Aspiring Cloud Engineer · Technical Problem Solver</p>
+                <p class="footer-stack-note">Hosted on Vercel · Serverless Node.js API (<code>/api/visitors</code>) · Persisted in Neon PostgreSQL · Soft Power Design System.</p>
             </div>
 
+            <nav class="footer-nav" aria-label="Footer">
+                <ul role="list">
+                    <li><a href="https://github.com/SimplyAlice" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                    <li><a href="https://www.linkedin.com/in/alice-matarise-778bb6374/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                    <li><a href="https://dayform-live.vercel.app/" target="_blank" rel="noopener noreferrer">Dayform</a></li>
+                    <li><a href="https://zazen-matcha.alwaysdata.net/" target="_blank" rel="noopener noreferrer">Zazen Matcha</a></li>
+                    <li><a href="https://github.com/SimplyAlice/Quote_Flow" target="_blank" rel="noopener noreferrer">Quote_Flow</a></li>
+                    <li><a href="assets/documents/Alice-Matarise-CV.pdf" download="Alice-Matarise-CV.pdf">CV (PDF)</a></li>
+                </ul>
+            </nav>
+        </div>
 
-
-            <div class="footer-bottom">
-
-
-                <p>
-                    © 2026 Alice Matarise
-                </p>
-
-
-                <p>
-                    Built with HTML, CSS, JavaScript, Vercel & Neon PostgreSQL ☁
-                </p>
-
-
-            </div>
-
-
-        </footer>
+        <div class="container footer-bottom">
+            <p>© 2026 Alice Matarise · Cape Town, South Africa</p>
+            <p>Cloud Resume Challenge Portfolio · <a href="https://github.com/SimplyAlice/Cloud-Resume-Challenge" target="_blank" rel="noopener noreferrer">Source Repository</a></p>
+        </div>
+    </footer>
 
     <script src="assets/js/script.js"></script>
 </body>
-
 </html>

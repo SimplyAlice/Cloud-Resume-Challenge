@@ -1,0 +1,52 @@
+{
+  "ready": true,
+  "concept": "Soft Power: Organic Growth Meets Technical Architecture — Two Standalone Scroll Experiences",
+  "mode": "independent-sections",
+  "aspectRatio": "16:9",
+  "recommendedResolution": "1920x1080",
+  "fps": 24,
+  "sections": [
+    {
+      "id": "video1",
+      "sectionId": "video-one",
+      "order": 1,
+      "composition": "standalone-plum-cinema",
+      "title": "Section 03 — Architectural Foundation in Deep Plum",
+      "originalFilename": "Flower_opening_with_architecture.mp4",
+      "originalArchivePath": "assets/video/originals/flower-opening-with-architecture.mp4",
+      "durationSeconds": 3.916667,
+      "frameCount": 94,
+      "fps": 24,
+      "posters": {
+        "open": "assets/images/posters/v1-open.webp",
+        "close": "assets/images/posters/v1-close.webp"
+      },
+      "sources": {
+        "desktop": "assets/video/scrub/flower-opening-with-architecture-1080p.mp4",
+        "mobile": "assets/video/scrub/flower-opening-with-architecture-720p.mp4",
+        "type": "video/mp4"
+      }
+    },
+    {
+      "id": "video2",
+      "sectionId": "video-two",
+      "order": 2,
+      "composition": "right-split-screen-ivory",
+      "title": "Section 05 — Organic Bloom & Radial Engineering Geometry",
+      "originalFilename": "Botanical_animation.mp4",
+      "originalArchivePath": "assets/video/originals/botanical-animation.mp4",
+      "durationSeconds": 9.958333,
+      "frameCount": 239,
+      "fps": 24,
+      "posters": {
+        "open": "assets/images/posters/v2-open.webp",
+        "close": "assets/images/posters/v2-close.webp"
+      },
+      "sources": {
+        "desktop": "assets/video/scrub/botanical-animation-1080p.mp4",
+        "mobile": "assets/video/scrub/botanical-animation-720p.mp4",
+        "type": "video/mp4"
+      }
+    }
+  ]
+}

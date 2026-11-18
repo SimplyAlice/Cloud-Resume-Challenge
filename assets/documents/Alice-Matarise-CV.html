@@ -7,7 +7,7 @@
     <style>
         @page {
             size: A4;
-            margin: 14mm 16mm;
+            margin: 9mm 13mm;
         }
 
         * {
@@ -15,181 +15,216 @@
         }
 
         body {
-            margin: 0;
-            color: #243247;
-            font: 9.5pt/1.4 Arial, sans-serif;
+            margin: 0 auto;
+            max-width: 184mm;
+            color: #141115;
+            background: #ffffff;
+            font: 8.2pt/1.28 'Segoe UI', Arial, Helvetica, sans-serif;
         }
 
         header {
-            border-bottom: 3px solid #2563eb;
-            margin-bottom: 14px;
-            padding-bottom: 10px;
+            border-bottom: 1.5pt solid #6E1F42;
+            margin-bottom: 6px;
+            padding-bottom: 4px;
         }
 
         h1 {
-            color: #163a70;
-            font-size: 25pt;
-            letter-spacing: 1px;
-            margin: 0 0 3px;
+            color: #141115;
+            font-size: 16.5pt;
+            font-weight: 700;
+            letter-spacing: 0.4px;
+            margin: 0 0 2px;
         }
 
         .headline {
-            color: #2563eb;
-            font-size: 11pt;
+            color: #6E1F42;
+            font-size: 9pt;
             font-weight: 700;
-            margin-bottom: 7px;
+            margin-bottom: 2px;
         }
 
         .contact {
-            color: #475569;
-            font-size: 8.5pt;
+            color: #332B35;
+            font-size: 8pt;
         }
 
         section {
-            margin: 0 0 11px;
+            margin: 0 0 6px;
         }
 
         h2 {
-            border-bottom: 1px solid #bfdbfe;
-            color: #1d4ed8;
-            font-size: 11pt;
-            letter-spacing: .7px;
-            margin: 0 0 6px;
-            padding-bottom: 3px;
+            border-bottom: 0.75pt solid #C9B5BF;
+            color: #6E1F42;
+            font-size: 8.8pt;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            margin: 0 0 3px;
+            padding-bottom: 1px;
             text-transform: uppercase;
         }
 
         h3 {
-            color: #1e293b;
-            font-size: 9.5pt;
-            margin: 0 0 2px;
+            color: #141115;
+            font-size: 8.4pt;
+            font-weight: 700;
+            margin: 0;
         }
 
         p {
-            margin: 3px 0;
+            margin: 1px 0;
         }
 
         .item {
             break-inside: avoid;
-            margin: 0 0 7px;
+            margin: 0 0 4.5px;
+        }
+
+        .item-line {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 8px;
         }
 
         .meta {
-            color: #475569;
-            font-size: 8.5pt;
+            color: #4A3D4E;
+            font-size: 7.8pt;
+            white-space: nowrap;
         }
 
         ul {
-            margin: 3px 0 0;
-            padding-left: 17px;
+            margin: 1.5px 0 0;
+            padding-left: 14px;
         }
 
         li {
-            margin: 1px 0;
-        }
-
-        .skills p {
-            margin: 2px 0;
+            margin: 0.75px 0;
         }
 
         a {
-            color: #1d4ed8;
+            color: #6E1F42;
             text-decoration: none;
+        }
+
+        code {
+            font-family: Consolas, 'Courier New', monospace;
+            font-size: 7.7pt;
         }
     </style>
 </head>
 <body>
     <header>
         <h1>ALICE MATARISE</h1>
-        <div class="headline">Cloud Engineering &amp; Technical Operations</div>
-        <div class="contact">Cape Town, Western Cape | +27 81 059 9388 | minervamatarise@gmail.com | GitHub: github.com/SimplyAlice</div>
+        <div class="headline">Cloud Support, Cloud Engineering &amp; Technical Operations Candidate | BSc IT (Software Engineering)</div>
+        <div class="contact">Cape Town, Western Cape | +27 81 059 9388 | <a href="mailto:Minervamatarise@gmail.com">Minervamatarise@gmail.com</a> | <a href="https://github.com/SimplyAlice">github.com/SimplyAlice</a> | <a href="https://cloud-resume-challenge-six.vercel.app/">cloud-resume-challenge-six.vercel.app</a></div>
     </header>
 
     <section>
         <h2>Professional Summary</h2>
-        <p>Final-year BSc Information Technology (Software Engineering) student building toward a career in cloud engineering and technical operations. Combines a software engineering foundation with cloud services, software development, APIs, databases, and deployment experience. Seeking early-career opportunities in cloud support, cloud engineering, and technical operations.</p>
+        <p>Final-year BSc Information Technology (Software Engineering) student at Eduvos, Cape Town (2023 – Expected May 2027) targeting early-career roles in <strong>Cloud Support</strong>, <strong>Cloud Engineering</strong>, and <strong>Technical Operations</strong>, with a long-term path toward <strong>Technical Project Management</strong>. Combines cloud hosting, serverless API deployment, SSH/SCP rollout verification, HTTP caching diagnostics, and SHA-256 asset checks with Python (FastAPI), SQL, PHP 8, TypeScript, and Kotlin development.</p>
     </section>
 
     <section>
-        <h2>Education</h2>
+        <h2>Technical Skills</h2>
+        <p><strong>Cloud &amp; Operations:</strong> Microsoft Azure (Storage <code>$web</code>, Functions, Table Storage, DNS, CDN, RBAC), AWS (S3, EC2, Fundamentals), Vercel, Neon PostgreSQL, Firebase Auth &amp; Firestore, GitHub Actions CI/CD, Docker, Linux, PowerShell 7.6.9, SSH/SCP Deployment, HTTP Diagnostics, SHA-256 Verification</p>
+        <p><strong>Engineering &amp; Data:</strong> Python, FastAPI, SQL, PostgreSQL, MariaDB/MySQL (InnoDB), PHP 8 (PDO), SQLAlchemy 2.0, Alembic, Pydantic v2, TypeScript, JavaScript, React, HTML5/CSS3, Kotlin, Android Studio, Git/GitHub</p>
+    </section>
+
+    <section>
+        <h2>Cloud Operations &amp; Engineering Projects</h2>
+
         <div class="item">
-            <h3>BSc Information Technology — Software Engineering</h3>
-            <div class="meta">Eduvos, Cape Town | 2023 – Expected May 2027</div>
+            <div class="item-line">
+                <h3>Cloud Resume Challenge | Serverless Portfolio (Deployed)</h3>
+                <span class="meta"><a href="https://cloud-resume-challenge-six.vercel.app/">Live Site</a> · <a href="https://github.com/SimplyAlice/Cloud-Resume-Challenge">GitHub</a></span>
+            </div>
+            <ul>
+                <li>Built Phase 1 infrastructure on Azure (Blob Storage <code>$web</code>, HTTP-triggered Azure Functions, Table Storage) with GitHub Actions CI/CD pipelines.</li>
+                <li>Migrated live production hosting to Vercel with a Node.js serverless API (<code>GET /api/visitors</code>) executing atomic SQL upserts in Neon PostgreSQL; resolved CORS, API routing, and environment configuration issues.</li>
+            </ul>
+        </div>
+
+        <div class="item">
+            <div class="item-line">
+                <h3>Zazen Matcha &amp; Tea Co. | Production E-Commerce &amp; Operations (Deployed)</h3>
+                <span class="meta"><a href="https://zazen-matcha.alwaysdata.net/">Live Store</a> · <a href="https://github.com/SimplyAlice/Zazen-Matcha">GitHub</a></span>
+            </div>
+            <ul>
+                <li>Built and deployed a custom PHP 8 (PDO) and MariaDB (InnoDB) e-commerce platform with transactional checkout locking (<code>SELECT ... FOR UPDATE</code>), <code>bcrypt</code> auth, and an <code>/admin</code> CRUD console.</li>
+                <li>Deployed updates via SSH/SCP to Alwaysdata hosting while preserving production DB records and <code>config.php</code>; resolved browser caching with cache-busting and verified asset parity using HTTP/SSH and PowerShell SHA-256 hashing.</li>
+            </ul>
+        </div>
+
+        <div class="item">
+            <div class="item-line">
+                <h3>Quote_Flow | B2B Pricing &amp; Margin Platform (In Development — SWE Lead)</h3>
+                <span class="meta"><a href="https://github.com/SimplyAlice/Quote_Flow">github.com/SimplyAlice/Quote_Flow</a></span>
+            </div>
+            <ul>
+                <li>Co-developing with a Data Science graduate; implemented 12 SQLAlchemy 2.0 ORM models, baseline PostgreSQL 16 Alembic migration (<code>6fe0f6e79dd9</code>), Pydantic v2 <code>ExactDecimal</code> contracts, 6 FastAPI v1 routers, Argon2/JWT authentication, and 27 Pytest modules (179 passing unit tests; PostgreSQL 16 integration testing pending); Next.js frontend planned.</li>
+            </ul>
+        </div>
+
+        <div class="item">
+            <div class="item-line">
+                <h3>Dayform | Outing Planner (Frontend Live on Vercel; Backend DB in Remediation)</h3>
+                <span class="meta"><a href="https://dayform-live.vercel.app/">Frontend App</a> · <a href="https://github.com/SimplyAlice/dayform">GitHub</a></span>
+            </div>
+            <ul>
+                <li>Built a React/TypeScript SPA (deployed on Vercel) and async Python/FastAPI backend integrating PostgreSQL (<code>SQLAlchemy 2.0</code>/<code>asyncpg</code>), Redis caching, OpenStreetMap Overpass, and Open-Meteo APIs (98 backend Pytest test files + 4 Vitest suites); currently remediating production SSL/TLS and PgBouncer connection pooling.</li>
+            </ul>
+        </div>
+
+        <div class="item">
+            <div class="item-line">
+                <h3>Career Connect | Android Graduate Opportunity Prototype (6-Person Team)</h3>
+                <span class="meta">Kotlin · Android Studio · Firebase</span>
+            </div>
+            <ul>
+                <li>Led a six-person Agile team and built Kotlin/XML UI screens integrated with Firebase Auth, Cloud Firestore (<code>firestore.rules</code>, foreground <code>StatusNotifier</code>), Remotive API (Retrofit 2), and local <code>AndroidKeyStore</code> AES-256-GCM profile/CV encryption (26 JUnit 4 unit tests).</li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <h2>Education &amp; Cloud Training</h2>
+        <div class="item">
+            <div class="item-line">
+                <h3>BSc Information Technology (Software Engineering) | Eduvos, Cape Town</h3>
+                <span class="meta">2023 – Expected May 2027</span>
+            </div>
             <p>Relevant coursework: Systems Analysis &amp; Design, Database Systems, Network Security, Web Server Management, Operating Systems, IT Project Management.</p>
         </div>
-    </section>
-
-    <section>
-        <h2>Projects</h2>
         <div class="item">
-            <h3>Dayform | Intelligent Day-Planning Application</h3>
-            <div class="meta"><a href="https://dayform-live.vercel.app/">Live application</a> | <a href="https://github.com/SimplyAlice/dayform">GitHub</a></div>
-            <ul>
-                <li>Developed and shipped a full-stack application that converts natural-language intent into verified, timed itineraries.</li>
-                <li>Built a Python/FastAPI backend with PostgreSQL and REST API integrations for venue and transport data.</li>
-                <li>Developed the React/TypeScript frontend and deployed the application for live public access.</li>
-            </ul>
-        </div>
-        <div class="item">
-            <h3>Cloud Resume Challenge | Serverless Cloud Portfolio</h3>
-            <div class="meta"><a href="https://cloud-resume-challenge-six.vercel.app/">Live portfolio</a> | <a href="https://github.com/SimplyAlice/Cloud-Resume-Challenge">GitHub</a></div>
-            <ul>
-                <li>Built a portfolio using Microsoft Azure services, including Azure Functions and Azure Table Storage, with GitHub Actions CI/CD.</li>
-                <li>The current live portfolio uses Vercel for hosting and its serverless API, with Neon PostgreSQL backing the visitor counter.</li>
-                <li>Troubleshot cloud configuration, API integration, and deployment issues.</li>
-            </ul>
-        </div>
-        <div class="item">
-            <h3>Career Connect | Project Manager &amp; Frontend Android Developer</h3>
-            <div class="meta">Academic team project | Six-person Agile student team</div>
-            <ul>
-                <li>Led research, UI/UX, implementation, and QA; coordinated frontend/backend integration.</li>
-                <li>Developed Android frontend components using Kotlin, XML, Android Studio, and Material Design; managed Git/GitHub workflows.</li>
-            </ul>
-        </div>
-    </section>
-
-    <section class="skills">
-        <h2>Technical Skills</h2>
-        <p><strong>Cloud &amp; DevOps:</strong> Microsoft Azure, Azure Functions, Azure Storage, GitHub Actions, CI/CD, Serverless Architecture</p>
-        <p><strong>Development:</strong> Python, TypeScript, JavaScript, React, FastAPI, REST APIs, HTML, CSS</p>
-        <p><strong>Data:</strong> PostgreSQL, MySQL, SQL, Database Design</p>
-        <p><strong>Tools:</strong> Git, GitHub, VS Code, Troubleshooting, Systems Analysis, Kotlin, XML, Android Studio</p>
-    </section>
-
-    <section>
-        <h2>Training / Cloud Learning</h2>
-        <div class="item">
-            <h3>AWS Skills Center — Becoming a Cloud Practitioner</h3>
-            <p>Classroom training completed September 2026. Completed four AWS cloud fundamentals classes with exposure to Amazon S3 and Amazon EC2.</p>
-        </div>
-        <div class="item">
-            <h3>Microsoft Azure Fundamentals (AZ-900)</h3>
-            <p>Preparing for AZ-900, with planned progression toward AZ-104.</p>
+            <div class="item-line">
+                <h3>AWS Skills Center (Cape Town) &amp; Microsoft Azure Certification Track</h3>
+                <span class="meta">Sep 2026 – Present</span>
+            </div>
+            <p>Completed four instructor-led AWS <em>Becoming a Cloud Practitioner</em> fundamentals sessions (exposure to Amazon S3 &amp; EC2); preparing for Microsoft Azure Fundamentals (AZ-900) with planned progression to AZ-104.</p>
         </div>
     </section>
 
     <section>
-        <h2>Experience</h2>
+        <h2>Work Experience</h2>
         <div class="item">
-            <h3>Events Steward | Ignite Events</h3>
-            <div class="meta">Cape Town | September 2022 – Present</div>
-            <ul>
-                <li>Coordinate fast-paced event workflows, manage competing priorities, and adapt to changing requirements.</li>
-                <li>Collaborate with teams to support smooth event operations and delivery.</li>
-            </ul>
+            <div class="item-line">
+                <h3>Events Steward | Ignite Events — Cape Town</h3>
+                <span class="meta">Sep 2022 – Present</span>
+            </div>
+            <p>Coordinate fast-paced event workflows, manage competing priorities, and collaborate across teams to maintain reliable operations.</p>
         </div>
         <div class="item">
-            <h3>Marketing &amp; Advertising Assistant | The Drain Surgeon Cape Town Central</h3>
-            <div class="meta">Cape Town</div>
-            <ul>
-                <li>Coordinate with clients and partners while supporting delivery of marketing services.</li>
-                <li>Work independently to resolve day-to-day operational challenges.</li>
-            </ul>
+            <div class="item-line">
+                <h3>Marketing &amp; Advertising Assistant | The Drain Surgeon Cape Town Central</h3>
+                <span class="meta">Cape Town</span>
+            </div>
+            <p>Coordinated with clients and service partners, supported service delivery, and resolved day-to-day operational issues independently.</p>
         </div>
         <div class="item">
-            <h3>Administrative Assistant | Capriccio Arts Powered Pre-school</h3>
-            <div class="meta">Cape Town | March 2022 – July 2024</div>
+            <div class="item-line">
+                <h3>Administrative Assistant | Capriccio Arts Powered Pre-school — Cape Town</h3>
+                <span class="meta">Mar 2022 – Jul 2024</span>
+            </div>
         </div>
     </section>
 </body>
